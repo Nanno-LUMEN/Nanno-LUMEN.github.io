@@ -1,0 +1,3428 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Blog for her</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+	margin-bottom: 2em;<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>各种【一元化思维】的谬误——从“星座理论”到“共产主义社会” @ 编程随想的博客</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+	margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(50, 48, 44, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-default_background {
+	color: rgba(50, 48, 44, 1);
+}
+.highlight-gray_background {
+	background: rgba(248, 248, 247, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(248, 243, 252, 1);
+}
+.highlight-pink_background {
+	background: rgba(252, 241, 246, 1);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-default_background {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray_background {
+	background: rgba(248, 248, 247, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(248, 243, 252, 1);
+}
+.block-color-pink_background {
+	background: rgba(252, 241, 246, 1);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-uiBlue { background-color: undefined; }
+.select-value-color-pink { background-color: rgba(225, 136, 179, 0.27); }
+.select-value-color-purple { background-color: rgba(168, 129, 197, 0.27); }
+.select-value-color-green { background-color: rgba(123, 183, 129, 0.27); }
+.select-value-color-gray { background-color: rgba(84, 72, 49, 0.15); }
+.select-value-color-transparentGray { background-color: undefined; }
+.select-value-color-translucentGray { background-color: undefined; }
+.select-value-color-orange { background-color: rgba(224, 124, 57, 0.27); }
+.select-value-color-brown { background-color: rgba(210, 162, 141, 0.35); }
+.select-value-color-red { background-color: rgba(244, 171, 159, 0.4); }
+.select-value-color-yellow { background-color: rgba(236, 191, 66, 0.39); }
+.select-value-color-blue { background-color: rgba(93, 165, 206, 0.27); }
+.select-value-color-pageGlass { background-color: undefined; }
+.select-value-color-washGlass { background-color: undefined; }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="1c826610-6d9f-8183-9523-ce858afcffce" class="page sans"><header><div class="page-header-icon undefined"><span class="icon">😁</span></div><h1 class="page-title">各种【一元化思维】的谬误——从“星座理论”到“共产主义社会” @ 编程随想的博客</h1><p class="page-description"></p></header><div class="page-body"><p id="1c826610-6d9f-815e-847b-faddd1898a18" class="">
+</p><p id="1c826610-6d9f-813e-973d-cc1c372b38d4" class="">
+</p><p id="1c826610-6d9f-8114-ba30-e6798c84ef88" class="">这个话题，俺很早以前就想写了。因为牵涉的面比较广，总感觉没想全面，拖到这几天才开始动笔。</p><h2 id="1c826610-6d9f-815f-a515-d92ac663e9d2" class="">★“一元化归因”的谬误</h2><p id="1c826610-6d9f-8112-946e-ddcd3b9eb3ba" class="">“单一归因”是比较常见的，所以先从这个话题说起。</p><p id="1c826610-6d9f-81a3-89f3-e18f4d2bc84e" class="">这个谬误的洋文是“fallacy of the single cause”，意思是：用单一的原因来解释某个事物，因此导致对其它原因的忽略。</p><h3 id="1c826610-6d9f-8129-b4ab-ea9a3ba0edb3" class="">◇星座理论</h3><p id="1c826610-6d9f-8174-9408-fc4368c350b8" class="">所谓的“星座理论”就是根据你出生的时辰，算出你属于某个星座；然后根据你属于哪个星座，来判断你的性格特征（甚至还可以推断你的人生运势）。</p><p id="1c826610-6d9f-814d-a7c5-ddd4ea029e90" class="">如果按照该理论来推演，同一个时辰出生的人，性格都应该是一样的。那这个世界上跟你同一个时辰出生的人，多了去了，难道这些人都跟你的性格一模一样？显然不可能嘛！</p><p id="1c826610-6d9f-81b2-a69d-f8f6f6016c30" class="">说到性格的形成，其实会受到很多因素的影响。比如“遗传因素、家庭环境、童年经历、受教育情况、社交圈”等等。而“星座理论”的荒诞之处就在于——企图用某个单一的因素（出生时间）来解释“性格的形成”——这就是“一元化归因”的谬误。</p><p id="1c826610-6d9f-8172-abf1-d66578449020" class="">类似于“星座理论”的忽悠还有很多，比如“血型理论”啊、“生肖理论”啊。大伙儿不妨举一反三。</p><h3 id="1c826610-6d9f-81f0-82b3-cbe0c2831f2e" class="">◇阴谋论</h3><p id="1c826610-6d9f-81ad-aa7c-c76c1df4afcb" class="">另一个“单一归因”的常见例子就是“阴谋论”。</p><p id="1c826610-6d9f-8143-bad2-ead534b75f20" class="">阴谋论的基本套路是这样滴——存在某个极其牛逼的组织（或政府机构），策划了各种各样的重大事件。关于“阴谋论”的批驳，可以看俺在几年前写的一篇专门的批驳文章《聊聊阴谋论流行的原因及其弊端》。</p><p id="1c826610-6d9f-8171-ab1f-d6d4d10480e5" class=""><strong>举例——《货币战争》</strong></p><p id="1c826610-6d9f-81c7-a158-f6a3c6c26a13" class="">《货币战争》是前几年很火的一本书。书中把历史上的种种大事（比如“拿破仑战争、美国南北战争、1929年大萧条、二战、金本位体系崩溃”等等）都说成是“罗斯柴尔德家族”在幕后操纵。</p><p id="1c826610-6d9f-81a6-8755-ee79d196af43" class=""><strong>举例——海外反华势力/境外敌对势力</strong></p><p id="1c826610-6d9f-8163-9d29-eb5081756b49" class="">这个阴谋论是咱们朝廷发明滴。你可以留意一下，天朝一旦出现啥不光彩的事情，喉舌们总喜欢搬出“海外反华势力/境外敌对势力”来作为解释，以此来推卸自己的责任，撇清自己的过错。</p><p id="1c826610-6d9f-8146-aa35-ea61d06e75e4" class="">比如朝廷喉舌就把“六四民运”说成是“境外敌对势力发起的”。但其实捏，如果你看过俺写的<a href="https://program-think.blogspot.com/2011/06/june-fourth-incident-0.html">《回顾六四》系列</a>，你会明白当年爆发学潮的因素有很多，而“胡耀邦逝世”只是一个导火索而已。至于所谓的“敌对势力”和“幕后黑手”之说，基本上是朝廷转移视线的手法。</p><p id="1c826610-6d9f-811e-a33c-fce0f515ea29" class=""><strong>举例——党中央在下一盘很大的棋</strong></p><p id="1c826610-6d9f-810c-9427-d77fb3372bc4" class="">你如果多留意，还可以想出其它一些阴谋论的例子。比如国内论坛的时政板块，经常会出现这样一种言论，不妨称之为“党中央在下一盘很大的棋”。这种论调把朝廷捧得很高，哪怕是朝廷在外交方面的重大败笔，都可以说成是“裆中央”未雨绸缪的伏笔。</p><h2 id="1c826610-6d9f-81a8-b40b-fe0b2c7fc662" class="">★“一元化评价”的谬误</h2><p id="1c826610-6d9f-8188-ade0-d1348a661512" class="">“一元化评价”指的是：企图用某种过于简单的描述来评价某个过于复杂的对象。</p><h3 id="1c826610-6d9f-8137-8988-e5888248a360" class="">◇“智商”的谬误</h3><p id="1c826610-6d9f-815d-a96a-c21b53d6cf7e" class="">“智商”（洋文叫 IQ）这个词儿，好多人都听说过，俺就不解释了。关于“智商测试”，有很多种方法。此处不想具体评价某种测试方法是否科学。俺想说的是，<strong>“智商”这个概念本身就是一种谬误</strong>。</p><p id="1c826610-6d9f-81ed-8183-dcf5322cf3b4" class="">人的智力构成，包括很多种维度（比如：观察能力、记忆能力、分析能力、推理能力、归纳能力、创造能力......）。对这些不同的能力，相互之间是无法进行【量化换算】的。换句话说，你不可能把“观察能力”通过某种算法折算成“记忆能力”，反之亦然。另外，上述这几个能力只是“大类”，下面还分“小类”。比如“观察能力”还有“视觉”和“听觉”之分。</p><p id="1c826610-6d9f-814d-ac4b-ec60625d1727" class="">在这种情况下，要想客观全面地表示某个人的智力水平，至少要通过一个“矩阵”，才能把相关的信息完全表达出来（如果你不晓得啥是“矩阵”，自己去查维基百科）。</p><p id="1c826610-6d9f-8165-9003-ff5af2f56880" class="">但是在“智商”这个概念中，企图用【单个】的数字（也就是“标量”）来全面地表示某个人的智力水平。其造成的结果就是“无意义”。也就是说，“智商测试”得到的这个数字【不能】表达出啥有用信息。所以是“无意义”的。</p><p id="1c826610-6d9f-8104-b46f-cb5f920127e3" class="">比方说，两个人的智商测试结果都是120，你能说这两个人的智力水平相似吗？【不能】</p><p id="1c826610-6d9f-8163-b13d-cee9650b8cd9" class="">比方说，某人的智商测试结果是100，你能说这个人的智力跟普通大众相似吗？【不能】（有可能此人的某些指标非常非常高，而另一些指标非常非常低，因此导致最终测试结果是100，但这样的话，此人显然跟普通人完全不同）</p><h3 id="1c826610-6d9f-8148-8f95-e579c8392d12" class="">◇“左派/右派”之称的谬误</h3><p id="1c826610-6d9f-81cf-bcd3-ea655c8f8d51" class="">在网上讨论政治话题，经常会看到网友使用“左/右”来形容政治流派。这又是一种“一元化评价”的例子。因为不同的政治流派之间的差异，不是一个维度上的差异，而是【多个维度】上的差异。举例如下：</p><p id="1c826610-6d9f-815b-949f-ccfb3a7853c1" class="">个人方面：个人主义 VS 集体主义 VS 国家主义</p><p id="1c826610-6d9f-810f-8cc5-c27be09f6eb7" class="">经济方面：放任 VS 管制</p><p id="1c826610-6d9f-815e-b760-cd52d18ce4b5" class="">政府方面：大政府 VS 小政府 VS 无政府</p><p id="1c826610-6d9f-81da-9f59-c4a0f9a58027" class="">外交方面：孤立主义 VS 国际主义</p><p id="1c826610-6d9f-8127-980f-fa5e3f833b45" class="">......（还有很多，就不一一列举了）</p><p id="1c826610-6d9f-818d-8b20-d3ffe294a09a" class="">请注意：上述的每一个维度都【不是】只有两个端点，而是如同“数轴”一样，可以连续分布的。就好比“经济”这个维度：如今已经没有哪个国家是 100% 的自由放任（历史上的英国曾经出现过），如今也没有哪个国家是 100% 的管制（人类历史上，大概只有红色高棉做到了“废除货币，废除财产继承”，参见《<a href="https://program-think.blogspot.com/2012/10/history-of-red-khmers.html">最“纯正”的共产主义政权——红色高棉简史</a>》）。如今的国家要么偏向“放任”一端，要么偏向“管制”一端，当然也有一些是折中的。</p><p id="1c826610-6d9f-815b-99aa-eb26993e69a9" class="">从上面的举例可知，反映政治立场的维度有很多，而“左/右”的说法，充其量只能表达一个维度。用“左/右”来形容政治流派，显然是【以偏概全】。所以俺经常建议说：要称呼政治流派，最好直接用“某某主义”来称呼，比较准确，避免歧义和误解。比如曾经有读者问俺的政治立场，俺会回答说倾向于“古典自由主义”，而不会回答说俺是“左派”还是“右派”。</p><h3 id="1c826610-6d9f-8125-bc7c-cc540d148d5e" class="">◇“脸谱化/标签化”的谬误</h3><p id="1c826610-6d9f-818b-af6c-eabcae476985" class="">所谓的“脸谱化”就是说，你对某个事物的认知，被某个特定的符号所取代。一提到该事物，你脑海中就【只会】出现该符号。</p><p id="1c826610-6d9f-810f-8c7c-c31fa1eadd38" class="">举例：</p><p id="1c826610-6d9f-8121-bd15-ed065a7324f5" class="">如比这几年“抗日神剧”热播。很多50后60后的中老年人，整天看着这些“抗日神剧”，其中一些人对“日本人”的认知就会变成“脸谱化”。一提到日本人，他们脑海中就只有“抗战中的日本鬼子”这个印象。除此之外，再没有其它印象。</p><p id="1c826610-6d9f-81d2-b97d-d360d7a60f00" class="">“脸谱化”的例子还有很多，列位看官不妨自己琢磨一下。</p><h3 id="1c826610-6d9f-8193-975e-c647fef0164b" class="">◇“评价成功人士”的谬误</h3><p id="1c826610-6d9f-8161-817c-ffa834095c4f" class="">天朝的拜金主义盛行，已经是众所周知的了。在这样的大环境下，绝大多数人都以“身家的多寡”来评判某个人是否属于“成功人士”（这同样是一种“单一化评价”的谬误）。然后那些初入社会的年轻人，在这种评价体系的影响下，自然也被塑造成“拜金主义者”。如此就陷入某种恶性循环。</p><p id="1c826610-6d9f-815c-aa58-f7e808a6f078" class="">其实对“成功”的评价，可以有各种各样的标准。每个人都可以给自己的人生设定一个【独特的】“成功标准”，然后为之奋斗。如果你老是以“别人的评判标准”来衡量“自己的人生目标”，那你一辈子都活在别人的眼光里。说到这里，顺便引用乔布斯的一句名言：</p><blockquote id="1c826610-6d9f-812b-b619-d2a0770ffae6" class="">你的时间有限，所以不要浪费时间去重复别人的生活！</blockquote><h2 id="1c826610-6d9f-81a7-a308-d30351601e05" class="">★对“标准答案”的幻想</h2><p id="1c826610-6d9f-8126-9de5-f1dfdd7f7d66" class="">作为一个“理工男”，俺要特别针对“理工科”的网友强调一下——“理工科”（尤其是“理科”）更容易产生这样的谬误。因为在理科的领域里面，很多问题都是有标准答案的。随便举几个例子：</p><p id="1c826610-6d9f-8154-8e3a-fb6595202316" class="">比如几何学：在二位平面上用定长的封闭曲线围出最大的面积，标准答案是圆形。</p><p id="1c826610-6d9f-811c-b9ed-c11c65697020" class="">比如力学：给定一个物体，找出其重心，这个也是有标准答案的。</p><p id="1c826610-6d9f-812d-98f0-dbe7ef1e278b" class="">......</p><p id="1c826610-6d9f-8133-b7e3-c6f292870f28" class="">但是在现实生活中、在实际工作中，你碰到的绝大部分问题都是【没有】标准答案的。下面俺举几个不同领域的例子。</p><p id="1c826610-6d9f-8108-bece-c50eaa009167" class="">
+</p><h3 id="1c826610-6d9f-81b2-b762-eeab51fe95c4" class="">◇举例——投资方面</h3><p id="1c826610-6d9f-8151-bcf3-f21f144846c1" class="">经常看到有人在网上问，最好的投资渠道是啥？这个问题同样是【没有】标准答案滴。</p><p id="1c826610-6d9f-81aa-971e-c86a53b4932f" class="">因为每个人的“知识结构”是不同的，每个人的“风险承受能力/风险偏好”是不同的，每个人的“资金量”是不同的......而且在不同国家，或者同一个国家的不同时期，投资环境又是不同的。因此，【不可能】给出某个普遍适用的解决方案。</p><p id="1c826610-6d9f-8102-926c-e324d6d52837" class="">就以“知识结构”来说吧。像巴菲特可以通过阅读财报，来分析某个上市公司是否具备可投资的价值。但是大部分网友去看财报，通常是一头雾水——因为不具备相关的知识结构。</p><p id="1c826610-6d9f-8194-a2df-eed77b100fc4" class="">类似的例子还可以举出很多：比如“择偶的方法、长寿的方法、教育子女的方法”等等，都是【没有】标准答案滴。</p><h2 id="1c826610-6d9f-816e-a5b5-e44dbf8afcc5" class="">★对“银弹”的幻想</h2><p id="1c826610-6d9f-81db-8da3-f7428e6296e5" class="">“银弹”一词出自西方，洋文称为“Silver Bullet”，相当于咱们这边所说的“万金油”（包治百病）。换一个比较严谨的说法就是：用单一工具来解决某个领域的大部分问题（甚至所有问题）。</p><h3 id="1c826610-6d9f-81cd-b6be-d102f52668fc" class="">◇举例——软件开发方面的银弹</h3><p id="1c826610-6d9f-8104-a47f-e828619533c1" class="">软件工程界的大牛 Brooks 在其代表作《人月神话》中，专门有一章叫做“没有银弹”，批驳的就是上述现象。俺个人认为，这一章是整本书最有价值的一章（09年刚开博客的时候，俺曾经写过此书的书评：《人月神话》——不朽的软件工程名著，当时就特地强调了“没有银弹”这一章的重要性）。</p><p id="1c826610-6d9f-815b-9b1c-c1d09f544736" class="">最近半个世纪以来，软件开发领域出现过很多新技术。很多新玩意儿刚刚推出时，都被渲染成是“银弹”。比如在编程技术方面有：OOP、CORBA、COM、Java......流程方面有：RAD、RUP、CMM、Agile......上述这些，有的已经过气了（比如 CORBA），有的虽然还在使用（比如：敏捷开发），但并没能根本解决软件开发的根本性困难（也就是说：有用，但没有传说中那么牛）。</p><p id="1c826610-6d9f-8140-8a6f-e7961c2b2505" class="">针对程序员读者补充说明一下：</p><p id="1c826610-6d9f-8145-b7fb-d6abfc230307" class="">《人月神话》中已经深刻分析了，软件开发的“根本性困难”到底啥。如果你真正理解了“软件开发的根本性困难”，自然就明白软件史上的那些银弹咋会失效。</p><h3 id="1c826610-6d9f-81f3-891d-f20c349896e9" class="">◇举例——医疗保健领域的银弹</h3><p id="1c826610-6d9f-81d8-81d7-f498d4f94c6b" class="">前几年，咱天朝出了一个张悟本，号称“绿豆神医”。此人在电视上（包括 CCTV）大肆鼓吹绿豆汤可以治疗各种各样的常见病（至少包括：近视、糖尿病、高血压、肿瘤......）。</p><p id="1c826610-6d9f-813a-a87c-d4bf0914344b" class="">这不就是把绿豆当“万金油”嘛 :) 还好这位张神医已经倒台了。否则的话，不知道还要误导多少人。</p><p id="1c826610-6d9f-81e1-b396-c4906737217c" class="">后来听说这个张神医因为脑梗住院了，看来他连自己都没搞定啊 :)</p><h2 id="1c826610-6d9f-8169-abce-d88985775aec" class="">★对“终极”的幻想</h2><p id="1c826610-6d9f-815f-9e7c-d72ed92479ae" class="">和“银弹”很接近的另一个话题就是“终极”（终极理论/终极体系/终极方法）。看完下面的介绍，你会发现：对“终极”的幻想，（从某种程度上）也可以算是“一元化思维的谬误”。</p><h3 id="1c826610-6d9f-812a-bfda-d3fc9829d22b" class="">◇政治领域：对“共产主义”的幻想</h3><p id="1c826610-6d9f-81f8-8c7c-d3006e39d5d4" class="">估计出生在天朝的网友，通常都被灌输了马克思那套理论——历史唯物主义（更贴切的术语是“历史决定论”）。作为共产运动的第一任教主，马克思预言说：共产主义社会是人类历史发展的终极目标/终极形态。</p><p id="1c826610-6d9f-8178-a86c-dd08a6b7751d" class="">对“历史决定论”最成功最彻底的批判，来自于哲学大牛波普尔。他在50年代写了一本很有影响力的《历史决定论的贫困》，从各个角度反驳了马教主的那套理论</p><p id="1c826610-6d9f-8168-93a3-eeee6c9ed7e2" class="">考虑到很多人不喜欢阅读枯燥的理论著作，俺把波普尔最核心的反驳，大致整理如下（俺的理论水平有限，如有纰漏，欢迎指出）：</p><blockquote id="1c826610-6d9f-81c6-9eec-d8e6d0c06078" class="">1. 人类掌握的知识水平/科技水平对历史的发展有关键性的影响（对这点，马克思自己也承认的）</blockquote><p id="1c826610-6d9f-81a2-bfd0-ced46ce218ba" class="">（请注意：上述只是波普尔对“历史决定论”最致命的反驳。除了这个，波普尔还在其它几个方面指出了马克思的谬误）</p><p id="1c826610-6d9f-8159-88d8-e1582f2b8060" class="">上述推导过程的关键在第二步。波普尔在书中用了比较复杂的【逻辑证明】（人家给出的是“证明”哦，不是主观拍脑袋的哦）。在此书的序言中，波普尔说道：</p><blockquote id="1c826610-6d9f-818d-b036-d6e4ddffa055" class="">我在书中提供的（对第2条）证明是复杂的——如果能找到较为简单的证明，我也不会惊异。我的证明在于指出了任何科学预测者——不管是一位科学家还是一部计算机——都不能用科学方法预测它自己未来的结果。只有在事后，这样做的尝试才能获得结果；但对于预测来说，已经为时太晚了——只有当预测已成为追溯（retrodiction），这些尝试才能得出结果。</blockquote><p id="1c826610-6d9f-810b-8190-d708fad0846c" class="">说到这儿，顺便再抹黑一下党国。</p><p id="1c826610-6d9f-81ea-acf5-ed45cbb15d6f" class="">马教主在政治和经济方面的理论，从发表到现在已经一百多年了。经过这一百多年，这两个领域已经有了长足进步。马教主的很多理论都已经过时了（比如“劳动价值理论”、“剩余价值理论”、“阶级斗争理论”，还有刚才提到的“历史决定论”），而且他的理论经过后人的大量批驳，都快成筛子（千疮百孔）。但是在咱们天朝，依然把马克思那些理论当宝贝一样供着，并且灌输给一代一代的年轻人。前几年的《解放军报》，甚至还在社论中提到：我们信仰的主义，乃是宇宙的真理。朝廷喉舌连这种话都敢说，真是滑天下之大稽 :)</p><p id="1c826610-6d9f-81ff-8285-f57bd3ddd3d5" class="">所以俺常说：天朝不愧是一个奇葩的国度。</p><h3 id="1c826610-6d9f-81ab-b744-c9de46e21dfa" class="">◇理论物理领域：对“TOE”的幻想</h3><p id="1c826610-6d9f-8131-a91e-fd6bcb2fac0e" class="">（本小节涉及数理逻辑和理论物理，没有相关基础的同学请自行略过）</p><p id="1c826610-6d9f-815e-b79e-dda809a8f6f3" class="">在理论物理领域，有一个很有名的东东，叫做“TOE”（洋文“Theory Of Everything”的缩写）。这玩意儿号称是理论物理的“圣杯”——从牛顿开始，很多理论物理学家就有“TOE 情结”，并视之为“物理学的终极目标”。</p><p id="1c826610-6d9f-81a2-a7e6-e55ceb8eef8e" class="">（注：为了避免歧义，俺写这篇博文时，特地在上述这段中标注了 TOE 的维基百科链接。TOE 可以有不同的理解——【狭义】的理解指“4种基本作用力的统一”；【广义】的理解，包括理论物理学发展史上的各种 TOE）</p><p id="1c826610-6d9f-81dd-a0e8-e03d5f27027f" class="">有好多著名的理论物理学家（其中不乏诺贝尔奖得主）都坚信：“总有一天可以实现（某种形式的）TOE 理论”。某些乐观的科学家甚至认为：TOE 在【不久的将来】就可以被搞定。持有这种观点的人至少包括“爱因斯坦、霍金、温伯格”等人。霍金甚至在上世纪80年代初期还信誓旦旦地宣称，TOE 已经“近在眼前，触手可及”。</p><p id="1c826610-6d9f-81f1-9956-e4c6069eefa8" class="">但是到了本世纪初（大约2002年左右），霍金的态度出现180度转变。他之后在各种场合作了名为《哥德尔和物理学的终结》的演讲，分享了他的观点。其大致意思是：物理学理论必定要基于某些数学模型。而数学理论会受到“哥德尔不完备定律”的制约。所以建立在数学模型基础上的物理理论，必定也是不完备的。（提醒一下：这里所说的“完备性”是有专门定义的术语，不要想当然地去理解）</p><p id="1c826610-6d9f-8122-aa8e-de6d4fb485c2" class="">貌似现在有越来越多的理论物理学家开始意识到——TOE 永远都是可望而不可求的东东。</p><p id="1c826610-6d9f-8199-95d6-f2193eb82ad9" class="">俺的观点是：哪怕将来有某个理论能够统一4种基本的力（目前4种里面已经统一2种了），该理论充其量也只能称之为“XXX统一理论”，而没有资格称之为“Theory Of Everything”。因为任何人都【没法证明】：宇宙间仅有这4种相互作用。说不定未来的某一天，会有人发现第5种【基本的】相互作用。</p><h2 id="1c826610-6d9f-81b4-9416-db701f7ae576" class="">★“一元化思维”的根源</h2><p id="1c826610-6d9f-81b2-87ad-de2ec8b75395" class="">俺大致分析了一下，有如下几种可能的根源（想得未必全面，欢迎大伙儿补充）。</p><h3 id="1c826610-6d9f-81af-bbc9-d528e95ab6dd" class="">◇思维的惰性</h3><p id="1c826610-6d9f-81f4-a4a6-e36041ce7b48" class="">很多“单一化归因”和“单一化评价”，都跟“思维的惰性”有关。</p><p id="1c826610-6d9f-81fd-8832-c96518ba64f4" class="">比如“星座理论”能够盛行，原因之一是因为“思维惰性”。很多人因为思维惰性，懒得对某人进行更全面的观察和了解。以星座来判定某人的性格，几乎是最省事的。</p><p id="1c826610-6d9f-8113-8b2d-d7155f51f1be" class="">引申阅读：</p><p id="1c826610-6d9f-8108-8058-dee6556b05c0" class="">俺后来写如下这篇博文，从“心理学”和“脑神经科学”的层面介绍了“思维的惰性”——其根源是某种称之为“认知负担”的东东。</p><h3 id="1c826610-6d9f-81da-968b-c39f4792f587" class="">◇信息来源的单一</h3><p id="1c826610-6d9f-8167-8ea3-fc4e5c65be43" class="">某些“单一化评价”是由于信息渠道的单一导致的。</p><p id="1c826610-6d9f-813d-b906-cf0921ceed59" class="">比如前面提到“日本人的例子”。如果某人只通过“抗日神剧”这一信息渠道来接触到日本人，那么他/她对日本人就会产生严重的认知偏差。</p><h3 id="1c826610-6d9f-815b-bdc8-fa6271bee5aa" class="">◇知识结构的单一</h3><p id="1c826610-6d9f-81fb-99df-f2fbc7a9dbe1" class="">如果某人的知识结构比较单一，他/她在看待某个复杂事物的时候，往往只看到自己熟悉的那一面（那个维度），对于自己的知识面欠缺的其它维度，就容易忽略掉。所以这类人也比较容易出现“单一化归因”和“单一化评价”。</p><h3 id="1c826610-6d9f-816c-9598-d4bb1590db65" class="">◇一致性原则</h3><p id="1c826610-6d9f-81b5-b0e4-c0826e2e0ed5" class="">心理学领域有一个很重要的原则叫“一致性原则”。俺在这几年的博文中不止一次提到过此原则，这里就不展开了。</p><p id="1c826610-6d9f-819d-a273-db81217a7829" class="">俺觉得：某些“银弹情结”应该跟“一致性原则”有关。</p><h3 id="1c826610-6d9f-81d3-82db-fd40e024dfb3" class="">◇走捷径的心理</h3><p id="1c826610-6d9f-810a-a327-e58ce9535018" class="">还有一些“银弹情结”跟“走捷径的心理”有关。比如前面提到张悟本的例子。</p><p id="1c826610-6d9f-81be-b71f-fd9515210892" class="">很多人宁愿相信“绿豆包治百病”的说法，因为这样一来，就可以省去看病/吃药的麻烦。于是就“宁可信其有”。</p><h3 id="1c826610-6d9f-8136-969e-cb2c03cc1a51" class="">◇过于追求完美</h3><p id="1c826610-6d9f-8102-999a-f6aef4aefcf1" class="">前面提到理论物理学家对 TOE 的追求。这个属于“过度追求完美”导致的问题。</p><h2 id="1c826610-6d9f-81cf-925f-d5fc4bf695a3" class="">★总结</h2><p id="1c826610-6d9f-81d4-bc49-f39075e8251d" class="">本文写得杂七杂八的，所以最后要稍微总结一下。</p><p id="1c826610-6d9f-81d7-814c-f915ba949784" class="">当你企图用某个【过于简化】的东东（理论/工具/方法论）来处理某个【足够复杂】的对象，你通常会走入死胡同。常见的“死胡同”有如下4种：</p><p id="1c826610-6d9f-81e0-b06c-f8ffaea37422" class="">1. 得到【片面】的结果（比如“脸谱化/标签化”的例子）</p><p id="1c826610-6d9f-81b7-843e-fd09c8cbbd71" class="">2. 得到【错误】的结果（比如马克思对“共产主义社会”的预言）</p><p id="1c826610-6d9f-8167-8b56-c3d0d266ae72" class="">3. 得到【无意义】的结果（比如“智商”的例子）</p><p id="1c826610-6d9f-81be-8825-efa73622eaf0" class="">4. 【永远得不到】结果（比如理论物理领域“TOE”的例子）</p><p id="1c826610-6d9f-8135-aa5b-d0a6ee0377f4" class="">
+</p><figure id="1c826610-6d9f-81b4-a9b0-c1c79f39ad51" class="link-to-page"><a href="%E5%90%84%E7%A7%8D%E3%80%90%E4%B8%80%E5%85%83%E5%8C%96%E6%80%9D%E7%BB%B4%E3%80%91%E7%9A%84%E8%B0%AC%E8%AF%AF%E2%80%94%E2%80%94%E4%BB%8E%E2%80%9C%E6%98%9F%E5%BA%A7%E7%90%86%E8%AE%BA%E2%80%9D%E5%88%B0%E2%80%9C%E5%85%B1%E4%BA%A7%E4%B8%BB%E4%B9%89%E7%A4%BE%E4%BC%9A%E2%80%9D%20@%20%E7%BC%96%E7%A8%8B%E9%9A%8F%E6%83%B3%E7%9A%84%E5%8D%9A%E5%AE%A2%201c8266106d9f81839523ce858afcffce/%E6%80%9D%E7%BB%B4%E7%9A%84%E8%AF%AF%E5%8C%BA%EF%BC%9A%E4%BB%8E%E2%80%9C%E6%B2%89%E6%B2%A1%E6%88%90%E6%9C%AC%E8%B0%AC%E8%AF%AF%E2%80%9D%E5%88%B0%E2%80%9C%E6%8D%9F%E5%A4%B1%E5%8E%8C%E6%81%B6%E6%83%85%E7%BB%93%E2%80%9D%20@%20%E7%BC%96%E7%A8%8B%E9%9A%8F%E6%83%B3%E7%9A%84%E5%8D%9A%E5%AE%A2%201c8266106d9f81b4a9b0c1c79f39ad51.html">思维的误区：从“沉没成本谬误”到“损失厌恶情结” @ 编程随想的博客</a></figure></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>思维的误区：从“沉没成本谬误”到“损失厌恶情结” @ 编程随想的博客</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+	margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(50, 48, 44, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-default_background {
+	color: rgba(50, 48, 44, 1);
+}
+.highlight-gray_background {
+	background: rgba(248, 248, 247, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(248, 243, 252, 1);
+}
+.highlight-pink_background {
+	background: rgba(252, 241, 246, 1);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-default_background {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray_background {
+	background: rgba(248, 248, 247, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(248, 243, 252, 1);
+}
+.block-color-pink_background {
+	background: rgba(252, 241, 246, 1);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-uiBlue { background-color: undefined; }
+.select-value-color-pink { background-color: rgba(225, 136, 179, 0.27); }
+.select-value-color-purple { background-color: rgba(168, 129, 197, 0.27); }
+.select-value-color-green { background-color: rgba(123, 183, 129, 0.27); }
+.select-value-color-gray { background-color: rgba(84, 72, 49, 0.15); }
+.select-value-color-transparentGray { background-color: undefined; }
+.select-value-color-translucentGray { background-color: undefined; }
+.select-value-color-orange { background-color: rgba(224, 124, 57, 0.27); }
+.select-value-color-brown { background-color: rgba(210, 162, 141, 0.35); }
+.select-value-color-red { background-color: rgba(244, 171, 159, 0.4); }
+.select-value-color-yellow { background-color: rgba(236, 191, 66, 0.39); }
+.select-value-color-blue { background-color: rgba(93, 165, 206, 0.27); }
+.select-value-color-pageGlass { background-color: undefined; }
+.select-value-color-washGlass { background-color: undefined; }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="1c826610-6d9f-81e6-803d-f6ef2d880f02" class="page sans"><header><h1 class="page-title">思维的误区：从“沉没成本谬误”到“损失厌恶情结” @ 编程随想的博客</h1><p class="page-description"></p></header><div class="page-body"><p id="1c826610-6d9f-81e3-b6b7-f33a66e15890" class=""><a href="https://program-think.blogspot.com/2014/06/sunk-cost-fallacy-and-loss-aversion.html">https://program-think.blogspot.com/2014/06/sunk-cost-fallacy-and-loss-aversion.html</a></p><p id="1c826610-6d9f-81b3-bb9a-dd555baec565" class="">
+</p><p id="1c826610-6d9f-81c0-a594-fa8a59726342" class=""><strong>文章目录</strong></p><p id="1c826610-6d9f-810b-b32e-ec9f27dd42c9" class=""><a href="https://program-think.blogspot.com/2014/06/sunk-cost-fallacy-and-loss-aversion.html?view=classic#head-1">★啥是“沉没成本”？</a></p><p id="1c826610-6d9f-816a-91ee-ed98bb02f664" class=""><a href="https://program-think.blogspot.com/2014/06/sunk-cost-fallacy-and-loss-aversion.html?view=classic#head-2">★啥是“沉没成本谬误”？</a></p><p id="1c826610-6d9f-81ad-95e5-ea69e6930603" class=""><a href="https://program-think.blogspot.com/2014/06/sunk-cost-fallacy-and-loss-aversion.html?view=classic#head-3">★“沉没成本谬误”举例</a></p><p id="1c826610-6d9f-8174-84e2-ee5e5e001fa3" class=""><a href="https://program-think.blogspot.com/2014/06/sunk-cost-fallacy-and-loss-aversion.html?view=classic#head-4">★“沉没成本谬误”的心理成因</a></p><p id="1c826610-6d9f-8134-985c-c156bb178ed9" class=""><a href="https://program-think.blogspot.com/2014/06/sunk-cost-fallacy-and-loss-aversion.html?view=classic#head-5">★先看几个小测试</a></p><p id="1c826610-6d9f-81f8-9afb-d78c209efc82" class=""><a href="https://program-think.blogspot.com/2014/06/sunk-cost-fallacy-and-loss-aversion.html?view=classic#head-6">★什么是“损失憎恶/损失规避”情结？</a></p><p id="1c826610-6d9f-812d-b7b6-e5a77c936184" class=""><a href="https://program-think.blogspot.com/2014/06/sunk-cost-fallacy-and-loss-aversion.html?view=classic#head-7">★你知道“对损失的厌恶”有多强烈吗？</a></p><p id="1c826610-6d9f-8160-9e80-e34214364a9a" class=""><a href="https://program-think.blogspot.com/2014/06/sunk-cost-fallacy-and-loss-aversion.html?view=classic#head-8">★如何用“损失憎恶情结”进行误导、忽悠和洗脑？</a></p><p id="1c826610-6d9f-8191-b5ad-d80b78be4e72" class=""><a href="https://program-think.blogspot.com/2014/06/sunk-cost-fallacy-and-loss-aversion.html?view=classic#head-9">★结尾</a></p><p id="1c826610-6d9f-8189-9f6a-c077f498628e" class="">本来在琢磨另一篇博文，其中涉及到“沉没成本”的概念。转念一想，改为写一篇关于“沉没成本谬误”的博文，也算是继续普及心理素质。</p><h2 id="1c826610-6d9f-8158-bb13-ebe3129fe8a4" class="">★啥是“沉没成本”？</h2><p id="1c826610-6d9f-81df-8630-c789f13f70b7" class="">“沉没成本”（sunk cost）是一个经济领域的概念，指的是已经付出并且【不可能】收回的成本。</p><p id="1c826610-6d9f-8135-95e8-cf6d65ced714" class="">比如你花钱买了某个商品，并且是不允许退货的。那么你已经花掉的钱就属于“沉没成本”。</p><h2 id="1c826610-6d9f-811f-8b97-efa9f603bb75" class="">★啥是“沉没成本谬误”？</h2><p id="1c826610-6d9f-8184-b384-df415730d03e" class="">“沉没成本谬误”，洋文叫做“sunk cost fallacy”。刚才说了，“沉没成本”是【不】可挽回滴。因此，一个足够理性的人，不会拿“沉没成本”作为对未来决策的参考依据。但实际上，绝大部分人都是很感性的，所以这些很感性的人在作决策的时候，会受到之前的沉没成本的影响，并作出不那么理智的决策。</p><p id="1c826610-6d9f-8115-9ec2-f9b5e0471169" class="">这么说比较抽象，给大伙儿举一个例子。</p><p id="1c826610-6d9f-8157-a77a-ebde2a4a076c" class="">上世纪60年代，英法两国联手研发大型超音速民航客机（协和客机）。懂行的同学应该晓得——这玩意儿很烧钱滴。搞到半途，参与其中的很多专家已经意识到——继续搞下去没戏。但是前期已经砸进去好多银子，如果半途终止，前面那些银子岂不是白花了？所以两国政府就硬着头皮继续搞。又砸进去更多的银子（据说总费用超预算8倍），终于搞出来了。但是根本没有竞争力，最后草草收场（前后总共才只有16架投入民航运营）。</p><p id="1c826610-6d9f-8158-a7e0-da6c3eb04a11" class="">因为协和客机的例子太有名了，所以“沉没成本谬误”有时候也称为“协和效应”。</p><h2 id="1c826610-6d9f-81d1-a59a-fa11ed6cc1fe" class="">★“沉没成本谬误”举例</h2><p id="1c826610-6d9f-81b8-9121-ebdb1fb19dc6" class="">为了加深列位看官的印象，再来举几个例子。</p><h3 id="1c826610-6d9f-81b7-bb09-c9b4edb57cd9" class="">◇炒股的例子</h3><p id="1c826610-6d9f-8142-9a96-f553ed76cea4" class="">比如咱天朝的股市在北京奥运那年猛跌，（截至俺写本文时）已经跌去一半都不止。很多股民从6000点就一直套牢到现在。</p><p id="1c826610-6d9f-81b0-8b61-dd8cc0f7e641" class="">当大盘跌到5000点的时候，他们想，这可能是短期的阶段性调整，于是没有止损；大盘到4000点的时候，很多人想，5000点都没有割肉，这时候割肉岂不是很傻，于是又忍着......然后就一直等到如今2000点。你说悲催吧？</p><h3 id="1c826610-6d9f-81ac-9586-dada762b7b63" class="">◇恋人的例子</h3><p id="1c826610-6d9f-815d-8f9c-cdb82b56acf6" class="">比如有一对恋人已经谈10年，性格等诸多方面还是合不来。继续谈下去，短期内也看不到改善的希望。如果双方都够理智的话，应该当机立断分手。但是两人都觉得，如果分手了，之前谈了那么多年，岂不是白费了？于是就继续拖下去，青春年华就这样耗在里面了。</p><h3 id="1c826610-6d9f-814b-a58f-cb71a1547532" class="">◇排队的例子</h3><p id="1c826610-6d9f-81ff-8771-cd93288ee3cd" class="">假设你去吃饭，你选中那家餐厅人多，需要排队叫号。然后你拿了一个号等着。但是等了30分钟还是没轮到你。这时候你饥饿难耐，而且边上有另一个同样档次的店已经空出来了。这时候你是选择继续在这家等（继续挨饿），还是选择去边上的另一家店就餐（无需再等）？</p><p id="1c826610-6d9f-8191-90d1-df97d4cfb65a" class="">大多数人会选择继续等。他们的理由是：刚才已经等了30分钟；如果中途放弃，刚才30分钟岂不是白等了？</p><h3 id="1c826610-6d9f-81e7-b61e-fa026fdb7808" class="">◇度假的例子</h3><p id="1c826610-6d9f-8113-9767-ca0a26bb92ab" class="">俺估计，很多读者都属于上述三个例子之一，所以某些读者会为自己作一些辩解。下面再举最后一个例子，也是一个特别傻的例子——傻到让你无可辩驳。</p><p id="1c826610-6d9f-81d5-ac06-e21ec6a6fbdf" class="">某个心理学家作了一个实验，设想了如下一个场景：</p><blockquote id="1c826610-6d9f-8159-917c-d4d17397a519" class="">假设你很喜欢度假。半年前，你花2万元买了一个度假的全套服务（不可退款）。前几天你又看到另一个【更好的】度假项目，只要1万元，然后你又买了（同样是不可退款）。等你买了第二个之后，才发现这两项目的时间是冲突的（你只能去其中一个），而这两个项目都不可转让（必须你本人去）。这时候你会选择去哪一个？</blockquote><p id="1c826610-6d9f-8157-8e19-f2129e2315f3" class="">针对很多人作了上述这个测试，大部分人选择去2万元那个（也就是【较差的】那个）。为啥明明有更好的，却选择去差的那个捏？这不是很傻逼吗？根本原因在于，很多人不愿意看到这2万元白花了——“沉没成本”误导了你的决策。</p><h2 id="1c826610-6d9f-8101-b3c4-eeb218b7547d" class="">★“沉没成本谬误”的心理成因</h2><p id="1c826610-6d9f-8189-9ee1-d2016c0de612" class="">为啥会有“沉没成本谬误”捏？俺总结了如下几个心理学层面的原因。</p><h3 id="1c826610-6d9f-81b4-8b3f-e68ab90a7013" class="">◇一致性原理</h3><p id="1c826610-6d9f-81fd-8557-dc425ddbe481" class="">俺博客中已经不止一次提到“一致性原理”了。早在5年前的那篇《<a href="https://program-think.blogspot.com/2009/05/halo-effect.html">光环效应引发的认知误区</a>》，里面就提到了这个原理。考虑到某些读者比较健忘，再来唠叨一次。</p><p id="1c826610-6d9f-8173-959d-e82264353029" class="">一致性原理说的是：人在心理上总是企图保持各种一致性（这里所说的一致性包括心理上的不同维度和层面）。举个最简单的例子：假如你是某歌星的忠诚粉丝，觉得此人歌唱得很好。那么，即使你对这个歌星的道德水平缺乏了解，你在潜意识里面依然会认为该歌星的人品很好。</p><p id="1c826610-6d9f-81cc-a757-f2fd6e4015f0" class="">从理智的角度来看，一个人的唱歌水平，跟此人的道德水平没有必然关系。但因为一致性原则在起作用，所以粉丝才会把这两者等同起来。</p><p id="1c826610-6d9f-81d5-8927-d9bd47263f67" class="">再回到“沉没成本”的话题。不论是前面提到的“炒股”还是“恋人”和“排队”的例子，你稍微思考一下，都能感觉到【一致性原则】在起作用。</p><p id="1c826610-6d9f-813c-be48-e7c9b4ef6efb" class="">如果你想更深入地了解“一致性原理”的相关话题，可以看《<a href="https://docs.google.com/document/d/1PmNGkvoqtPWPwV63h5KMiQQWgGU-Mo3Zf4aFzX16om4/">影响力</a>》这本书（本博客上已经第 N 次提到此书了，<a href="https://github.com/programthink/books">俺的网盘</a>有此书的多种电子版）。</p><h3 id="1c826610-6d9f-81be-9ffb-f1223ac340c8" class="">◇侥幸心理</h3><p id="1c826610-6d9f-8133-91d1-ff8b36234042" class="">这个因素其实比较好理解。</p><p id="1c826610-6d9f-81fe-bc71-f69247e45e4e" class="">比如在“恋人的例子”，两人都怀着某种侥幸心理，以为再相处一段时间，关系就能够改善。为啥说这是侥幸心理捏？因为如果10年都无法改善，那么今后发生改善的机会是很小的（“性格”这种东西，往往是年龄越大，可塑性越差）。</p><p id="1c826610-6d9f-81b6-8f75-e2f9a8619a06" class="">比如在“炒股的例子”，很多被高位套牢的股民，就是心怀侥幸，以为很快就能等来大盘反弹（可惜5-6年都没反弹）。</p><h3 id="1c826610-6d9f-81fa-8b4e-f24ea80bb3ae" class="">◇【损失憎恶】心理</h3><p id="1c826610-6d9f-8149-a413-cef1b272d281" class="">不过前面提到的“一致性原理”和“侥幸心理”都不是最关键滴。导致“沉没成本谬误”的【最关键因素】是“损失憎恶心理”。</p><p id="1c826610-6d9f-8187-a6dd-e2d2664cd0d4" class="">很多人光看字面上的意思，以为自己已经明白啥是“损失憎恶”。其实未必哦。如果你光从字面上理解，那么你的理解多半是肤浅的，【未】切中要害。因为这个效应包含了一些可能令你意想不到的东西。</p><p id="1c826610-6d9f-813d-8015-ff0d7c8be128" class="">考虑到这个效应比较重要，又是本博客第一次提及，俺需要多花点口水，所以在下面单独开几个章节来聊。</p><h2 id="1c826610-6d9f-813e-89ad-fa844e1bb166" class="">★先看几个小测试</h2><p id="1c826610-6d9f-8150-a2cf-d699df8dbb70" class="">为了让大伙儿更好地理解“损失厌恶”这个心理学效应，咱们来做几个小测试。</p><h3 id="1c826610-6d9f-8123-8cfb-e593354be5e8" class="">◇测试1</h3><p id="1c826610-6d9f-813c-9e0c-f8c3460c6f97" class="">如下两个方案让你选，你会选哪个？</p><blockquote id="1c826610-6d9f-81b3-b601-cdcdf5e69cff" class="">方案A（保守方案）：</blockquote><p id="1c826610-6d9f-81c8-a16c-c9c0dec0f1df" class="">经过心理学实验的测试，大部分人选“方案A”。</p><h3 id="1c826610-6d9f-815e-af13-c245fa329072" class="">◇测试2</h3><p id="1c826610-6d9f-8195-beb6-f8705257a69c" class="">如下两个方案让你选，你会选哪个？</p><blockquote id="1c826610-6d9f-81de-948a-c03044a264f6" class="">方案A（保守方案）：</blockquote><p id="1c826610-6d9f-81dc-abb4-d49a6d27e097" class="">经过心理学测试，大部分人选“方案B”。</p><h3 id="1c826610-6d9f-81b5-8c9d-f7b7e43e8fbf" class="">◇问题</h3><p id="1c826610-6d9f-81bb-a9e2-ff16b3c0ee7e" class="">如果你稍微懂点概率，应该明白：不论是第1个测试还是第2个测试，作为候选的两个方案，从概率学的角度讲是【等价】滴。</p><p id="1c826610-6d9f-818d-8a8e-c856531c5249" class="">那为啥大部分人在第1个测试中采用保守策略，但却在第2个测试中改用激进策略？心理学上的“损失憎恶情结”可以回答这个问题。</p><h2 id="1c826610-6d9f-8121-8a70-cd9619a8e3d2" class="">★什么是“损失憎恶/损失规避”情结？</h2><p id="1c826610-6d9f-8188-8b6e-e95d50039996" class="">“损失憎恶”也叫“损失厌恶”或“损失规避”，洋文叫做“loss aversion”，英文维基百科的页面在“<a href="https://en.wikipedia.org/wiki/Loss_aversion">这里</a>”。</p><p id="1c826610-6d9f-81c1-bd34-eb6043038cdd" class="">前面说过了，千万不要只从字面上理解这个概念。因为即使是傻子也明白，人都是偏好收益，讨厌损失的。如果只是包含这么肤浅的含义，它就不会成为心理学领域的重要概念了。</p><p id="1c826610-6d9f-81a8-bca5-e61a7ebc20de" class="">这个概念的关键点在于：<strong>损失产生的消极情绪【远远超过】收益产生的积极情绪</strong>。</p><p id="1c826610-6d9f-817f-baff-c6493e099b44" class="">在第一个测试中，你面临的2个选择都不涉及损失，这时候大多数人会选择保守策略——这个很容易解释。在之前的博文《<a href="https://program-think.blogspot.com/2013/04/why-write-blog.html">为啥俺要写这个博客——动机的自我分析</a>》中，提到了马斯洛的“需求层次理论”（洋文叫“hierarchy of needs”维基百科的词条在“<a href="https://zh.wikipedia.org/wiki/%E9%9C%80%E6%B1%82%E5%B1%82%E6%AC%A1%E7%90%86%E8%AE%BA">这里</a>”）。在该理论中，“安全性需求”仅次于“生理需求”。也就是说，在不威胁到生理需求的前提下，大部分人都优先考虑“安全性需求”。选择“保守策略”（不用冒风险）自然是符合“安全性需求”的。</p><p id="1c826610-6d9f-81af-85d7-ca739b01816f" class="">但是在第二个测试中，为啥大多数人反而选择“冒险策略”？因为第二个测试的“A方案”，其损失是必然发生的。面对这种【必然性】的损失，内心的“损失憎恶情结”就起作用啦。大多数人为了规避这种“必然性的损失”，宁可冒险赌一把。</p><h2 id="1c826610-6d9f-81ef-adb2-dfb79a1cb3e4" class="">★你知道“对损失的厌恶”有多强烈吗？</h2><p id="1c826610-6d9f-81f0-8f79-e7818ac4538a" class="">要了解“对损失的厌恶”强烈到何种程度，再来看第三个测试。</p><p id="1c826610-6d9f-81b3-8021-efc4262b3114" class="">如下两个方案让你选，你会选哪个？</p><blockquote id="1c826610-6d9f-81bb-82b9-d2a3f5512d11" class="">方案A：</blockquote><p id="1c826610-6d9f-81be-a40a-e5531fbb33fc" class="">稍微有点概率常识的同学，肯定意识到“方案B”（等价于损失1000元）明显比“方案A”【更差】。但是经过心理学测试，大部分被测试的人还是选“方案B”。</p><p id="1c826610-6d9f-8168-a1c6-e513ca499b6d" class="">那么，收益要达到多大的比例，才能抵消对损失的厌恶情绪捏？这个比例肯定是因人而异滴。通常越理性的人，这个比例越接近1；反之则越大。</p><p id="1c826610-6d9f-815a-8ccc-f5ab9f4d51c2" class="">俺曾经在一本心理学的书籍中看到说，“对损失的厌恶”最多的情况下会2倍于“对收益的满足”。也就是说，如果某人的“损失憎恶情结”特别强烈，那么潜在收益要达到损失的2倍，他/她才会觉得两者是相当的。对应到“测试3”，需要把“方案A”中“铁定损失的金额”调整为500，那么这些人才会觉得这两个方案是差不多的。</p><p id="1c826610-6d9f-8186-846a-e4856fb392de" class="">下面这张图片摘自《<a href="https://docs.google.com/document/d/1jJA46kpraXr252iQEWXmxGyQpUd4yju8qcHu7kR38z4/">无从选择——为何多即是少</a>》（注：<a href="https://github.com/programthink/books">俺的网盘</a>上有此书的中英文电子版）。</p><figure id="1c826610-6d9f-8165-9bef-d2964617d60e" class="image"><a href="https://lh4.googleusercontent.com/E8iB44q-Z2Kc7xmcYGzhqsUdVnvdEsBFn9VWs11T-j13Wp5dSq1G9EXLZD0V8RuBqx_3eU7F5tBxTT8wS8C8k0MyebuVb0f8JBRfFkpEHwpQDF6vVHKLrULEAl3ORwAe1QRT"><img src="https://lh4.googleusercontent.com/E8iB44q-Z2Kc7xmcYGzhqsUdVnvdEsBFn9VWs11T-j13Wp5dSq1G9EXLZD0V8RuBqx_3eU7F5tBxTT8wS8C8k0MyebuVb0f8JBRfFkpEHwpQDF6vVHKLrULEAl3ORwAe1QRT"/></a></figure><p id="1c826610-6d9f-815b-b62f-d6e89e3b02d0" class="">不见图 请翻墙</p><p id="1c826610-6d9f-81ee-bac1-f20f5cb89176" class="">在上图中，请注意在原点附近的曲线——第三象限比第一象限要陡峭，这个“陡峭”就体现出——“损失产生的消极情绪【超过】收益产生的积极情绪”。</p><p id="1c826610-6d9f-81c1-b848-ec638a550133" class="">某些比较善于思考的同学会问：为啥在远离原点的地方，曲线又变平缓了？这其实涉及到另一个心理学的话题——“边际效用递减”。为了避免篇幅过长（以照顾某些【阅读障碍】的同学），等俺以后有空的话，再单独写一篇博文聊“边际效用递减”这个话题。</p><h2 id="1c826610-6d9f-815e-a508-d1e9d3a71992" class="">★如何用“损失憎恶情结”进行误导、忽悠和洗脑？</h2><p id="1c826610-6d9f-81ca-aab0-c0ac517a819b" class="">“损失憎恶情结”已经在很多领域（尤其是营销领域）被广泛使用了。俺稍微举几个例子。</p><h3 id="1c826610-6d9f-8147-9572-f6fd986a5b79" class="">◇买车的例子</h3><p id="1c826610-6d9f-8158-bb7a-efb16d7cc31b" class="">如今买私家车的同学越来越多啦。买车的过程中有一个环节是选择你要的附属品（比如内置音箱、等等），每选择一种附属品都要支付额外的费用。国外的心理学家做过一个相关的测试，他们采用两种方式让买车的人选择附属品。</p><blockquote id="1c826610-6d9f-81e7-8289-db88694fde7f" class="">选择方式1：</blockquote><p id="1c826610-6d9f-8156-b983-da515fc280cc" class="">对于比较理性的人而言，这两种方式应该是等价的。但是实际测试下来，对于“方式1”，买家购买了【更多】的附属品。</p><p id="1c826610-6d9f-8140-a392-d621c888377c" class="">为啥会这样捏？“方式1”的这种做法，会让买家在潜意识里面感觉那些附属品已经是汽车的一部分，“划掉某个选项”更像是某种“损失”。对损失的厌恶会让买家去掉比较少的选项（相对于“方式2”而言）。</p><h3 id="1c826610-6d9f-81ea-8c08-fc9ebdd1d2a5" class="">◇售楼处的例子</h3><p id="1c826610-6d9f-81d1-986b-f49b7e0588a2" class="">很多售楼小姐都会用一个诈术——忽悠说该楼盘已经卖得差不多了，只剩下少数几套。某些买家被这样一忽悠，就会匆忙下订金。这个招数能奏效，原因之一依然是“损失憎恶情结”。在这个例子中，买家害怕的是【购买机会的损失】。</p><p id="1c826610-6d9f-8129-97b9-f35d91f990db" class="">如果你对周围的环境稍微留意一下，你会发现：很多行业的营销人员，都擅长制造“机会即将失去”的紧张气氛。而且这招屡试不爽。</p><h2 id="1c826610-6d9f-814d-87d3-e2ee014229c4" class="">★结尾</h2><p id="1c826610-6d9f-8100-b6cf-ec235a7efd31" class="">篇幅已经挺长了，今天先聊到这里。对这个话题有兴趣的同学，可以在博客留言中分享你的心得。比如在日常生活中，你是否也碰到过“沉没成本谬误”和“损失憎恶情结”。</p><p id="1c826610-6d9f-81ca-85e0-f089a85638ff" class="">另外，俺留一个思考题：你自己想想看，朝廷的官方宣传中，是否也采用了本文提及的“沉没成本谬误”和“损失憎恶情结”？</p><p id="1c826610-6d9f-8144-8292-c7a767a42598" class=""><strong>俺博客上，和本文相关的帖子（需翻墙）</strong>：</p><p id="1c826610-6d9f-81c4-a881-ec3286131a6e" class="">《<a href="https://program-think.blogspot.com/2010/07/silent-proof.html">思维的误区：忽视沉默的大多数</a>》</p><p id="1c826610-6d9f-8101-8894-ef643a1e8e83" class="">《<a href="https://program-think.blogspot.com/2018/12/Book-Review-Antifragile-Things-That-Gain-from-Disorder.html">读书笔记：＜反脆弱——从不确定性中获益＞</a>》</p><p id="1c826610-6d9f-811b-b118-c64336aa06b9" class="">《<a href="https://program-think.blogspot.com/2013/05/difference-between-fact-and-opinion.html">批判性思维扫盲：学会区分“事实”与“观点”</a>》</p><p id="1c826610-6d9f-8155-923c-c52abe6b1d3c" class="">《<a href="https://program-think.blogspot.com/2010/04/how-to-attribute-success-failure.html">“心智模式”系列：你是如何看待【成败】的？——兼谈【有效归因】</a>》</p><p id="1c826610-6d9f-8108-8231-e15af32f7845" class="">《<a href="https://program-think.blogspot.com/2012/01/stockdale-paradox.html">“心智模式”系列：如何面对【逆境】？——兼谈“斯托克代尔悖论”</a>》</p><p id="1c826610-6d9f-8129-a3fc-e0ed63efc841" class="">《<a href="https://program-think.blogspot.com/2014/05/fans-and-idolatry.html">不要成为“粉丝”——谈谈“偶像崇拜”的成因和危害</a>》</p><p id="1c826610-6d9f-81da-9f7b-e68da81952fb" class="">《<a href="https://program-think.blogspot.com/2009/05/halo-effect.html">光环效应引发的认知误区</a>》</p><p id="1c826610-6d9f-8114-9e9f-ebbb09a6946f" class=""><strong>版权声明</strong></p><p id="1c826610-6d9f-81e6-8cf8-dfaecead5ad9" class="">本博客所有的原创文章，作者皆保留版权。转载必须包含本声明，保持本文完整，并以超链接形式注明作者<a href="mailto:program.think@gmail.com">编程随想</a>和本文原始地址：</p><p id="1c826610-6d9f-815b-aa15-dcb5bf9c24e3" class=""><a href="https://program-think.blogspot.com/2014/06/sunk-cost-fallacy-and-loss-aversion.html">https://program-think.blogspot.com/2014/06/sunk-cost-fallacy-and-loss-aversion.html</a></p></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>科学是什么？——兼谈“非科学、伪科学、反科学”和一些常见谬误 @ 编程随想的博客</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+	margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(50, 48, 44, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-default_background {
+	color: rgba(50, 48, 44, 1);
+}
+.highlight-gray_background {
+	background: rgba(248, 248, 247, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(248, 243, 252, 1);
+}
+.highlight-pink_background {
+	background: rgba(252, 241, 246, 1);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-default_background {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray_background {
+	background: rgba(248, 248, 247, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(248, 243, 252, 1);
+}
+.block-color-pink_background {
+	background: rgba(252, 241, 246, 1);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-uiBlue { background-color: undefined; }
+.select-value-color-pink { background-color: rgba(225, 136, 179, 0.27); }
+.select-value-color-purple { background-color: rgba(168, 129, 197, 0.27); }
+.select-value-color-green { background-color: rgba(123, 183, 129, 0.27); }
+.select-value-color-gray { background-color: rgba(84, 72, 49, 0.15); }
+.select-value-color-transparentGray { background-color: undefined; }
+.select-value-color-translucentGray { background-color: undefined; }
+.select-value-color-orange { background-color: rgba(224, 124, 57, 0.27); }
+.select-value-color-brown { background-color: rgba(210, 162, 141, 0.35); }
+.select-value-color-red { background-color: rgba(244, 171, 159, 0.4); }
+.select-value-color-yellow { background-color: rgba(236, 191, 66, 0.39); }
+.select-value-color-blue { background-color: rgba(93, 165, 206, 0.27); }
+.select-value-color-pageGlass { background-color: undefined; }
+.select-value-color-washGlass { background-color: undefined; }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="1c826610-6d9f-8166-a1c6-c74cbeebca1a" class="page sans"><header><h1 class="page-title">科学是什么？——兼谈“非科学、伪科学、反科学”和一些常见谬误 @ 编程随想的博客</h1><p class="page-description"></p></header><div class="page-body"><p id="1c826610-6d9f-81cd-b3e4-f9088171f7ac" class=""><a href="https://program-think.blogspot.com/2015/10/What-is-Science.html">https://program-think.blogspot.com/2015/10/What-is-Science.html</a></p><p id="1c826610-6d9f-811d-90e4-da681c12db77" class="">
+</p><p id="1c826610-6d9f-818c-af1e-e72025d7f1ff" class=""><strong>文章目录</strong></p><p id="1c826610-6d9f-81df-b35f-df81193a3735" class=""><a href="https://program-think.blogspot.com/2015/10/What-is-Science.html?view=classic#head-1">★引子</a></p><p id="1c826610-6d9f-8129-9fd2-f8ded3aa92f9" class=""><a href="https://program-think.blogspot.com/2015/10/What-is-Science.html?view=classic#head-2">★写在前面的话</a></p><p id="1c826610-6d9f-8122-8c30-c48c2589aeb3" class=""><a href="https://program-think.blogspot.com/2015/10/What-is-Science.html?view=classic#head-3">★预备知识（这节很重要哦）</a></p><p id="1c826610-6d9f-81ce-b4b0-f17935c2fe22" class=""><a href="https://program-think.blogspot.com/2015/10/What-is-Science.html?view=classic#head-4">★啥是“科学哲学”？</a></p><p id="1c826610-6d9f-81ef-a72a-d328574bf919" class=""><a href="https://program-think.blogspot.com/2015/10/What-is-Science.html?view=classic#head-5">★“划界问题”及其流派</a></p><p id="1c826610-6d9f-810f-901f-e3ab7e84a52b" class=""><a href="https://program-think.blogspot.com/2015/10/What-is-Science.html?view=classic#head-6">★为啥只讲波普尔的“证伪主义”？</a></p><p id="1c826610-6d9f-8127-a532-f9e6ea6fff4b" class=""><a href="https://program-think.blogspot.com/2015/10/What-is-Science.html?view=classic#head-7">★如何定义“科学”？</a></p><p id="1c826610-6d9f-8148-a226-d555d911ca84" class=""><a href="https://program-think.blogspot.com/2015/10/What-is-Science.html?view=classic#head-8">★“证伪主义”的积极作用</a></p><p id="1c826610-6d9f-81d0-afc6-c533761fc578" class=""><a href="https://program-think.blogspot.com/2015/10/What-is-Science.html?view=classic#head-9">★啥是“非科学”？</a></p><p id="1c826610-6d9f-8152-8da9-feb4019abd53" class=""><a href="https://program-think.blogspot.com/2015/10/What-is-Science.html?view=classic#head-10">★啥是“伪科学”（pseudoscience）？</a></p><p id="1c826610-6d9f-8109-a689-ce0c27b60f7b" class=""><a href="https://program-think.blogspot.com/2015/10/What-is-Science.html?view=classic#head-11">★啥是“反科学”（anti-science）？</a></p><p id="1c826610-6d9f-818f-b64b-e92e3e3fa18d" class=""><a href="https://program-think.blogspot.com/2015/10/What-is-Science.html?view=classic#head-12">★列举常见谬误</a></p><p id="1c826610-6d9f-814e-ae44-de0e2e1a779a" class=""><a href="https://program-think.blogspot.com/2015/10/What-is-Science.html?view=classic#head-13">★对待“科学和科学理论”的正确态度</a></p><p id="1c826610-6d9f-8109-867d-edae37a13f1d" class=""><a href="https://program-think.blogspot.com/2015/10/What-is-Science.html?view=classic#head-14">★引申阅读</a></p><h2 id="1c826610-6d9f-81ee-a136-e96e6a76da7d" class="">★引子</h2><p id="1c826610-6d9f-8195-8966-cd09aa800691" class="">本来俺在前几个月的博文《<a href="https://program-think.blogspot.com/2015/06/The-Mythical-Theories-of-Success.html">成功学批判——简述其危害性及各种谬误</a>》中，已经承诺要聊一聊“何为科学”的话题。</p><p id="1c826610-6d9f-81e8-9b4e-ebdaab033176" class="">近期因为屠呦呦获得诺贝尔医学奖的事情，网上再度出现关于中医的口水战。俺发现很多参与口水战的人，没有搞清楚“科学的定义”。还有一些网友，虽然知道“可证伪性”，但是对“何为科学”的理解，依然存在很大偏差。</p><p id="1c826610-6d9f-8121-b397-e64d0b8c59f4" class="">所以，借着诺贝尔奖的机会，今天发一篇博文聊聊这个话题。</p><h2 id="1c826610-6d9f-8180-81d0-c6f3e2a51ac4" class="">★写在前面的话</h2><p id="1c826610-6d9f-81e7-8470-d33017a2c89f" class="">本文立足于“扫盲和科普”。由于本文【不是】学术论文，所以俺注重的是“通俗性”，而不是“严肃性、严密性”。</p><p id="1c826610-6d9f-8170-a8fd-e6e4d86d0845" class="">另，虽然本文重点聊的是“科学哲学”，但俺本人【不是】“哲学”领域的科班出身。本文难免有错漏之处，欢迎该领域的专业人士指正。</p><h2 id="1c826610-6d9f-81c0-a0dc-fa2fce6446a2" class="">★预备知识（这节很重要哦）</h2><p id="1c826610-6d9f-8169-abb5-edab895c5999" class="">首先要介绍预备知识。<strong>只有当你清楚这些预备知识，后续的内容才能看懂。</strong></p><p id="1c826610-6d9f-816f-b16d-ee469456337a" class="">如果你已经知道这些，请直接略过本章节；反之，如果你不了解这些，请仔细看完本章节。</p><h3 id="1c826610-6d9f-8123-8e58-d08f8efc864e" class="">◇普遍概念 VS 个别概念</h3><p id="1c826610-6d9f-818c-8957-da9d7a65e6a8" class="">关于这两个词汇，完备且严密的定义，会比较冗长枯燥。所以俺通过“举例子”的方式，来通俗地说明这两个词汇。</p><p id="1c826610-6d9f-8148-a523-fcc6ad7498da" class="">比如说：“国家”属于“普遍概念”；“中国”属于“个别概念”。</p><p id="1c826610-6d9f-8105-abbe-fa42abe7a8ad" class="">比如说：“独裁者”属于“普遍概念”；“习近平”属于“个别概念”。</p><p id="1c826610-6d9f-81ee-a368-c59a7c84936d" class="">上面的例子好理解，再来说一个稍微容易混淆的。</p><p id="1c826610-6d9f-8184-8200-dfef6498cf3e" class="">思考一下“这一届政治局的成员”属于哪种？——是“个别概念”。</p><p id="1c826610-6d9f-818e-9827-f593fe89ee6f" class="">俺个人是这样理解这两种概念的区别：“普遍概念”是无法逐一枚举其包含的实体；而“个别概念”要么是单一实体，要么其包含的实体是可以逐一枚举的。</p><p id="1c826610-6d9f-81ce-ad5d-f064b241da83" class="">有人可能会反驳说：可以逐一列举出历史上的“独裁者”，为啥还把“独裁者”当成“普遍概念”。</p><p id="1c826610-6d9f-8120-909e-eef9f86fa2df" class="">因为“独裁者”一词，既可以用来表示过去和现在的独裁者，也可以表示未来的独裁者。而未来的独裁者尚未出现，你不可能进行逐一枚举。</p><h3 id="1c826610-6d9f-81dc-9807-d71af91ad83c" class="">◇全称陈述 ＆ 单称陈述 ＆ 存在陈述</h3><p id="1c826610-6d9f-813a-94c9-e66fd3b520e3" class="">这三个概念，还有另一种说法叫做：全称命题、单称命题、存在命题。</p><p id="1c826610-6d9f-81d8-b4c8-f5ff852f450d" class="">同样用“举例子”的方式，来辅助大伙儿理解。</p><p id="1c826610-6d9f-81ba-96c5-e23ace2d2ed8" class="">全称陈述——所有人（任何人）的身高都小于3米</p><p id="1c826610-6d9f-81b3-9cac-e83d0ddf32a2" class="">单称陈述——姚明和郭敬明的身高都小于3米</p><p id="1c826610-6d9f-81fa-88e8-cb2aa11fd099" class="">存在陈述——至少存在一个人，其身高小于3米</p><p id="1c826610-6d9f-8114-a926-cdc1e9d1c5c8" class="">请注意，“全称陈述”对应的主体（主语）就是前面提及的“普遍概念”；“单称陈述”对应的主体就是前面提及的“个别概念”。</p><p id="1c826610-6d9f-8189-9dcb-da9ea9eb0916" class="">为了巩固你对“普遍概念”的印象，再来做一个练习：</p><p id="1c826610-6d9f-817f-b436-cb7d04e0fdd5" class="">“这一届政治局的成员，身高都小于3米”——这句话是哪一种陈述？</p><p id="1c826610-6d9f-8151-8dd6-ebcca04c2eea" class="">如果你【误以为】这句话是“全称陈述”，请你回过头重新复习前一个小节（普遍概念 VS 个别概念）。</p><h3 id="1c826610-6d9f-81c0-9fdf-ca779df9cb37" class="">◇客观陈述 VS 主观陈述</h3><p id="1c826610-6d9f-814f-ab80-d2d9b22ddced" class="">“客观/主观”这两个概念是哲学领域的常见词汇，而且对这俩的定义，可说是五花八门。</p><p id="1c826610-6d9f-81a6-9598-fadd3a915ba1" class="">由于本文聊的是“科学哲学”，所以这里只给出波普尔用于科学哲学的定义（这个定义是比较简洁，而且【不】牵扯到“形而上学”）。</p><p id="1c826610-6d9f-81df-a997-e8d31505d999" class="">波普尔指出：陈述句（命题）的客观性在于——它们能通过不同的主体间进行相互检验。（引用出处：《<a href="https://docs.google.com/document/d/1WRVGU5qcrhhjDMbgnpYiiSiomRmgPm--ZHMYmIAhVeo/">科学发现的逻辑</a>》第1章）</p><p id="1c826610-6d9f-814f-bd18-f67828a06444" class="">因此，无法做到上述这点的，就是主观的陈述。</p><h3 id="1c826610-6d9f-811a-b6af-f8261767cecd" class="">◇经验 VS 理性</h3><p id="1c826610-6d9f-81f5-9604-c04fa904873a" class=""><strong>本文所说的“经验”是“</strong><strong><a href="https://zh.wikipedia.org/wiki/%E7%BB%8F%E9%AA%8C%E4%B8%BB%E4%B9%89">经验主义</a></strong><strong>”相关的；本文所说的“理性”是“</strong><strong><a href="https://zh.wikipedia.org/wiki/%E7%90%86%E6%80%A7%E4%B8%BB%E4%B9%89">理性主义</a></strong><strong>”相关的。【不要】用日常的含义来理解</strong>。</p><p id="1c826610-6d9f-8101-90c8-ed0ecc514d5a" class="">哲学有一个很重要的领域叫做“认识论”（有时也称为“知识论”）。“经验主义”和“理性主义”是该领域的两大流派。</p><p id="1c826610-6d9f-81c8-9e2e-d5e248793698" class="">“经验主义”所说的“经验”，通俗地说就是：用人的感官通过外界进行认识。“理性主义”所说的“理性”是跟前面的“经验”相对滴——也就是说，不依赖于人的感官，单靠大脑思考而获得知识。</p><p id="1c826610-6d9f-811c-aa6f-f09d67396985" class="">举例：</p><p id="1c826610-6d9f-8168-b059-f27b88409d00" class="">对“数论”的研究，属于“纯理性”的范畴——不需要依赖外部客观世界，也可以思考数论的问题。</p><p id="1c826610-6d9f-8128-8d6d-dc28da0ab3f7" class="">相对的，物理学和化学的研究，需要依赖“经验”——要做实验，研究外部客观世界，才能获取相关知识。</p><h3 id="1c826610-6d9f-8139-a070-c1feb5eb66be" class="">◇可验证性、可重复性、可操作性</h3><p id="1c826610-6d9f-8148-916f-f48661431de3" class="">“可验证性”指的是某个命题<strong>可以通过【经验】的方式</strong>进行检验。（何为“经验”，参见前一个小节）</p><p id="1c826610-6d9f-8120-8893-f79a28b937ab" class="">为了便于大伙儿理解，俺来举一个“不可验证”的例子——隐身精灵。</p><p id="1c826610-6d9f-8164-9f08-da04c9b2fb30" class="">假设某人声称地球上存在某种“隐身精灵”。这种精灵非常牛逼，你用任何技术手段都无法探知其存在。</p><p id="1c826610-6d9f-816b-b9c4-d7f17c488ae5" class="">那么，这种所谓的“不可知的精灵”，就是不可验证的。（下面俺会聊到—不可验证的命题，在科学上是没有意义的）</p><p id="1c826610-6d9f-8182-af1a-d1058c5ac43d" class="">“可重复性”指的是，对某个命题的验证，必须是“对多人可重复的”。</p><p id="1c826610-6d9f-81c6-ab3d-ca055192b379" class="">说个反面教材：</p><p id="1c826610-6d9f-8179-952b-d008e3f9f972" class="">去年（2014）科学界出了一个重大丑闻（STAP细胞），关注科技动态的同学应该都听说了。日本理化所的研究员小保方晴子号称搞定了“人工多能干细胞”（轰动了干细胞研究领域）。<strong>但是她论文中的实验方法，无法被任何一个生物学同行重现。</strong>后来日本理化所进行内部调查，认定她的论文造假。之后小保方的指导教授笹井芳树上吊自杀。</p><p id="1c826610-6d9f-810e-aa11-eb1e2c0e835d" class="">在上述案例中，小保方的学术成果被质疑，关键原因在于：其他同行无法复现其实验结果——在科研领域中，这是非常致命的。</p><p id="1c826610-6d9f-8187-96d0-f4515d381003" class="">“可操作性”指的是对命题的验证要能够通过切实可行的、有限的技术步骤来完成。</p><p id="1c826610-6d9f-8133-89db-f474c206e74b" class="">举例：</p><p id="1c826610-6d9f-81a9-943e-e1296d001da5" class="">如何判断某个软件是否具有智能？</p><p id="1c826610-6d9f-817f-a694-cdb6aa2b4585" class="">普通人可能会说：只需要让这个软件跟人比一下智力，看它是否跟人一样聪明。</p><p id="1c826610-6d9f-81cf-9a9b-f6ecebbe80fe" class="">但是，上述这种说法，【不具备】可操作性——首先，“聪明程度”是很难量化的；其次，如何进行“比智力”，也很难化解为可操作的步骤。</p><p id="1c826610-6d9f-81d8-ab5c-d65bac9d07ec" class="">再来看计算机领域的绝对大牛图灵，他就给出了一个【可操作的】判定过程——叫做“图灵测试”（具体介绍参见“<a href="https://zh.wikipedia.org/wiki/%E5%9B%BE%E7%81%B5%E6%B5%8B%E8%AF%95">维基词条</a>”）</p><p id="1c826610-6d9f-8161-ba68-dbed319bb281" class="">“图灵测试”的优点就在于其“可操作性”。</p><h3 id="1c826610-6d9f-81e6-ade7-cf0c4207339d" class="">◇证伪 VS 证实</h3><p id="1c826610-6d9f-81b3-bf54-c91d8bfcfda4" class="">通过检验，判定某个命题为“真”，称之为“证实”；反之，判定该命题为假，称之为“证伪”。</p><h3 id="1c826610-6d9f-816a-a601-dc2d39f8fbaa" class="">◇演绎法 VS 归纳法</h3><p id="1c826610-6d9f-8159-9e82-cbb56cb90f05" class="">关于这两个词汇，完备且严密的定义，会比较冗长枯燥。所以俺通过“举例子”的方式，来通俗地说明这两个词汇。</p><p id="1c826610-6d9f-81fb-9865-ebd2e336b21a" class="">“演绎法”在某些学术文章中也被称为“分析的”。通俗的说法是“推理”。下面是一个演绎推理的三段论：</p><p id="1c826610-6d9f-8143-88d2-d99e95f39d14" class="">大前提：人都是会死的。</p><p id="1c826610-6d9f-816b-8b0e-df8394c2cbea" class="">小前提：哲学家都是人。</p><p id="1c826610-6d9f-8130-96c6-e96985e85530" class="">结论：哲学家都是会死的。</p><p id="1c826610-6d9f-81f6-a388-ca326e447799" class="">“归纳法”在某些学术文章中也被称为“综合的”。通俗的说法是“总结”。下面是举例：</p><p id="1c826610-6d9f-81ad-b77b-d9346eccf8e5" class="">因为每天都看到太阳从东边升起，于是就总结出（归纳出）：太阳永远都会从东边升起。</p><p id="1c826610-6d9f-81c0-ac2e-e4ce532db01b" class="">古代的欧洲人只看到过白天鹅，于是就总结出（归纳出）：天鹅全都是白色的。</p><p id="1c826610-6d9f-816c-aea7-d23dbcd97f02" class=""><strong>“演绎法”和“归纳法”具有本质上的差异。</strong></p><p id="1c826610-6d9f-81f7-9d68-f4c23b6245a7" class="">“演绎法”是严密的——如果“大前提和小前提”都成立，则结论【必定】成立。</p><p id="1c826610-6d9f-811b-b5a9-cc4f9640025f" class="">反之，“归纳法”是【不严密】的——因为归纳法企图通过“有限次”观测来得到一个普适的结论。</p><p id="1c826610-6d9f-8152-9950-c3d3548b1b6c" class="">用逻辑学的术语：“归纳法”企图通过 N 次“单称陈述”，推导出一个“全称陈述”。这必定是不严密的（始终存在例外的可能性）</p><h2 id="1c826610-6d9f-8134-be58-cc585062c666" class="">★啥是“科学哲学”？</h2><p id="1c826610-6d9f-8159-9299-c368fa302454" class="">“科学哲学”顾名思义，是哲学的一个分支，用来研究“科学”。</p><p id="1c826610-6d9f-8143-abc6-e9631446f8ef" class="">它研究的内容包括：科学的定义（划界问题）、科学研究的方法论、科学知识的结构、科学的目的性......</p><h2 id="1c826610-6d9f-8133-8e2d-cfdf262af997" class="">★“划界问题”及其流派</h2><p id="1c826610-6d9f-816c-bc40-cea07d54f83e" class="">关于“科学的定义”也称为“划界问题”。意思是说：划一条边界，把“科学”与“非科学”区分开。</p><p id="1c826610-6d9f-8187-84cc-ca61e5de94b2" class="">（请注意，此处说的是“非科学”，而不是“伪科学”。“非科学”是“伪科学”的超集。关于这两个概念，后面还会聊到）</p><p id="1c826610-6d9f-817e-add6-d8966431f5f7" class="">为了解决“划界问题”，历史上出现多个不同的流派。下面大概描述一下：</p><h3 id="1c826610-6d9f-81c6-adcd-ffe52cd00dcb" class="">◇逻辑实证主义 / 逻辑经验主义</h3><p id="1c826610-6d9f-814d-b046-cd17d9db90ec" class="">这玩意儿洋文叫做“logical positivism”或“logical empiricism”。该流派统治了“科学哲学”很长时间。其代表人物包括“马赫、<a href="https://zh.wikipedia.org/wiki/%E7%BB%B4%E4%B9%9F%E7%BA%B3%E5%AD%A6%E6%B4%BE">维也纳学派</a>”等。</p><p id="1c826610-6d9f-81c2-b66d-f6548fb1b785" class="">关于该流派的理论，简而言之就是：以【可证实性】作为划界标准。</p><p id="1c826610-6d9f-811c-9c46-c6ac43a92218" class="">上述俺只用一句话“简而言之”。但实际上，该流派的理论有一大坨。比如对“分析命题”和“综合命题”的区别对待......诸如此类的。因为该流派不是本文的重点，所以俺就一笔带过。</p><h3 id="1c826610-6d9f-8116-8285-db9f7c5a0a05" class="">◇证伪主义 / 批判理性主义</h3><p id="1c826610-6d9f-81a5-aff8-c7a046b70def" class="">这玩意儿洋文叫做“falsificationism”或“critical rationalism”。为了避免歧义，本文后续部分一律采用“证伪主义”这个称呼。</p><p id="1c826610-6d9f-8118-bef8-c4eaac68d01f" class="">该流派由大名鼎鼎的<a href="https://zh.wikipedia.org/wiki/%E5%8D%A1%E5%B0%94%C2%B7%E6%B3%A2%E6%99%AE%E5%B0%94">卡尔·波普尔</a>开创。关于这位大牛，俺在<a href="https://program-think.blogspot.com/2014/09/oversimplification.html">之前的博文</a>有多次提及（当时主要是聊：他对马克思理论体系的批判）。</p><p id="1c826610-6d9f-8171-b1ff-c72e6d9da48f" class="">关于该流派，本文后续会详述。这里先大致说一下——其核心观念是：以【可证伪性】作为划界标准。</p><p id="1c826610-6d9f-81b5-9f21-dfc5e6f34b5b" class="">（提醒大伙儿注意：该理论同样有一大坨，“可证伪性”只是最关键的要素，但【不是】唯一要素）</p><p id="1c826610-6d9f-81c6-9706-c7342dbe6167" class="">波普尔不但用“证伪主义”创立了一个新的划界理论，而且他还指出“逻辑实证主义”的致命缺陷。从那之后，“逻辑实证主义”的理论体系逐渐地破产。如今提及“逻辑实证主义”，大都是拿来当反面教材进行批判。</p><h3 id="1c826610-6d9f-814f-b80d-e065a333c29e" class="">◇“逻辑实证主义”的【根本缺陷】</h3><p id="1c826610-6d9f-81e4-8286-d5066a16f4fe" class="">“逻辑实证主义”的根本缺陷是啥捏？这个问题如果详述的话，又是一篇长博文。因为本文已经很长了。为了照顾某些阅读障碍的读者，俺长话短说——</p><p id="1c826610-6d9f-8118-91da-fbc2ed7b82a3" class="">假设某理论包含如下命题——天鹅都是白色的（这是一个全称命题）。“逻辑实证主义”强调的是【证实】，它可以对这个命题做很多很多的验证（观察许许多多的天鹅），发现果然都是白色滴。但无论你观察的次数有多么大，你【永远无法】100% 担保这个命题为真。因为你不可能穷举所有的天鹅。哪怕你把当今世上所有活着的天鹅都检验一遍，还是不够。因为出生在【未来】的天鹅，你无法检验。</p><p id="1c826610-6d9f-81b5-a354-ecd5f912b99c" class="">这就是“逻辑实证主义”的根本性缺陷——永远无法证实“全称命题”。</p><h3 id="1c826610-6d9f-812e-9854-c89bfc3fc07c" class="">◇波普尔之后的“划界理论”</h3><p id="1c826610-6d9f-81ef-9897-f2fc6c5dd450" class="">波普尔之后，又有若干哲学家提出其它的划界理论。简要列举其中几个：</p><p id="1c826610-6d9f-81f7-9f6c-f969a4c70000" class="">托马斯·库恩提出了基于“释疑”的划界标准。</p><p id="1c826610-6d9f-81f1-ae7f-d3be5ad3ecd8" class="">夏佩尔提出了基于“合理性”的划界标准。</p><p id="1c826610-6d9f-8193-82d0-db68b3976b3c" class="">萨伽德提出了“多元划界标准”，包括了“思维方式、经验验证、理论简单性、进步性”等判定标准。</p><p id="1c826610-6d9f-81bb-922c-d994e4d922e5" class="">这些人里面，以库恩的影响力最大，其代表作是《科学革命的结构》。他与波普尔生活的年代大致重叠，两人都批评对方的划界标准有缺陷。</p><h3 id="1c826610-6d9f-811f-8e96-fe98c8213ef6" class="">◇对“划界问题”的消解</h3><p id="1c826610-6d9f-812f-b6d8-e6c5003d3bc7" class="">在波普尔之后，还有一批哲学家改换思路来解决划界问题——他们没有提出新的划界理论，而是致力于论证“划界问题”无意义（或者论证它是一个“伪问题”）。</p><p id="1c826610-6d9f-8178-8f88-f2c1f6285b02" class="">这里面的代表人物包括“威拉德·蒯因、费亚阿本德、劳丹”等人。</p><h2 id="1c826610-6d9f-81e6-ba46-fd27ad4ada0f" class="">★为啥只讲波普尔的“证伪主义”？</h2><p id="1c826610-6d9f-81a4-9cda-cef7bfab1ea3" class="">本文俺会以波普尔开创的“证伪主义”来定义：何为科学？</p><p id="1c826610-6d9f-81b6-bbc3-c2cb8b55ad5f" class="">由于前一章节已经介绍了“划界理论”的几个不同流派（“证伪主义”只是其中一个流派）。所以，肯定有读者会问：为啥只介绍这个流派。</p><p id="1c826610-6d9f-818c-9d08-e8ce84dc34d3" class="">为了增加本文的说服力，在聊“证伪主义”之前，先说说“证伪主义”相对于其它流派的优势。</p><h3 id="1c826610-6d9f-81d5-af84-ef23b4fc0608" class="">◇举例1——理论物理大牛对波普尔的认可</h3><p id="1c826610-6d9f-811d-9d00-e01b43f297f4" class="">波普尔开创了“证伪主义”之后，不但在哲学界造成轰动，甚至在理论物理领域也造成很大反响。</p><p id="1c826610-6d9f-81e9-9ec6-d612708bf076" class="">要知道，理论物理学界的风气，通常是看不起其它学科的，<strong>尤其看不起哲学家</strong>。下面插几段理论物理学家的八卦。</p><p id="1c826610-6d9f-8143-be55-dbae037dc283" class="">那个聪明绝顶的费曼（Feynman，诺贝尔奖得主，搞出了“量子的路径积分表述”与“费曼图”）有次给朋友写信，其中提到：最近一切都好，就是我儿子让我担心——他居然想当个他妈的哲学家。</p><p id="1c826610-6d9f-810d-a3f4-f9bb212f3f92" class="">看过美剧《生活大爆炸》的同学，还可以回顾一下男主角谢耳朵（Sheldon Cooper）的形象。据说谢耳朵的原型是长期执教加州理工的盖尔曼（Murray Gell-Mann，诺贝尔奖得主，创立了“夸克理论”）。这个盖尔曼，不但鄙视哲学，而且鄙视其它自然科学以及实验物理学。</p><p id="1c826610-6d9f-81fb-88e4-fc7bc7d094a4" class="">甚至连口碑极好的玻尔（Bohr，“哥本哈根学派”精神领袖）也曾经发过一句牢骚：我发现了，哲学家们都是在胡扯！。</p><p id="1c826610-6d9f-81e6-89db-ef9bfa334d13" class="">因为这种传统，你很难找到某个哲学家，能被同时代的多个理论物理大牛认可。而波普尔恰恰做到了这一点。</p><p id="1c826610-6d9f-81db-b383-fcd89a3d9ff8" class="">有一年，波普尔到美国普林斯顿大学演讲，包括“爱因斯坦、玻尔、薛定谔”在内的多位理论物理学家，亲自到场听他讲演。（请注意：俺列的这3位，都是大师级的；而且他们不是光去捧场的，是真的去听讲的）。</p><p id="1c826610-6d9f-8171-8984-fbeda030681a" class="">理论物理学家邦迪（Hermann Bondi，创立“稳态理论”）甚至说过这么一段话：科学中，方法是最重要的；而科学方法中，波普尔的科学方法是最重要的。</p><h3 id="1c826610-6d9f-8139-9d4e-f60426982ae3" class="">◇举例2——当前的心理学权威教材依然使用“证伪主义”</h3><p id="1c826610-6d9f-81cb-a327-c7326dd65a84" class=""><a href="https://github.com/programthink/books">俺的网盘上</a>曾经分享过一本《<a href="https://docs.google.com/document/d/16-GOAoIar2zpwGwsWq0vl_0wbsnehoWYgz2srYGgzzY/">对“伪心理学”说不</a>》（洋文书名是：How to Think Straight about Psychology）。</p><p id="1c826610-6d9f-81a8-9c43-c114111af349" class="">其作者<a href="https://en.wikipedia.org/wiki/Keith_Stanovich">基思·斯坦诺维奇</a>是权威的心理学家，发了200多篇论文，而且论文引用率很高。此书被全球几百所高校（包括一流高校）用作教材。</p><p id="1c826610-6d9f-810a-8a50-e8697f091f28" class="">在这本权威心理学教材中，用大量的篇幅讲述“证伪主义”。</p><h2 id="1c826610-6d9f-81c6-ba67-fa214b2ac8a0" class="">★如何定义“科学”？</h2><p id="1c826610-6d9f-81df-bb74-e10dafc54977" class="">下面，俺用逐层递进的方式，来描述“科学理论”应该符合的条件。当你搞清楚啥是“科学理论”，自然就明白啥是“科学”。</p><h3 id="1c826610-6d9f-8191-ba38-cb182ff71a5e" class="">◇首先，必须是个【理论】</h3><p id="1c826610-6d9f-81fb-84f2-ef0cc31da689" class="">所谓的“理论”，你起码得是【相互关联的】命题的集合。</p><p id="1c826610-6d9f-815f-b822-dedc0e6bc1af" class="">举个反例：</p><p id="1c826610-6d9f-8134-b109-d4c9bedf3688" class="">像“诗歌、小说”是不能称之为“理论”的，当然也就不能称之为“科学理论”。</p><h3 id="1c826610-6d9f-811b-90f9-d1e844a74ab3" class="">◇理论中的命题必须是【客观陈述】</h3><p id="1c826610-6d9f-8101-aa09-d370f9d306c5" class="">科学理论中的命题/陈述，必须是“【客观】陈述”。</p><p id="1c826610-6d9f-8152-a9de-c30fc106b1bb" class="">（对“客观”一词，采用波普尔的定义，详见前面的“预备知识”章节）</p><p id="1c826610-6d9f-817b-a3fa-c7399e3d01b2" class="">如果你仔细阅读某些宗教理论，其命题/陈述不满足这条标准。</p><h3 id="1c826610-6d9f-8159-bf55-c48bea2c3db0" class="">◇理论中的命题必须是【全称陈述】</h3><p id="1c826610-6d9f-81c2-8bcd-ceeb6ff793b1" class="">科学理论中的命题/陈述，必须是“【全称】陈述”。因为“全称陈述”才有价值，“单称陈述”和“存在陈述”，几乎没啥价值。</p><p id="1c826610-6d9f-8148-92dd-e4cc60b92ab8" class="">另外，数学理论中虽然会有“存在陈述”，但这些“存在陈述”都是基于【纯理性】来验证滴。后续的小节聊“可验证性”，俺会提到：科学理论是基于【经验】来验证滴——这是科学理论与数学理论的主要差异之一。</p><p id="1c826610-6d9f-8119-8ff6-c712bb400dd3" class="">下面以牛顿第二定律举例（俺博客的读者至少都读过初中物理吧，应该知道这玩意儿）</p><p id="1c826610-6d9f-8165-ac23-e2eda44648a5" class="">任何物体都符合 <code>F = ma</code>（这是全称陈述）</p><p id="1c826610-6d9f-812d-be9b-c3acb1b32020" class="">编程随想这个人符合 <code>F = ma</code>（这是单称陈述）</p><p id="1c826610-6d9f-81ed-af73-c97552585f24" class="">至少存在一个物体符合 <code>F = ma</code>（这是存在陈述）</p><p id="1c826610-6d9f-81f9-9991-ed3f9153d063" class="">很显然，第一句话最有价值。因为该陈述指明的是【任何物体】，不管这个物体是大是小、是天然还是人造、是固态还是液态还是气态......总之都符合 <code>F = ma</code></p><p id="1c826610-6d9f-8189-b38a-dc0b8ba04f8c" class="">因此，牛顿定律可以被广泛运用到多个不同领域（比如“机械工程、空气动力学”等）。</p><p id="1c826610-6d9f-8193-9244-f2ec21b6da0e" class="">反之，后面两个命题，就没啥价值——包含的信息量（知识量）太少。</p><h3 id="1c826610-6d9f-814a-ac71-db6f54a550fb" class="">◇基于【演绎法】建立理论体系</h3><p id="1c826610-6d9f-816f-90df-f23ece85e74d" class="">“科学理论”必须是基于“演绎法”来建立整个理论体系的。</p><p id="1c826610-6d9f-81fc-9cab-f4660e32569d" class="">说得更具体一点：</p><p id="1c826610-6d9f-81b8-a7f3-e965f7859e9b" class="">要建立科学理论，首先提出若干前提，这些前提是不言自明滴（有点类似数学公理）；然后基于这些前提，进行演绎推理。得出各种各样的推论。</p><p id="1c826610-6d9f-810f-9d9f-d7e69271eb35" class="">举例：</p><p id="1c826610-6d9f-81c7-974f-fbe9eba2e55c" class="">爱因斯坦建立“狭义相对论”主要是基于两个原理：“狭义相对性原理”和“光速不变原理”。然后由这俩推导出理论的其它内容（比如“尺缩效应”和“钟慢效应”）</p><h3 id="1c826610-6d9f-8101-880f-db55a404d1c4" class="">◇科学理论中的命题必须是【可验证】的</h3><p id="1c826610-6d9f-8150-94f3-d4408fd3a353" class="">关于“可验证”，俺强调几点：</p><p id="1c826610-6d9f-81a2-92c0-c1a14f66d3f9" class="">1. 此处所说的验证，必须是“可重复”验证。</p><p id="1c826610-6d9f-819b-a4d6-d7e74bcc45f4" class="">2. 此处所说的验证，是基于“经验”的验证，而【不是】基于“理性”的验证。（关于“经验、理性”二词，不要望文生义，请仔细看“预备知识”）</p><h3 id="1c826610-6d9f-8162-8fb8-e606fe7b70fe" class="">◇科学理论中的命题必须是【可证伪】的</h3><p id="1c826610-6d9f-813e-93a7-d22f8abafd92" class="">前面已经说了——“不可验证”的理论，不能算科学理论。下面来讨论“不可证伪”。</p><p id="1c826610-6d9f-8106-b528-e54f493aea4b" class="">“不可证伪”包括如下几种：</p><p id="1c826610-6d9f-81c5-b215-fa43b3e217db" class=""><strong>1. 因为“不可验证”，所以无法证伪</strong></p><p id="1c826610-6d9f-81c8-af09-cfab924f09b3" class="">（关于这种，参见前一个小节）</p><p id="1c826610-6d9f-81d1-82b2-c69a731d3475" class=""><strong>2. 恒真命题、重言命题、套套逻辑</strong></p><p id="1c826610-6d9f-81a4-a00f-dd1a1c41a10e" class="">为了通俗化，俺举几个例子，都是【永远为真】的命题：</p><p id="1c826610-6d9f-81f9-a52e-fe92b8fc58be" class="">菱形有4条边（基于“定义”的恒真句）</p><p id="1c826610-6d9f-81f3-af13-d8e6495769f5" class="">直角三角形的三条边，要么是直角边，要么是斜边（基于“定义及枚举”的恒真句）</p><p id="1c826610-6d9f-81cc-8878-f6a68e0dc30f" class="">任何人的身高，要么比我高，要么不比我高（基于“排中律”的恒真句）</p><p id="1c826610-6d9f-8114-b18c-c7fb55d1529d" class=""><strong>3. 存在命题/存在陈述</strong></p><p id="1c826610-6d9f-8177-b18b-cd90f35e655c" class="">前面的“预备知识”中已经介绍了何为“存在命题”。</p><p id="1c826610-6d9f-816a-ae31-c8034da52b4d" class="">“存在命题”是不可能证伪的。</p><h3 id="1c826610-6d9f-8124-8851-fc9e10f6aec7" class="">◇命题的【可证伪程度】越高，则理论越好</h3><p id="1c826610-6d9f-81df-add2-ead4737445ed" class="">聊完“可证伪性”，再来聊聊“可证伪”的程度。</p><p id="1c826610-6d9f-8101-bc46-d8ad9415b547" class="">先看如下两个命题：</p><p id="1c826610-6d9f-8150-aa0c-c5a02cd9abdb" class="">命题1：所有三角形的内角和必定等于180度</p><p id="1c826610-6d9f-8164-ada1-d686b798a2cd" class="">命题2：所有三角形的内角和必定大于90度</p><p id="1c826610-6d9f-81a4-bcd1-c7d8bc9855af" class="">假设有人找到一个三角形，其内角和是150度——那么就可以推翻第1个命题，但却无法推翻第2个命题。</p><p id="1c826610-6d9f-811d-b01f-ff0d2747c89f" class="">因此，咱们就说：这两个命题中，第1个命题更容易被推翻。用行话就是：第1个命题可证伪的程度更高。</p><p id="1c826610-6d9f-8138-9f37-cebe23257aba" class="">如果你稍微聪明一些，自然就明白：某理论可证伪的程度越高，说明该理论给出的预测越丰富和详细；因此，该理论包含的信息量（知识量）也就越大。用通俗的话来说就是：越容易被推翻的命题，知识量越大。</p><p id="1c826610-6d9f-81ad-bb54-c1e10c980a40" class="">所以，<strong>那些看起来好像很容易被推翻，但是又迟迟没有被推翻的理论，那才是真正的牛B理论。</strong>（广义相对论和量子力学，就属于此类）</p><h3 id="1c826610-6d9f-8180-bc4c-f101eed218bd" class="">◇只允许某种类型的【特设性修正】</h3><p id="1c826610-6d9f-815b-b9b8-f4d72df5600f" class="">早在波普尔写《<a href="https://docs.google.com/document/d/1WRVGU5qcrhhjDMbgnpYiiSiomRmgPm--ZHMYmIAhVeo/">科学发现的逻辑</a>》的时候，他就料到有些人会采用“特设性修正”来规避理论的反例，因此也就可以让理论逃避“被证伪的命运”。</p><p id="1c826610-6d9f-8183-a563-f874c2394505" class="">上述这句话比较抽象，俺第 N 次举例：</p><blockquote id="1c826610-6d9f-81f7-8fae-fb23b1e2c196" class="">比如俺给出一个全称陈述：“所有的人，身高都小于3米”</blockquote><p id="1c826610-6d9f-8159-93d3-ca135822c049" class="">在上述这个例子中，俺玩的把戏，波普尔称之为“利用特设性修正逃避证伪”。</p><p id="1c826610-6d9f-8129-af3c-d9ce54f56576" class="">为了防范这种下三滥钻空子的行为，波普尔在他的“证伪主义”理论中加了一个约束条件，大意如下：</p><p id="1c826610-6d9f-8130-9ead-f7dee788eba9" class=""><strong>对理论进行“特设性修正”应该要【提高】理论的“可证伪程度”。只有这样，才算是科学理论；否则的话，就不是科学理论。</strong></p><p id="1c826610-6d9f-8165-ada9-d06d715f005f" class="">前面说了：“可证伪程度”越高，则理论的价值越高。正派的科学家，应该不断完善理论，于是理论的“可证伪程度”会上升（也就是越来越容易被推翻）；而如果通过“特设性修正”让理论的“可证伪程度”越来越低，那就相当于耍无赖了，同时理论也变得越来越没价值。</p><h3 id="1c826610-6d9f-8101-8240-cc2aabaabb91" class="">◇上述每一个要求，单独只构成“必要条件”</h3><p id="1c826610-6d9f-81fb-bc59-d32ee98c7dd0" class="">本来写到这里，这个章节就结束了——把上述这些条件汇总起来，就是判定“科学理论”的【充分条件】。</p><p id="1c826610-6d9f-81be-8154-e229f1551225" class="">但是考虑到很多人犯了一些低级错误，俺再多费点口水。</p><p id="1c826610-6d9f-81e3-b9fc-e38851f58461" class="">本章节提到了很多判定“科学理论”的依据/标准。这里面的每一个标准，【单独】都只构成【必要条件】，而不是【充分条件】。</p><p id="1c826610-6d9f-8157-8907-caa2596156f3" class="">再来举例：</p><p id="1c826610-6d9f-8159-b916-cce7ae8e7cce" class="">比如很多占星术的理论，也具有可检验性和可证伪性。然后那帮占星术的粉丝就跳出来说，这玩意儿也是科学。他们的谬误在于——错把“必要条件”当成“充分条件”。实际上大部分占星术理论（甚至有可能是全部的占星术理论），都缺乏“演绎体系”——也就是说，他们不是基于演绎法建立起来的。</p><p id="1c826610-6d9f-8199-b20c-cf8e4bdeb270" class=""><strong>具备上述某个单一标准的理论，【不一定是】科学。但是不具备的，就【一定不是】科学。</strong></p><h2 id="1c826610-6d9f-8158-abf5-f2f2146ad080" class="">★“证伪主义”的积极作用</h2><p id="1c826610-6d9f-8164-8636-f8e594b576fa" class="">俺觉得大致有如下几条：</p><p id="1c826610-6d9f-812b-8952-f2eca4c86ac5" class="">1. 破除了“科学理论是绝对真理”的观念</p><p id="1c826610-6d9f-81af-a7f7-f63817bf67ed" class="">2. 强调了基于经验证伪的重要性（“证伪”比“证实”更重要）</p><p id="1c826610-6d9f-817d-b966-eb4f2ec738af" class="">3. 由于鼓励了对科学理论的证伪，促进科学理论更快更好地发展</p><p id="1c826610-6d9f-81d4-98a9-cec43e254cf6" class="">4. 提供了一种指导思想来建立科学理论（比如前面提及的：越容易“被证伪/被推翻”的理论，越有价值）</p><h2 id="1c826610-6d9f-81d1-8616-f18c8bd907a4" class="">★啥是“非科学”？</h2><p id="1c826610-6d9f-81a1-8487-de7c54492ad0" class="">从语言逻辑上讲，“非科学”等价于“不是科学”。根据“排中律”，任何一个玩意儿 ，要么是“科学”，要么是“非科学”。</p><p id="1c826610-6d9f-813b-bda5-e20b54afedf5" class="">在此，俺要提醒一句：<strong>千万不要把【非科学】当成贬义词</strong>。</p><p id="1c826610-6d9f-81a5-ac79-c8d1cf11cd4e" class="">下面列举一些常见“非科学”：</p><h3 id="1c826610-6d9f-817d-b1e1-c9426a9eb5f8" class="">◇文学、艺术</h3><p id="1c826610-6d9f-81ff-ad8b-f7cae7bff2ce" class="">这些领域的理论，是【主观】的，而不是【客观】的。用波普尔的定义就是——无法在不同的主体间进行相互检验。</p><p id="1c826610-6d9f-814f-852e-ccf3f4cf90ee" class="">有句老话叫做：文无第一、武无第二。因为文艺领域是主观的，很难建立一个公认的评价标准。</p><h3 id="1c826610-6d9f-81b0-b038-f0baa0751b57" class="">◇宗教</h3><p id="1c826610-6d9f-8190-9861-dc0f0888ee15" class="">前面俺已经提到了：大多数宗教理论，其命题/陈述，【不是】客观陈述。</p><p id="1c826610-6d9f-81b9-8a2b-fe2edc552979" class="">另外，大多数宗教的理论的命题，有的是缺乏“可验证性”，有的命题直接在逻辑形式上就是“无法证伪”（比如前面提及的“存在命题”是不可能证伪的）。</p><h3 id="1c826610-6d9f-8179-820b-ff3c264af021" class="">◇大部分的数学分支</h3><p id="1c826610-6d9f-81b5-8e7c-f25cc0b7ce76" class="">大部分的数学分支，都属于“纯理性”的认识领域（再次唠叨：此处的【理性】不是通常的用法/含义，请参见“预备知识”）。也就是说，这些领域不依赖于客观世界。比如：集合论、数论、算术......</p><p id="1c826610-6d9f-8126-9bac-d986f19bc751" class="">那么，数学的哪个部分属于“科学”捏？俺认为“几何学”属于科学。几何学是研究空间的，因此几何学是需要通过【经验】进行检验的，也可以通过【经验】进行证伪的（再次唠叨：此处的【经验】不是通常的用法/含义，请参见“预备知识”）。与之相比，数学的其它分支，都是【纯理性】的。</p><p id="1c826610-6d9f-810f-8bbc-ce4224058085" class="">实际上，传统的“欧氏几何”已经通过【经验】证伪了。</p><p id="1c826610-6d9f-817a-be4b-e4af5f05cc02" class="">咱们在小学中学教的几何就是“欧氏几何”，它描述的是平坦的空间（空间曲率为零）。在平坦空间中，过直线外的一点只能作一条平行线（这就是“欧氏几何”中大名鼎鼎的平行公理）。而咱们生活的宇宙，空间曲率大于零（也称为“椭圆空间”）。在这种空间中，过直线外的一点不可能作平行线（总是会相交）。实际上还有一种空间叫做“双曲空间”，曲率为负数，过直线外一点，可以作不止一条平行线。</p><p id="1c826610-6d9f-8130-8a49-d320731007c3" class="">有兴趣的同学可以去看看维基百科<a href="https://zh.wikipedia.org/wiki/%E9%9D%9E%E6%AC%A7%E5%87%A0%E9%87%8C%E5%BE%97%E5%87%A0%E4%BD%95">关于“非欧几何”的词条</a></p><p id="1c826610-6d9f-810d-bd68-c46b17b766f0" class="">补充说明：</p><p id="1c826610-6d9f-814c-bf86-dac68ddf26c9" class="">本文发出后，关于”几何学“是否可以被证伪，产生了大量的讨论（辩论）。于是俺加上这个”补充说明“</p><p id="1c826610-6d9f-8162-83c2-dca6da0df20a" class="">很多网友不同意俺的观点，他们的理由是：数学是无法证伪的，几何学属于数学，所以几何学也无法证伪。</p><p id="1c826610-6d9f-8184-82a6-e98441ff6041" class="">这些网友的立论有问题，他们忽略了本文”预备知识“中强调过的，”可证伪性“是带有定语的，那就是”基于【经验】的可证伪性“。</p><p id="1c826610-6d9f-8165-b899-ec42ff54525b" class="">再来看几何学和数学的其它分支，有何不同。</p><p id="1c826610-6d9f-813d-8a8d-fd2c12a17abd" class="">几何学是研究”空间结构“的。当年康德写《纯粹理性批判》的时候，认为”空间和时间“都是【先验的】（不依赖经验）。如果按照康德的说法，那么几何学跟其它数学分支的本质是类似滴——都算是【纯粹理性】的学科。</p><p id="1c826610-6d9f-81c2-80bf-c9eb1dc0f0a6" class="">但是，到了爱因斯坦发表《狭义相对论》和《广义相对论》之后，“空间和时间”已经被证明，不再是“先验的”，而是“经验的”。如此一来，几何学也就跟其它数学分支有了根本差异——几何学的命题，是可以根据经验进行检验的，因此也就有可能”基于【经验】进行证伪“。</p><h3 id="1c826610-6d9f-8165-9c59-d3e659092f39" class="">◇逻辑学</h3><p id="1c826610-6d9f-81c5-aafc-c20fedc3dac5" class="">逻辑学也不是科学。</p><p id="1c826610-6d9f-8158-96df-e8caf80a99b3" class="">原因在于逻辑学中的真理是“绝对真理”，是无法证伪的（比如：矛盾律、排中律）。</p><h3 id="1c826610-6d9f-8124-8be9-f80e2b86b205" class="">◇技术</h3><p id="1c826610-6d9f-810b-8f9c-d923584696e8" class="">还有一类常见的“非科学”是技术。</p><p id="1c826610-6d9f-8105-899b-f60440a325df" class="">咱们经常说的“科技”是“科学和技术”的总称。但这两者有本质区别：</p><p id="1c826610-6d9f-81e9-a972-e8ab2dd688d9" class="">科学理论是基于【演绎法】（逻辑推理）建立起来的。</p><p id="1c826610-6d9f-811b-8009-d2bcd33eaacb" class="">技术理论是基于【归纳法】（经验总结）建立起来的。</p><p id="1c826610-6d9f-815b-9d31-e4c47f37b1e6" class="">作为俺的老本行，说个软件开发领域的例子：</p><p id="1c826610-6d9f-81f2-93a3-d0ee2e19f5b9" class="">比如软件工程，就属于“技术”而不是“科学”。软件工程中强调的那些措施（每日构建、代码评审、短周期迭代...），都是基于前人的经验总结出来的，而【不是】通过逻辑推理得到的。</p><p id="1c826610-6d9f-81b3-9e5e-d885b212d6aa" class="">再来聊个容易引发口水战的例子：</p><p id="1c826610-6d9f-81b6-afb8-feaa0897ce6a" class="">实际上中国古代从来【没有】诞生过真正的逻辑学【体系】。诸子百家中，墨家晚期的典籍，开始出现少量朴素的逻辑思想（但远远称不上“体系”）；可惜“独尊儒术”之后，就荒废了。另外，印度传入的佛教典籍中包含的“因明”，也达不到古希腊逻辑学那么完善的程度（而且“因明”仅限于佛教领域）。</p><p id="1c826610-6d9f-8170-861b-f98131e88054" class="">所以，中国古代那些能拿出来夸耀的东西，严格来讲都仅仅是【技术】，而不是【科学】。</p><p id="1c826610-6d9f-81d7-bea8-c13521d1a909" class="">比如“建筑、历法、造纸、瓷器、医术”等成就，都是基于“经验总结”（属于“归纳法”）；这些东西根本【算不上】“演绎推理”。</p><h2 id="1c826610-6d9f-81e3-aceb-c00a1ca8f8e6" class="">★啥是“伪科学”（pseudoscience）？</h2><p id="1c826610-6d9f-8162-83c6-f30316c5e1dc" class="">所谓“伪科学”，通俗地说就是：本身不是科学，但是又伪装自己是科学。</p><p id="1c826610-6d9f-8134-89ed-e17a0363e687" class="">从范畴上，“伪科学”是“非科学”的【真子集】。</p><p id="1c826610-6d9f-81f1-b119-cc19ffce6e22" class="">举例：</p><p id="1c826610-6d9f-81f4-b4ee-fd10e780897f" class="">按照俺一贯给党国抹黑的套路，来说说共产党经常吹捧的“科学的共产主义”（有时也称“科学的社会主义”）。</p><p id="1c826610-6d9f-8115-91d0-f88b480da550" class="">马教主的这套理论，冠以“科学的”作定语，显然就是标榜该理论是科学。到底是不是捏？俺偷个懒不点评了，直接引用波普尔著作《<a href="https://docs.google.com/document/d/1EkTX-vK8eX4KeqBir4nYL_A5Qe0VWymINXOdZVyq4mw/">猜想与反驳——科学知识的增长</a>》中的一段：</p><blockquote id="1c826610-6d9f-816c-ac44-f66d5a1afa50" class="">尽管经过其支持者不断的辩护，马克思主义的历史观最终仍然流于江湖郎中算命的水平。</blockquote><p id="1c826610-6d9f-81a6-aa42-e0c6e1db5a5f" class="">（注：关于马克思的“历史唯物主义”，俺在如下几篇博文也聊过）</p><p id="1c826610-6d9f-8134-a204-e8e9f7ee9e86" class="">《<a href="https://program-think.blogspot.com/2018/09/Book-Review-The-Errors-of-Marxism-Leninism.html">为什么马克思是错的？——全面批判马列主义的知名著作导读</a>》</p><p id="1c826610-6d9f-812e-9701-cb4d9c859796" class="">《<a href="https://program-think.blogspot.com/2014/09/oversimplification.html">各种一元化思维的谬误——从“星座理论”到“共产主义社会”</a>》</p><h2 id="1c826610-6d9f-8178-a657-cf05cc4cf5e8" class="">★啥是“反科学”（anti-science）？</h2><p id="1c826610-6d9f-81af-8405-e32e7c4668ea" class="">科学研究本身是以思维作为主体的活动，而且科学理论是欢迎质疑和反驳的。如前所述，对科学理论的证伪，往往会触发新理论的建立。</p><p id="1c826610-6d9f-811b-a183-d4b206959389" class="">而“反科学”就是采用“科学之外的力量”来打击科学活动。有的采用政治手段，有的采用宗教手段，有的采用直接暴力手段。</p><p id="1c826610-6d9f-81b8-83e6-c9ad3a0a12b8" class="">举几个例子：</p><p id="1c826610-6d9f-818b-92e2-f9aa3c26e5a9" class="">中世纪时期，伽利略被宗教裁判所判刑（关于这事儿，列位看官应该是耳熟能详）</p><p id="1c826610-6d9f-8121-ab0e-df5b2deacdcb" class="">纳粹德国时期，“相对论”被当成“犹太人的物理学”加以批判，禁止传授。</p><p id="1c826610-6d9f-81dd-8238-d0c8bce3e665" class="">天朝文革时期，“相对论、量子力学、大爆炸理论”被当成“资产阶级的物理学”加以批判，禁止传授。</p><p id="1c826610-6d9f-81aa-822b-c25b602988d8" class="">在某些伊斯兰教国家，传播进化论或其它与古兰经不符的理论，会有生命危险。</p><p id="1c826610-6d9f-81fb-8133-c929cae57de4" class="">（列位看官是否感觉到：纳粹时期和文革时期，”反科学“的手法很像，如果你再看看俺的另一篇博文《<a href="https://program-think.blogspot.com/2015/01/Communism-Nazism-Caesaropapism.html">人类自由的三大死敌——谈谈“共产运动、纳粹主义、政教合一”的共性</a>》，就明白为啥两者这么像了）</p><h2 id="1c826610-6d9f-817b-af48-ff301a38e6ff" class="">★列举常见谬误</h2><h3 id="1c826610-6d9f-815d-9fb4-ccc106c13456" class="">◇常见谬误：把科学理论等同于“绝对真理”</h3><p id="1c826610-6d9f-81e3-bfcc-e0948753eccd" class="">如果根据“证伪主义”的划界标准，科学恰恰是【最不可能】成为“绝对真理”的。</p><p id="1c826610-6d9f-81fb-bdd0-f0ebfbc72ef0" class="">科学理论总是存在“被推翻的可能性”，所以科学理论要么“已经被推翻”，要么是“暂时尚未被推翻”。</p><h3 id="1c826610-6d9f-810b-9dc3-f91e3c7e2e4f" class="">◇常见谬误：混淆“非科学”与“伪科学”</h3><p id="1c826610-6d9f-8112-81eb-c12406a7aa10" class="">前面俺已经说了：“伪科学”只是“非科学”一个很小的【真子集】。</p><h3 id="1c826610-6d9f-8114-acdb-cafc6da604e2" class="">◇常见谬误：以为“科学”总是比“非科学”更牛逼</h3><p id="1c826610-6d9f-812f-bcfd-e929f43ff4fb" class="">其实不一定。</p><p id="1c826610-6d9f-8193-9bb9-d85e29b170fd" class="">比如“科学理论”需要依靠逻辑演绎法来建立。所以“逻辑学”是科学的基石。“逻辑学”应该比“科学”更牛逼，对吧。</p><p id="1c826610-6d9f-8194-bbc1-db82f75037db" class="">但“逻辑学”属于“非科学”。</p><h3 id="1c826610-6d9f-81fc-b267-d44dc115a72c" class="">◇常见谬误：觉得只有“科学”是重要的，“非科学”不重要</h3><p id="1c826610-6d9f-814b-952f-dc5b37a4604d" class="">前一条俺说了——“逻辑学”比“科学”更重要，并“逻辑学”属于“非科学”。</p><p id="1c826610-6d9f-818a-afeb-c9d3994b7fe1" class="">另外，人文领域全部都是“非科学”。人文领域同样是非常重要的。尤其像人文领域中的“伦理学”——重要性不亚于科学。</p><h3 id="1c826610-6d9f-81ca-92f3-eb66eba657df" class="">◇常见谬误：已经被证伪的科学理论就没用了</h3><p id="1c826610-6d9f-81c5-87b2-c9557a3b7118" class="">这个说法【不一定】成立！</p><p id="1c826610-6d9f-816a-bf2f-e6edabdd9e3a" class="">有些科学理论被证伪之后，确实就废了。比如曾经的”燃素理论“，”以太理论“，如今几乎没啥用了（现在提到这俩，通常是拿来当反面教材）。</p><p id="1c826610-6d9f-81ca-bb07-eecc02a5a7cb" class="">但是，还有一些科学理论，虽然被证伪了，依然还在使用。为啥捏？</p><p id="1c826610-6d9f-8156-a4ff-dadd0b44e1f1" class="">比如当爱因斯坦发表《狭义相对论》和《广义相对论》之后，牛顿的经典力学体系就被彻底证伪了。但是现在的工程学科（比如机械工程）还在用牛顿力学。因为在速度远远低于光速，质量远远没有达到天文学尺度的前提下，牛顿力学与实际观测的误差，非常非常小，工程上可以忽略不计。所以工程上依然用牛顿力学。</p><h2 id="1c826610-6d9f-81e3-8eb9-eeb4f08af61b" class="">★对待“科学和科学理论”的正确态度</h2><h3 id="1c826610-6d9f-818e-810c-d31974a6a74e" class="">◇【不要】盲目崇拜科学</h3><p id="1c826610-6d9f-8195-82b4-d2e2d54050a1" class="">这种现象貌似还挺普遍——很多人把”科学理论“当成是永恒真理，并对”科学“崇拜不已。</p><p id="1c826610-6d9f-8101-b563-d237f77acc0b" class="">首先，对”科学理论“而言——既然每一个科学理论总有可能被证明是错的，没必要把它看得太过神圣。</p><p id="1c826610-6d9f-81b6-a507-d57bc167f4c3" class="">其次，对”科学“本身而言，应该把它视作某种【手段】而不应该视作”终极目标“或”崇拜对象“。</p><p id="1c826610-6d9f-8100-bc71-ff0fbbab4aa4" class="">（关于”崇拜“的话题，还可以参考另一篇博文：《<a href="https://program-think.blogspot.com/2014/05/fans-and-idolatry.html">不要成为“粉丝”——谈谈“偶像崇拜”的成因和危害</a>》）</p><h3 id="1c826610-6d9f-8179-ade7-d363deab7ae4" class="">◇【不要】以为科学是万能滴</h3><p id="1c826610-6d9f-811c-9d03-dc9d59756973" class="">实际上，没有任何东西是万能的。</p><p id="1c826610-6d9f-817f-98ee-da41a4340c58" class="">如果有人跟你说：某某东西是万能的，这人要么是傻子要么是骗子。</p><h3 id="1c826610-6d9f-81e2-a837-dcac222aeba8" class="">◇“证伪（推翻）”通常比“证实”更有价值</h3><p id="1c826610-6d9f-81c9-bfd8-f904a0fd1f46" class="">看完本文前面的部分，大伙儿应该明白：证伪（推翻）某个科学理论，其贡献是很大，超过了对科学理论的证实（验证）。</p><p id="1c826610-6d9f-81b7-80fb-c50b81cb8c16" class="">如果某人能够基于“经验”的观测，对某个理论进行证伪（找到反例），就可以把该理论推翻。推翻之后，科学家自然会去想办法创造出更好的理论，于是科学就进步了。</p><h2 id="1c826610-6d9f-81c2-9af0-ea86d4948079" class="">★引申阅读</h2><p id="1c826610-6d9f-81cd-a921-e24ddbd224a8" class="">俺在网盘上分享了几本有关“科学哲学”的电子书，都放在【哲学类 / 科学哲学】这个分类目录下。有兴趣的同学可以去下载来看。</p><p id="1c826610-6d9f-814d-ace8-e093865d24ab" class="">全部电子书的清单如下（该页面可以【免翻墙】打开）。</p><p id="1c826610-6d9f-8130-b8c2-dd1fd30ad7a2" class=""><strong><a href="https://github.com/programthink/books">https://github.com/programthink/books</a></strong></p><p id="1c826610-6d9f-81eb-a9ae-c099783e5c71" class=""><strong>俺博客上，和本文相关的帖子（需翻墙）</strong>：</p><p id="1c826610-6d9f-8138-83e5-d183aa7c08a0" class="">《<a href="https://program-think.blogspot.com/2018/09/Book-Review-The-Errors-of-Marxism-Leninism.html">为什么马克思是错的？——全面批判马列主义的知名著作导读</a>》</p><p id="1c826610-6d9f-818d-a0f0-cfab0202b15b" class="">《<a href="https://program-think.blogspot.com/2014/09/oversimplification.html">各种【一元化思维】的谬误——从“星座理论”到“共产主义社会”</a>》</p><p id="1c826610-6d9f-81e4-84f7-fe7f6c7cdb43" class="">《<a href="https://program-think.blogspot.com/2015/06/The-Mythical-Theories-of-Success.html">成功学批判——简述其危害性及各种谬误</a>》</p><p id="1c826610-6d9f-8132-9b99-c495e03613b4" class="">《<a href="https://program-think.blogspot.com/2014/05/fans-and-idolatry.html">不要成为“粉丝”——谈谈“偶像崇拜”的成因和危害</a>》</p><p id="1c826610-6d9f-81f0-bc05-d95a03f8ee33" class="">《<a href="https://program-think.blogspot.com/2015/01/Communism-Nazism-Caesaropapism.html">人类自由的三大死敌——谈谈“共产运动、纳粹主义、政教合一”的共性</a>》</p><p id="1c826610-6d9f-819b-a680-e52faf78a176" class=""><strong>版权声明</strong></p><p id="1c826610-6d9f-8186-af22-c48a97f4459d" class="">本博客所有的原创文章，作者皆保留版权。转载必须包含本声明，保持本文完整，并以超链接形式注明作者<a href="mailto:program.think@gmail.com">编程随想</a>和本文原始地址：</p><p id="1c826610-6d9f-81b2-9587-d382d78c2efb" class=""><a href="https://program-think.blogspot.com/2015/10/What-is-Science.html">https://program-think.blogspot.com/2015/10/What-is-Science.html</a></p></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>面对共产党——民国人文大师的众生相 @ 编程随想的博客</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+	margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(50, 48, 44, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-default_background {
+	color: rgba(50, 48, 44, 1);
+}
+.highlight-gray_background {
+	background: rgba(248, 248, 247, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(248, 243, 252, 1);
+}
+.highlight-pink_background {
+	background: rgba(252, 241, 246, 1);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-default_background {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray_background {
+	background: rgba(248, 248, 247, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(248, 243, 252, 1);
+}
+.block-color-pink_background {
+	background: rgba(252, 241, 246, 1);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-uiBlue { background-color: undefined; }
+.select-value-color-pink { background-color: rgba(225, 136, 179, 0.27); }
+.select-value-color-purple { background-color: rgba(168, 129, 197, 0.27); }
+.select-value-color-green { background-color: rgba(123, 183, 129, 0.27); }
+.select-value-color-gray { background-color: rgba(84, 72, 49, 0.15); }
+.select-value-color-transparentGray { background-color: undefined; }
+.select-value-color-translucentGray { background-color: undefined; }
+.select-value-color-orange { background-color: rgba(224, 124, 57, 0.27); }
+.select-value-color-brown { background-color: rgba(210, 162, 141, 0.35); }
+.select-value-color-red { background-color: rgba(244, 171, 159, 0.4); }
+.select-value-color-yellow { background-color: rgba(236, 191, 66, 0.39); }
+.select-value-color-blue { background-color: rgba(93, 165, 206, 0.27); }
+.select-value-color-pageGlass { background-color: undefined; }
+.select-value-color-washGlass { background-color: undefined; }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="1c826610-6d9f-8126-8ae3-c4c8c016861e" class="page sans"><header><h1 class="page-title">面对共产党——民国人文大师的众生相 @ 编程随想的博客</h1><p class="page-description"></p></header><div class="page-body"><p id="1c826610-6d9f-81f9-9a7f-c21afd70040c" class=""><a href="https://program-think.blogspot.com/2014/07/artists-and-ccp.html">https://program-think.blogspot.com/2014/07/artists-and-ccp.html</a></p><p id="1c826610-6d9f-81b4-898d-d1849ace388c" class="">
+</p><p id="1c826610-6d9f-816d-91ff-eb35b020625d" class=""><strong>文章目录</strong></p><p id="1c826610-6d9f-810b-bfb7-f5dfdc975c12" class=""><a href="https://program-think.blogspot.com/2014/07/artists-and-ccp.html?view=classic#head-1">★王国维——很有先见之明的满清遗老</a></p><p id="1c826610-6d9f-8131-acf7-efe595a62502" class=""><a href="https://program-think.blogspot.com/2014/07/artists-and-ccp.html?view=classic#head-2">★徐志摩——曾被苏俄【短暂】蒙蔽，访苏之后觉醒</a></p><p id="1c826610-6d9f-8143-bff8-d12f7a0597e9" class=""><a href="https://program-think.blogspot.com/2014/07/artists-and-ccp.html?view=classic#head-3">★胡适——曾被苏俄【长期】蒙蔽，之后觉醒</a></p><p id="1c826610-6d9f-8154-88e1-eb2b230055a8" class=""><a href="https://program-think.blogspot.com/2014/07/artists-and-ccp.html?view=classic#head-4">★梁实秋——被鲁迅痛骂的反共文人</a></p><p id="1c826610-6d9f-813b-ab2c-eea2e648aaa0" class=""><a href="https://program-think.blogspot.com/2014/07/artists-and-ccp.html?view=classic#head-5">★鲁迅——与中共关系暧昧，充满争议</a></p><p id="1c826610-6d9f-8119-82b0-d1f2d3fe9c5f" class=""><a href="https://program-think.blogspot.com/2014/07/artists-and-ccp.html?view=classic#head-6">★林语堂——与鲁迅反目的反共文人</a></p><p id="1c826610-6d9f-8124-9828-d168f88f72d8" class=""><a href="https://program-think.blogspot.com/2014/07/artists-and-ccp.html?view=classic#head-7">★张爱玲——两部小说揭露”土改“的阴暗面</a></p><p id="1c826610-6d9f-8135-9b7b-d35124b930a8" class=""><a href="https://program-think.blogspot.com/2014/07/artists-and-ccp.html?view=classic#head-8">★陈寅恪——被红卫兵活活折腾死</a></p><p id="1c826610-6d9f-81fa-90d5-e75a593f34b0" class=""><a href="https://program-think.blogspot.com/2014/07/artists-and-ccp.html?view=classic#head-9">★沈从文——被逼封笔40年</a></p><p id="1c826610-6d9f-812e-b3cf-f29a94fa8e40" class=""><a href="https://program-think.blogspot.com/2014/07/artists-and-ccp.html?view=classic#head-10">★巴金——把丢失的晚节又找回来了</a></p><p id="1c826610-6d9f-81fb-b3ca-ea133a43eea4" class=""><a href="https://program-think.blogspot.com/2014/07/artists-and-ccp.html?view=classic#head-11">★老舍——妻离子散，不堪受辱，投湖自尽</a></p><p id="1c826610-6d9f-8139-8317-c6f41dff9f80" class=""><a href="https://program-think.blogspot.com/2014/07/artists-and-ccp.html?view=classic#head-12">★茅盾——中共元老，人品很有问题</a></p><p id="1c826610-6d9f-81e4-b954-cf66420f9d6c" class=""><a href="https://program-think.blogspot.com/2014/07/artists-and-ccp.html?view=classic#head-13">★冯友兰——生性怯懦的投机分子</a></p><p id="1c826610-6d9f-8175-a9cc-d8b7d7bd8955" class=""><a href="https://program-think.blogspot.com/2014/07/artists-and-ccp.html?view=classic#head-14">★郭沫若——足够厚颜无耻的党棍</a></p><p id="1c826610-6d9f-8198-90ee-d44b852abd7b" class=""><a href="https://program-think.blogspot.com/2014/07/artists-and-ccp.html?view=classic#head-15">★总结</a></p><p id="1c826610-6d9f-8179-9b62-f63e7dca1c07" class=""><a href="https://program-think.blogspot.com/2014/07/artists-and-ccp.html?view=classic#head-16">★引申阅读</a></p><p id="1c826610-6d9f-81b4-9dc2-f11a247919f7" class="">昨天是咱们天朝“伟光正”的生日，作为长期抹黑党国的屁民，俺当然要写一篇博文，作为党生日的献礼。本文打算聊一聊民国时期的“大师级”牛人（主要是人文领域方面）。了解这些人的经历之后，你对共产运动导致的祸害，会有更深刻的体会。</p><p id="1c826610-6d9f-81d6-8ba3-d86cf0255eb3" class="">（这篇博文原本要在昨天发，由于篇幅写得比较长，一不小心就拖到今天）</p><h2 id="1c826610-6d9f-81dc-ab0b-dee752c0e28f" class="">★<a href="https://zh.wikipedia.org/wiki/%E7%8E%8B%E5%9B%BD%E7%BB%B4">王国维</a>——很有先见之明的满清遗老</h2><figure id="1c826610-6d9f-81b4-82b2-f15147ed1387" class="image"><a href="https://lh6.googleusercontent.com/FLOG1oMi1qntaVf9CYaNEkUFLEIsE6fFyOew9k_hOp0YrvtKZXtKrd1lBVyi9FhK_b7Er6DAgxQcSrIsfSNuM68oRMA5_a82GLa5aKSbgKBqGtflPXq9I_KnZdP_nxaY2aWC"><img src="https://lh6.googleusercontent.com/FLOG1oMi1qntaVf9CYaNEkUFLEIsE6fFyOew9k_hOp0YrvtKZXtKrd1lBVyi9FhK_b7Er6DAgxQcSrIsfSNuM68oRMA5_a82GLa5aKSbgKBqGtflPXq9I_KnZdP_nxaY2aWC"/></a></figure><p id="1c826610-6d9f-8174-b2fd-c2b13e3eb524" class="">不见图 请翻墙</p><p id="1c826610-6d9f-815d-b1bc-c9459726d28c" class="">文艺小清新对王国维应该不陌生。此人在文学、美学、史学、考古学等领域均有极高的造诣。他与梁启超、陈寅恪、赵元任被并称为清华国学研究院的“四大导师”。不过很多文青可能不了解王国维在政治方面的立场和眼光。</p><p id="1c826610-6d9f-8159-b579-eb62ce58ab08" class="">首先俺必须承认：王国维是一个顽固的清末遗老，在某些方面，思想非常僵化。但是在对待共产运动方面，他具有独到并且超前的洞察力。俺举几个例子：</p><p id="1c826610-6d9f-81f3-8ee5-dd87b44f31c5" class="">1917年末，十月革命刚刚发生，王国维就担忧十月革命会波及中国。当时他写给柯劭忞的一封信中提及了他的担忧。罗振玉所著的《王忠悫遗书序》一书中记载了王国维的原话，如下：</p><blockquote id="1c826610-6d9f-8133-96d9-c04af454a165" class="">已而俄国果覆亡，公以祸将及我，与北方某耆宿书言：<p id="1c826610-6d9f-811a-8716-e9bdad864d18" class=""><strong>观中国近状，恐以共和始，而以共产终。</strong></p></blockquote><p id="1c826610-6d9f-8174-8050-c01b1c9afa8d" class="">当时中共尚未成立，王国维就能说出“恐以共和始，而以共产终”这样精准的判断。令人叹服。</p><p id="1c826610-6d9f-818f-8989-c3a4f032464d" class="">1919年，“五四”运动爆发时，王国维写信给陆宗舆（当时负责外交事务），建议他在巴黎和会上提出议案，团结世界各国剿灭俄国布尔什维克。</p><p id="1c826610-6d9f-814d-9c3d-cfa7c402d5a8" class="">1924年，王国维在写给溥仪的奏折中提到：</p><blockquote id="1c826610-6d9f-81ae-83e7-e9b2aebcb7d2" class="">井田之法，口分之制，皆屡试而不能行，或行而不能久。西人则以是为不足，于是有社会主义焉，有共产主义焉。然此均产之事，将使国人共均之乎？<p id="1c826610-6d9f-81f2-b6c0-e4d889161995" class=""><strong>（共产制度）俄人行之伏尸千万，赤地万里，而卒不能不承认私产之制度</strong></p></blockquote><p id="1c826610-6d9f-8174-8381-fc36c3ef2d6a" class="">奏折中提到的“俄人行之伏尸千万，赤地万里”指的就是苏联搞了共产主义那套玩意儿，所导致的惨状。如果你不相信苏俄制造的人间地狱，可以去看影片《苏维埃往事》（影评在“<a href="https://program-think.blogspot.com/2013/02/film-soviet-story.html">这里</a>”）。</p><p id="1c826610-6d9f-8110-8516-ee2f59cc9ce9" class="">从上述几个例子可以看出——王国维这个满清遗老，对共产运动有惊人的预见性，超越了同时代很多人文领域的大师。</p><h2 id="1c826610-6d9f-81bf-8412-c0d001fe1bfb" class="">★<a href="https://zh.wikipedia.org/wiki/%E5%BE%90%E5%BF%97%E6%91%A9">徐志摩</a>——曾被苏俄【短暂】蒙蔽，访苏之后觉醒</h2><figure id="1c826610-6d9f-8172-977b-c14365dcbe66" class="image"><a href="https://lh3.googleusercontent.com/fmWFEIO1IjpPAyhZKkcduT-iubydzNugjIRt0xhhj06DyrTTBagwxQqhzHkA05HTjgk9rVCbBaVvZW0O1xK64L93Ho80PocfvUkBgYUKh_1VKm_48vI7zWYGFvz8ugl4lJAh"><img src="https://lh3.googleusercontent.com/fmWFEIO1IjpPAyhZKkcduT-iubydzNugjIRt0xhhj06DyrTTBagwxQqhzHkA05HTjgk9rVCbBaVvZW0O1xK64L93Ho80PocfvUkBgYUKh_1VKm_48vI7zWYGFvz8ugl4lJAh"/></a></figure><p id="1c826610-6d9f-81f5-a923-db7291d8b2c1" class="">不见图 请翻墙</p><p id="1c826610-6d9f-8152-83fa-cfd94613937f" class="">徐志摩跟王国维类似——也经常被文艺青年追捧，但是很多文青都不了解徐志摩在政治方面的眼光。</p><p id="1c826610-6d9f-8105-a29a-f6981d42abac" class="">在五四运动前后，罗素是很多中国知识分子的精神导师。徐志摩也不例外。而罗素在十月革命爆发后（1917-1920），曾经是苏联的积极拥护者。受此影响，徐志摩也一度是苏联的拥护者。</p><p id="1c826610-6d9f-8172-8301-f59d51b11f7c" class="">1920年，罗素受苏共当局的邀请，去苏联访问，还见到了列宁本人。本来苏共的如意算盘是：让罗素这个世界级大牛（大哲学家、大数学家、唯一获得诺贝尔<strong>文学奖</strong>的科学家）替苏联说点好话。谁曾想，罗素在苏联逛了一圈回到英国之后，态度发生180度大转变——从“苏联的积极拥护者”转变为“苏联的坚定批评者”。比如1922年3月24日，罗素在伦敦发表公开演说，标题是《自由的思想与官方的宣传》，其中一句是：俄国的思想压迫比起无论哪一个资本主义国家都更严酷。</p><p id="1c826610-6d9f-81ba-a4df-d9595591aa88" class="">罗素的这个转变很大，他的粉丝徐志摩一开始无法接受。徐志摩甚至在《罗素游俄记书后》一文中讽刺了罗素，称其言行前后不一致。文中的原话是：入红境者，红心红德之罗素；返白邦者，白心白德之罗素也。</p><p id="1c826610-6d9f-81ca-a01d-eff315199697" class="">1925年，徐志摩去英国见泰戈尔，途经苏联，在莫斯科逗留3天。在莫斯科期间，他还去拜谒了列宁腌制在水晶棺材里面的“金刚不坏之身”。结果这次旅行也让徐志摩从“苏联的拥护者”变为“苏联的批评者”。显然，徐志摩到那个时候，才理解他的精神导师罗素为啥在“对苏态度”上会发生180度的转变。</p><p id="1c826610-6d9f-8182-ab29-f1ee19fadfc7" class="">回国之后，徐志摩写了《欧游漫录》（共13篇），在其中的《欧游漫录——西伯利亚游记》提及他在西伯利亚的见闻：</p><blockquote id="1c826610-6d9f-81f1-9f7f-d1ca2fa89bec" class="">入境愈深，当地人民的苦况愈发的明显。</blockquote><p id="1c826610-6d9f-811e-a320-cc2de16b7fbf" class="">到了莫斯科，他拜访托尔斯泰的女儿，得知一个令他震惊的信息——十月革命之后，托尔斯泰、屠格涅夫、陀思妥耶夫斯基等人的书籍几乎绝迹了（布尔什维克查禁这些书籍的理由是——代表了资产阶级的腐朽思想）。徐志摩在《欧游漫录——托尔斯泰》中写道：</p><blockquote id="1c826610-6d9f-8127-80a4-c47e457af575" class="">假如有那么一天，你想看某作者的书，算是托尔斯泰的，可是有人告诉你：不但他的书再也买不到，你有了书也是再也不能看的——你的感想怎样？</blockquote><p id="1c826610-6d9f-815b-8770-f9364a4cedc7" class="">对于革命领袖列宁，徐志摩写道：</p><blockquote id="1c826610-6d9f-815d-b508-c02069d4bd24" class="">他不承认他的思想有错误的机会；铁不仅是他的手，他的心也是的。</blockquote><p id="1c826610-6d9f-81e0-bbf8-cc183c2c4642" class="">在本章节的最后，摘录徐志摩本人对苏俄最精辟的批判。当时他去红场拜谒列宁墓，刚一进门，看到一个通体血红的地球仪，旁边还有同样血红的镰刀和锤子。于是在《欧游漫录——血，谒列宁遗体回想》一文中（这也是《欧游漫录》的最后一篇），写了如下这段：</p><blockquote id="1c826610-6d9f-81a0-955c-eed8d8063f03" class="">从北极到南极，从东极到西极（姑且这么说），一体是血色。旁边一把血染的镰刀，一个血染的锤子。<p id="1c826610-6d9f-814e-a35a-f3ae28aeb062" class=""><strong>他们相信天堂是有的，是可以实现的。但在现实世界与那天堂的中间隔着一座海，一座血污海。人类得泅过这血海，才能登那彼岸。于是他们决定，先实现那血海。</strong></p></blockquote><p id="1c826610-6d9f-8164-906d-d583a9376a39" class="">徐志摩关于“血污海”的比喻，极度精辟。整个20世纪，共产运动制造的“血污海”不但淹没了苏联，还淹没了中国、东欧、北朝鲜、越南、古巴、柬埔寨......</p><h2 id="1c826610-6d9f-8135-bb8c-ecd72021ee5c" class="">★<a href="https://zh.wikipedia.org/wiki/%E8%83%A1%E9%81%A9">胡适</a>——曾被苏俄【长期】蒙蔽，之后觉醒</h2><figure id="1c826610-6d9f-815e-9108-dbee6d15fb6f" class="image"><a href="https://lh5.googleusercontent.com/8F5pBmnAi5JRnsPw0NtqDwynEYh5EtikjTR9o-n5SZWbXrX5fa4XUlTkOshletxwajw12JfRcAPavaXInWeRtnPc5n5oj_y7FYpBgkys9uXGNPaLE3h9FavQlpYdkZJZzhSn"><img src="https://lh5.googleusercontent.com/8F5pBmnAi5JRnsPw0NtqDwynEYh5EtikjTR9o-n5SZWbXrX5fa4XUlTkOshletxwajw12JfRcAPavaXInWeRtnPc5n5oj_y7FYpBgkys9uXGNPaLE3h9FavQlpYdkZJZzhSn"/></a></figure><p id="1c826610-6d9f-81fd-b5b8-cef81f373634" class="">不见图 请翻墙</p><p id="1c826610-6d9f-817b-b1b1-effc287ca4be" class="">接下来说说胡适。很凑巧的是，他具有跟徐志摩类似的经历——也是去访问英国，途经苏联；也是走西伯利亚铁路；也是在莫斯科逗留3天。</p><p id="1c826610-6d9f-81c6-b8e0-e1bb9ddd1502" class="">虽然两人游历苏联的经历很雷同，但是结论却迥异——胡适访苏后，对苏俄大加赞美。在写给张慰慈的信中，胡适提到：</p><blockquote id="1c826610-6d9f-81ed-8e97-f0dc22de13b4" class="">此间的人正是我前日信中所说有理想与理想主义的政治家；他们的理想也许有我们爱自由的人不能完全赞同的，但他们的意志的专笃，却是我们不能不十分顶礼佩服的。他们在此做一个空前的伟大政治新试验；他们有理想，有计划，有绝对的信心，只此三项已足使我们愧死。我们这个醉生梦死的民族怎么配批评苏俄！</blockquote><p id="1c826610-6d9f-81a0-9d18-ca03c2d7cdc4" class="">这封信后来刊登在《晨报副刊》上。而当时主持《晨报副刊》的正是徐志摩。徐志摩对胡适的看法很不赞同，于是在《晨报副刊》上发表文章揭露苏联“新教育”的真相。此后胡徐二人发生了论战，话题就是关于苏俄的“仇友赤白”（此论战在当时的文坛很有名）。</p><p id="1c826610-6d9f-81d2-8f82-fd5200420e7f" class="">针对胡适提到的“统计数字”，徐志摩在《〈一个态度〉的按语》一文中反驳说：</p><blockquote id="1c826610-6d9f-8177-b317-dccfcc4ab196" class="">我们谁不知道这句成语——“数目是不说瞎话的，但说瞎话的人可以造数目”。并且统计即使是可靠的，统计表并不能告诉我们实际的情形是怎么一回事。</blockquote><p id="1c826610-6d9f-81ad-b5aa-e7597285487f" class="">在这场论战中还有其它一些人卷入。后来徐志摩还发了另一篇《关于党化教育的讨论——答张象鼎先生》，其中写道：</p><blockquote id="1c826610-6d9f-81fe-83c7-ddf76e3f7bfb" class="">当然在共产主义治下，你可以得到不少的自由。正如在中世纪教皇治下，你也得到不少的自由。但你的唯一的自由——思想自由——不再是你的了。</blockquote><p id="1c826610-6d9f-8154-b553-ef6dea02ad82" class="">从上述论战可以看出——至少在20年代中后期，胡适依然受到苏俄的蒙蔽——至少在这方面，胡适不如徐志摩。</p><p id="1c826610-6d9f-814d-b58d-f5daeeee2d4e" class="">直到40年代初期，胡适才开始转变看法。当时他看了英籍匈牙利作家阿瑟·库斯勒写的一本书《正午的黑暗》。在1941年8月1日的日记中描写了他读此书的感受。</p><blockquote id="1c826610-6d9f-81f9-aa55-cbf79afa82bf" class="">读完了《Darkness at Noon》。这部小说写一个苏俄革命老同志，被“刷新”而关在监里，受种种拷问，终于自承种种罪名，并在公庭上宣布自己的罪状。结果还是枪毙了</blockquote><p id="1c826610-6d9f-8197-b730-e54c9532a475" class="">到了40年代中期，胡适基本上看清了共产运动的真面目。1947年，他写了一篇《两种根本不同的政党》（本博客转载过此文，链接在“<a href="https://program-think.blogspot.com/2013/01/weekly-share-38.html">这里</a>”），文中总结了——共产党完全不同于欧美国家的政党。这篇文章中还提到——俄国的布尔什维克党、德国的纳粹党、意大利的法西斯党，他们本质上是一样的。</p><p id="1c826610-6d9f-8161-9ccc-ebd0a3d00a54" class="">1948年，胡适发了一篇《国际形势里的两个问题——给周鲠生先生的一封信》，其中提到：</p><blockquote id="1c826610-6d9f-8199-8fbe-f9896f0e1d85" class="">我们且不谈中欧与巴尔干。单看我们中国这两三年之中从苏联手里吃的亏，受的侵害——老兄，我不能不承认这一大堆冷酷的事实，不能不抛弃我二十多年对“新俄”的梦想，不能不说苏俄已变成了一个很可怕的侵略势力。</blockquote><p id="1c826610-6d9f-8182-a0c1-d3a9180e472f" class="">1949年大陆沦陷前夕，胡适准备逃到台湾。他的一些朋友（比如周鲠生）和学生（比如吴晗）都极力劝说他留在北大。但是胡适坚决不肯留下来。他还说了那段流传很广的名言：</p><blockquote id="1c826610-6d9f-81fc-a1b5-ed61883a71d6" class="">美国人来了，有面包，有自由；</blockquote><h2 id="1c826610-6d9f-8119-ab9b-e542fca80c6a" class="">★<a href="https://zh.wikipedia.org/wiki/%E6%A2%81%E5%AE%9E%E7%A7%8B">梁实秋</a>——被鲁迅痛骂的反共文人</h2><figure id="1c826610-6d9f-8159-8463-c3c0219f6405" class="image"><a href="https://lh5.googleusercontent.com/W0mNBcJE500lmulYhr3S0UiE80CeM6Ruz5Ak1U21n8Z9Gg-EV44GvL_kUHXR50sdBuOdPfZ2TKIF8H8xDTVTHkMeatVTpl2enOoIQgsx4y8kDc4jnE-nTg-23i3BS0qincZP"><img src="https://lh5.googleusercontent.com/W0mNBcJE500lmulYhr3S0UiE80CeM6Ruz5Ak1U21n8Z9Gg-EV44GvL_kUHXR50sdBuOdPfZ2TKIF8H8xDTVTHkMeatVTpl2enOoIQgsx4y8kDc4jnE-nTg-23i3BS0qincZP"/></a></figure><p id="1c826610-6d9f-81cb-81a5-db48b51b6906" class="">不见图 请翻墙</p><p id="1c826610-6d9f-81ea-8d9f-f7b25092d2ef" class="">1949年逃往台湾的，除了胡适，还有几个大师级文人，比如梁实秋。</p><p id="1c826610-6d9f-8128-a104-f7850dc7cc37" class="">咱们天朝的网友，大都不了解粱实秋。即便听说过此人，或许也是因为鲁迅骂他是“丧家的资本家的乏走狗”（中学语文课本里面有这篇）。客观地讲，粱实秋是民国时期著名的散文家、学者、文学批评家、翻译家，华人世界研究莎士比亚的头号权威（同时也是唯一独立将莎士比亚全集翻译成中文的人）。</p><p id="1c826610-6d9f-8116-921f-edc876f136b6" class="">只看他的一篇文章，就能大致明白他对共产运动的观点。这篇文章是《我为什么不赞成共产党》。以下是精华部分摘录：</p><blockquote id="1c826610-6d9f-81bb-ae86-fa7824bd169d" class="">我最不满于共产党的是它对于民族精神的蔑视。共产党的理论，重视阶级而不重视民族。他们的革命的策略是世界上的无产阶级联合起来推翻资产阶级。中国共产党不是中国国内的一个单纯革命党，它是听命于第三国际的，它是世界革命的一环，它是为阶级斗争。<p id="1c826610-6d9f-810f-be06-d91a1cf80eab" class=""><strong>我站在民主的立场，便觉得法西斯之专政，共产党之专政，国民党之专政，都同样的不是妥当的办法。议会制度，也许是不能成为最有效率的政治制度，但民主的精神，即服从多数意见，尊重少数人之权利，最大量之个人自由，公开讨论的风气等，是任何国家所不可少的。只有民主的国家里，才有个人自由之可言。民主精神是人类几千年来付了很大代价才获得的一点智慧，凡反民主的姿势，都是开倒车。</strong></p></blockquote><p id="1c826610-6d9f-811c-9555-e0cf5b78291c" class="">加粗体的部分，俺认为说得极好。而且在这段中，粱实秋既骂了共产党，也骂了国民党。说明他还是比较中肯的，不是偏向某一方。</p><p id="1c826610-6d9f-8174-96be-d4dc0e105d86" class="">咱们天朝的毛太祖，于1942年发表了很著名的《在延安文艺座谈会上的讲话》。在讲话中专门点名批评了梁实秋，称之为【为资产阶级文学服务的代表人物】。为啥毛太祖这么不喜欢梁实秋捏？因为实秋在1931年发表过一篇《所谓〈文艺政策〉者》——此文专门批评鲁迅翻译的《文艺政策》。精华片段摘录如下：</p><blockquote id="1c826610-6d9f-81e6-94f1-ed77eb53c71a" class="">“文艺”而可以有“政策”，这本身就是一个名辞上的矛盾。俄国共产党颁布的文艺政策，里面并没有什么理论的根据，只是几种卑下的心理之显明的表现而已：一种是暴虐，以政治的手段来剥削作者的思想自由；一种是愚蠢，以政治的手段来求文艺的清一色。<p id="1c826610-6d9f-8132-b80c-ec2d22f2cb14" class=""><strong>马克思主义在政治经济方面，其优劣所在，自然还值得讨论；可是共产党人把这理论的公式硬加在文艺的领域上，如何能不牵强？我想有一天他们还要创造马克思主义的数学，马克思主义的物理化学罢！</strong></p></blockquote><h2 id="1c826610-6d9f-8136-be74-e33645cd47e0" class="">★<a href="https://zh.wikipedia.org/wiki/%E9%B2%81%E8%BF%85">鲁迅</a>——与中共关系暧昧，充满争议</h2><figure id="1c826610-6d9f-8140-b59f-f7a25c478624" class="image"><a href="https://lh4.googleusercontent.com/gXNv9L7wuXcfvbXwsuZAaxjTmgfZSYkBSvv6h91tTAd4zWVzNNAw7Cg4_S4RCiRDyQI-TUyPnIlYaUsROeTq2rwjxjT7pwKMngDAP_oXoDuW3tW7afgcvWILc0Vnn0eJDzQf"><img src="https://lh4.googleusercontent.com/gXNv9L7wuXcfvbXwsuZAaxjTmgfZSYkBSvv6h91tTAd4zWVzNNAw7Cg4_S4RCiRDyQI-TUyPnIlYaUsROeTq2rwjxjT7pwKMngDAP_oXoDuW3tW7afgcvWILc0Vnn0eJDzQf"/></a></figure><p id="1c826610-6d9f-8180-8979-c278286bb872" class="">不见图 请翻墙</p><p id="1c826610-6d9f-819c-8111-cf8a398df149" class="">既然说到梁实秋与鲁迅的论战，就顺势来聊聊鲁迅和共产党的暧昧关系。为啥用“暧昧”这个词儿？因为鲁迅本身并【不是】中共党员，但是他跟中共的关系又挺密切的。比如在天朝钦定的文艺6大师“鲁郭茅巴老曹”中，鲁迅名列第一。</p><p id="1c826610-6d9f-81fc-b801-ecefb3b96c95" class="">后人评价鲁迅，出现两种截然对立的观点。其中一方认为：鲁迅就是中共的御用文人，中共拿他当枪使；另一方的观点认为，虽然鲁迅和中共关系密切，但他依然保持自己的独立性。</p><p id="1c826610-6d9f-81b5-b633-c68a389100b7" class="">下面俺列举一些史料，供大伙儿参考。</p><h3 id="1c826610-6d9f-8151-84b9-ca13514bd0d9" class="">◇与左联的关系</h3><p id="1c826610-6d9f-81f0-b8e2-f8ad9c59dcb5" class="">要谈鲁迅与中共的暧昧关系，自然会扯到“左联”。</p><p id="1c826610-6d9f-8186-831e-f4685a48ec56" class="">左联的全称是“<a href="https://zh.wikipedia.org/wiki/%E4%B8%AD%E5%9B%BD%E5%B7%A6%E7%BF%BC%E4%BD%9C%E5%AE%B6%E8%81%94%E7%9B%9F">中国左翼作家联盟</a>”，鲁迅是左联的标杆和旗帜。左联是中共成立的文学组织，直接受中共领导。成立该组织的目的是——跟国民党争夺舆论阵地。</p><p id="1c826610-6d9f-81da-b586-c4884040c9cb" class="">以上这几点应该没啥分歧。不过捏，通过阅读鲁迅文集中一些鲜为人知的往来书信，可以看出鲁迅跟中共派驻左联的某些人（尤其是周扬、田汉 等人），有比较深的矛盾，关系闹得很僵。</p><p id="1c826610-6d9f-81b9-9641-c7607948c54e" class="">以下这段摘自1934年12月18日致杨霁云的书信。</p><blockquote id="1c826610-6d9f-81bf-b424-cff62955667f" class="">叭儿之类，是不足惧的，最可怕的却是口是心非的所谓“战友”，因为防不胜防。例如绍伯之流（编程随想注：绍伯是田汉的化名），我至今还不明白他是什么意思。为了防后方，我就得横站，不能正对敌人，而且瞻前顾后，格外费力。身体不好，倒是年龄关系，和他们不相干，不过我有时确也愤慨，觉得枉费许多气力，用在正经事上，成绩可以好得多。</blockquote><p id="1c826610-6d9f-813d-94a7-ef4b98f9d350" class="">在写于1935年06月28日的书信中，鲁迅提及：</p><blockquote id="1c826610-6d9f-81d1-a0e8-cc9e8bf9c5b3" class="">我实在有些不愿意出门。我本来常常出门的，不过近来知道了我们的元帅深居简出，只令别人出外奔跑，所以我也不如只在家里坐了。记得托尔斯泰的什么小说说过，小兵打仗，是不想到危险的，但一看见大将面前防弹的铁板，却就也想到了自己，心跳得不敢上前了。但如元帅以为生命价值，彼此不同，那我也无话可说，只好被打军棍。</blockquote><p id="1c826610-6d9f-8159-b2ed-ef0de69820e8" class="">（此信中提及的“元帅”，影射周扬——30年代中共的文艺总管）</p><p id="1c826610-6d9f-81ba-bc91-eb0cb04e6986" class="">在1935年09月12日写给胡风的信中提到：</p><blockquote id="1c826610-6d9f-81a4-b2e7-d5bcfd79154f" class="">以我自己而论，总觉得缚了一条铁索，有一个工头在背后用鞭子打我，无论我怎样起劲的做，也是打，而我回头去问自己的错处时，他却拱手客气的说，我做得好极了。他和我感情好极了，今天天气哈哈哈......真常常令我手足无措，我不敢对别人说关于我们的话，对于外国人，我避而不谈，不得已时，就撒谎。</blockquote><p id="1c826610-6d9f-81ce-9627-ce6e8889d5a7" class="">（此信中的“工头”也是暗指周扬）</p><p id="1c826610-6d9f-810f-b644-c51401b59c25" class="">如果说前面这几封书信都没有直接指名道姓，到了1936年，因为“两个口号”的争论，1936年，鲁迅公开发表了一篇《答徐懋庸并关于抗日统一战线问题》（全文在“<a href="http://www.luxunhome.com/a/qiejietingzawenmoji/20120607/334.html">这里</a>”）。其中点了“周起应”的名字（周扬，字起应），实际上把左联内部的矛盾公开化了。这篇文章的末尾说得很直白：</p><blockquote id="1c826610-6d9f-81f4-a8bf-c2ad5246a534" class="">否则，抓到一面旗帜，就自以为出人头地，摆出奴隶总管的架子，以鸣鞭为唯一的业绩——是无药可医，于中国也不但毫无用处，而且还有害处的。</blockquote><h3 id="1c826610-6d9f-819b-b762-e89e8ff1475a" class="">◇与<a href="https://zh.wikipedia.org/wiki/%E5%86%AF%E9%9B%AA%E5%B3%B0">冯雪峰</a>的关系</h3><p id="1c826610-6d9f-810b-ab69-f97c8a941103" class="">除了前面提到的周扬，冯雪峰也是中共派驻左联的党团书记，此人既是鲁迅的学生，也是其朋友。在30年代，冯还是中共中央宣传部文化工作委员会书记。</p><p id="1c826610-6d9f-81d7-b13a-e0a7d7d233db" class="">鲁迅的老婆（严格讲，是同居女友）许广平在《鲁迅和青年们》中，回忆了鲁冯二人的交谈：</p><blockquote id="1c826610-6d9f-81d1-b37a-fd84a4f2f0a5" class="">有时听听他们谈话，觉得真有趣。</blockquote><p id="1c826610-6d9f-8136-a6aa-cb7404661822" class="">（这段话中，F 指冯雪峰）</p><p id="1c826610-6d9f-8131-a0a0-e4be6f78aebe" class="">在胡风所写的长文《鲁迅先生》中，提到如下一段：</p><blockquote id="1c826610-6d9f-8107-ab76-d22d06bcac75" class="">口号问题发后，国防文学派集全力进攻。冯雪峰有些着慌了，想把攻势压一压。当时鲁迅在重病中，无力起坐，也无力说话，连和他商量一下都不可能。恰好愚蠢的托派相信谣言，竟以为这是可乘之机，就给鲁迅写了一封「拉拢」的信。鲁迅看了很生气，冯雪峰拿去看了后就拟了这封回信。「国防文学」派放出流言，说「民族革命战争的大众文学」是托派的口号。冯雪峰拟的回信就是为了解消这一栽诬的。他约我一道拿着拟稿去看鲁迅，把拟稿念给他听了。鲁迅闭着眼睛听了，没有说甚么，只简单点了点头，表示了同意。<p id="1c826610-6d9f-81c6-8a7e-f2e53fd1ff6f" class=""><strong>一道出来后，雪峰马上对我说：鲁迅还是不行，不如高尔基。高尔基那些政论，都是党派给他的秘书写的，他只是签一个名。</strong></p></blockquote><h3 id="1c826610-6d9f-81cc-85cf-eeec55420eef" class="">◇毛太祖的点评</h3><p id="1c826610-6d9f-8102-8d34-f9a66b0581b3" class="">周海婴在《鲁迅与我七十年》一书中提及了一段往事。</p><p id="1c826610-6d9f-818b-adf9-d759ba4fd11d" class="">1957年反右的时候，罗稷南当着老毛的面提了一个问题：要是今天鲁迅还活着，他可能会怎样？</p><p id="1c826610-6d9f-8119-988a-dfb83f16e1c8" class="">毛腊肉沉思片刻，回答说：要么是关在牢里还要写，要么他识大体不做声。</p><h3 id="1c826610-6d9f-8153-8aec-eca40da6ff15" class="">◇鲁迅的自述</h3><p id="1c826610-6d9f-81e6-aba9-e9ca3a9a13d2" class="">最后再来看看鲁迅本人是怎么说滴。</p><p id="1c826610-6d9f-8161-8685-f0879f8605e9" class="">在《鲁迅纪念集》第1辑第68页，记录了鲁迅向李霁野复述了一段他跟冯雪峰的对话，时间是1936年4月。</p><blockquote id="1c826610-6d9f-8155-b24b-c2dfd4439e48" class="">鲁迅：<p id="1c826610-6d9f-8136-817b-ed2443a57c8c" class=""><strong>你们来时，我要逃亡，因为首先要杀的，恐怕是我。</strong></p></blockquote><p id="1c826610-6d9f-8155-9369-df8aad515a90" class="">这段话很重要，俺加了红色粗体。从这里可以看出，鲁迅很清楚中共一旦掌权，是什么货色。</p><h3 id="1c826610-6d9f-81e2-8308-e039c708b72b" class="">◇小结</h3><p id="1c826610-6d9f-812a-aa90-fbae40ca1405" class="">综上所述，俺个人认为：对共产运动，鲁迅确实不如徐志摩和粱实秋看得透彻。他也确实在某种程度上被中共利用了。但是他跟高尔基不同——他没有沦为一个彻底的傀儡，而是保持了一定的独立性，保持了自己的原则。据说胡适去了台湾之后，有一次跟别人谈到鲁迅，胡适是这样说的：鲁迅是个自由主义者，绝不会为外力所屈服，鲁迅是我们的人。</p><h2 id="1c826610-6d9f-81c9-9059-c9db71dceb01" class="">★<a href="https://zh.wikipedia.org/wiki/%E6%9E%97%E8%AF%AD%E5%A0%82">林语堂</a>——与鲁迅反目的反共文人</h2><figure id="1c826610-6d9f-81f6-9be7-d39d4ab44c11" class="image"><a href="https://lh5.googleusercontent.com/DxNkCHrFb3CBy_4bJxGVDk-nGBxJqlb_plI93q37Siw9bqcJPExRZiLRbduzDhub0XxHcBB3OlrMS-V8uu_G6v_qRpsyW4JYGcG7pUDp6T412wR5VwkiIWCFWnE0WKYrTUV1"><img src="https://lh5.googleusercontent.com/DxNkCHrFb3CBy_4bJxGVDk-nGBxJqlb_plI93q37Siw9bqcJPExRZiLRbduzDhub0XxHcBB3OlrMS-V8uu_G6v_qRpsyW4JYGcG7pUDp6T412wR5VwkiIWCFWnE0WKYrTUV1"/></a></figure><p id="1c826610-6d9f-8134-aa03-ec035846a321" class="">不见图 请翻墙</p><p id="1c826610-6d9f-816a-b1eb-e709680b54b5" class="">对林语堂，咱们天朝的网友估计也不太熟悉。此人比较牛，不但是知名文学家，还是发明家。文学方面的代表作是《京华烟云》，另外还用英文写过一本畅销书《吾国与吾民》，向欧美国家介绍中华传统文化。发明方面，搞了“明快中文打字机”解决了中文打字输入的难题（当时电脑还没出现）。</p><p id="1c826610-6d9f-8151-af26-f40fa867efc4" class="">林语堂跟前面提到的粱实秋都是反共文人，都跟鲁迅有过激烈的论战。差别在于——粱实秋从一开始就跟鲁迅论战。而林语堂一开始是鲁迅的好友，后来才反目成仇的。据说两人反目的主要起因是：对国民性的见解有分歧（对“国民性”感兴趣的同学可以看“<a href="https://program-think.blogspot.com/2013/11/weekly-share-57.html">这篇转载</a>”）。</p><p id="1c826610-6d9f-816b-8fae-c2c24df0da69" class="">虽然两人有激烈的论战，但是鲁迅去世后，林语堂还是写了篇《鲁迅之死》纪念之。其中一段如下：</p><blockquote id="1c826610-6d9f-814c-9447-f27f000f4a6e" class="">鲁迅与其称为文人，不如号为战士。战士者何？顶盔披甲，持矛把盾交锋以为乐。不交锋则不乐，不披甲则不乐，即使无锋可交，无矛可持，拾一石子投狗，偶中，亦快然于胸中，此鲁迅之一副活形也。德国诗人海涅语人曰，我死时，棺中放一剑，勿放笔。是足以语鲁迅。</blockquote><p id="1c826610-6d9f-8139-9c84-d40b49924dd0" class="">作为一个坚定反共之人，林语堂能这样给鲁迅盖棺定论，说明他也不认为鲁迅是共党的人。</p><p id="1c826610-6d9f-81ee-a1d0-de904f94cad1" class="">说到林语堂的“坚定反共”，举几个例子：</p><p id="1c826610-6d9f-81c9-a613-d1b047f3d8f2" class="">1927年老蒋“清党”之初，林语堂发了一篇英文评论《Making China Safe for the Kuomintang》（确保国民党统一中国），其中提到（以下是意译）：</p><blockquote id="1c826610-6d9f-817f-bc84-eb0dc9b727a3" class="">革命的目标是创建一个自由民主的新中国，而只有国民党堪负此重任。因为共产党的宗旨是要实行“专政”，而非民主。</blockquote><p id="1c826610-6d9f-8114-8ad5-e3275f113707" class="">另外他跟粱实秋一样，在反共的同时，也批评国民党的弊端。下面是他1930年在英文刊物《The China Critic》上写的评论（以下是意译）：</p><blockquote id="1c826610-6d9f-8133-82e6-fa6bbc61ac7a" class="">军阀间内战，劳民伤财，与此同时“朱毛领导的共产党小股武装”却在广东、福建边界获得长足发展，两百万剿匪国军都是废物吗？</blockquote><p id="1c826610-6d9f-81f3-b9e8-c42efd5c0754" class="">经热心网友在评论中提醒，再补充林语堂针对中共的一段名言（1937年，发表于申报）：</p><blockquote id="1c826610-6d9f-813e-ad46-ee4e8e9262d6" class="">中国就是有这么一群人，为了几个卢布，不惜出卖自己的国家和民族的利益，在报纸上疯狂叫卖自己的汉奸言论，武装保卫苏联，支持外蒙人民自己当家做主。</blockquote><h2 id="1c826610-6d9f-8149-9e5b-fb7acb79f689" class="">★<a href="https://zh.wikipedia.org/wiki/%E5%BC%B5%E6%84%9B%E7%8E%B2">张爱玲</a>——两部小说揭露”土改“的阴暗面</h2><figure id="1c826610-6d9f-81c3-a8dd-f6f5978f4644" class="image"><a href="https://lh6.googleusercontent.com/7RClRnxM_oJTGw5L765-GSXn8pdRof-BPkSZqEvEiuzm278VejGkIIxwHPI90zOFM5aNz8_IFTFON79Osja9sKqNjAu8QIjJQHoOlcdLjQ6qyyqchU2sP_85LOG9FK4SXXOc"><img src="https://lh6.googleusercontent.com/7RClRnxM_oJTGw5L765-GSXn8pdRof-BPkSZqEvEiuzm278VejGkIIxwHPI90zOFM5aNz8_IFTFON79Osja9sKqNjAu8QIjJQHoOlcdLjQ6qyyqchU2sP_85LOG9FK4SXXOc"/></a></figure><p id="1c826610-6d9f-810c-8680-c11794f555ff" class="">不见图 请翻墙</p><p id="1c826610-6d9f-81bb-8e75-e890401f6df5" class="">论辈份，张爱玲是这些民国大师里面的后起之秀，成名于40年代初期。大陆沦陷时，她选择留在上海。</p><p id="1c826610-6d9f-8153-9466-efa60a9f6124" class="">1950年夏天，张爱玲随同上海文艺代表团去苏北农村参与土改运动，为期2月。中共方面让她去参加土改运动，说白了就是想利用她在文坛的名声，然后发表一些“歌颂土改的作品”。但是这样作品，张爱玲一直写不出来（有可能她压根儿不想写这种“遵命文学”）。</p><p id="1c826610-6d9f-81e3-92e2-fb21461f09ff" class="">1952年7月，张爱玲找了一个借口，说是要“继续因战事而中断的学业”，然后去了香港。从那之后，她再也没回过天朝。在香港其间，她创作了两部揭露土改运动的小说——《秧歌》与《赤地之恋》。《秧歌》的名气较大，与姜贵写的《旋风》并称为“反共文学”的代表（这几部小说，<a href="https://github.com/programthink/books">俺的网盘</a>都分享了电子版）。</p><p id="1c826610-6d9f-81e7-a5d7-d03d036eba58" class="">出版了这两部小说之后，很自然的，张爱玲就被真理部彻底封杀了——她的作品在大陆绝迹，教科书也没有提及她的姓名。所以咱们天朝的文青，要到80年代之后，才开始能接触到她的作品。</p><h2 id="1c826610-6d9f-81b1-9d9c-faf1207cf92a" class="">★<a href="https://zh.wikipedia.org/wiki/%E9%99%88%E5%AF%85%E6%81%AA">陈寅恪</a>——被红卫兵活活折腾死</h2><figure id="1c826610-6d9f-8106-918e-d3bc0c2e42de" class="image"><a href="https://lh5.googleusercontent.com/efhOSVM3x7rs4dbhfWwc_oUrZ-_eJoldAFFBMJS9IFjOd5EbyTI9Ek0r-9Mk2Fy1WfdthUe3M93PuKGbhmbn0zoZMu6Vzvd2vMwkOYPi1UZR538zjIk2Z0lZsRVNAedePReM"><img src="https://lh5.googleusercontent.com/efhOSVM3x7rs4dbhfWwc_oUrZ-_eJoldAFFBMJS9IFjOd5EbyTI9Ek0r-9Mk2Fy1WfdthUe3M93PuKGbhmbn0zoZMu6Vzvd2vMwkOYPi1UZR538zjIk2Z0lZsRVNAedePReM"/></a></figure><p id="1c826610-6d9f-8114-9fac-d7a09f3e16d9" class="">不见图 请翻墙</p><p id="1c826610-6d9f-8143-96e4-e7bcf565b613" class="">前面提到了清华国学院的“四大导师”，顺便再聊聊陈寅恪。此人堪称“三百年乃得一见的史学大师”，单单语言就通晓二十余种（跨多个语系，还包括巴利语、波斯语、突厥语、西夏语 这类很偏僻语种）。在清华执教时，被称为“教授的教授”。他开课时，连吴宓、朱自清、冯友兰这类名家都来旁听。水平可见一斑。</p><p id="1c826610-6d9f-81b5-b80a-d809d85a28c6" class="">虽然同为“四大导师”，但陈寅恪在政治方面的素质就明显不如王国维。大陆沦陷之前，无论是胡适还是傅斯年，都极力劝说他去台湾，但他一直犹豫不决。对于陈寅恪为啥不去台湾，钱穆的观点是：</p><blockquote id="1c826610-6d9f-819e-9c74-eb1ac09e8e6f" class="">当时一辈知识分子对共产党新政权都抱与人为善之心。在新旧政权交替的时刻，中国知识分子不生丝毫扰攘；对于新生的共和国，大体上保持了一种拥护、顺应和期待的态度。</blockquote><p id="1c826610-6d9f-816c-bc00-d4c7ad5aaa43" class="">等到文革开始，陈寅恪被定性为“反动学术权威”。他珍藏多年的大量书籍、诗文稿，在红卫兵抄家时，全部洗劫一空。当时他因为眼疾，已经双目失明。但是那帮红卫兵小将没有轻易放过他，还专门发明了“对付盲人学者的独特批斗法”。简而言之就是：把高音喇叭架设在他病床前，终日播放噪音，还美其名曰：“让反动学术权威听听革命群众的愤怒控诉”。</p><p id="1c826610-6d9f-8187-9db8-fd259ea43174" class="">陈寅恪夫妇本来身体就不好，经过这样长期折腾，到了1969年，夫妇二人都已经奄奄一息。陈终于在那年10月7日辞世。其妻在次月也随他而去。陈在临死前留下一幅对联。</p><blockquote id="1c826610-6d9f-8195-bebc-e0417dc918b3" class="">涕泣对牛衣，卌载都成肠断史。</blockquote><h2 id="1c826610-6d9f-8131-9310-ce04c3371908" class="">★<a href="https://zh.wikipedia.org/wiki/%E6%B2%88%E4%BB%8E%E6%96%87">沈从文</a>——被逼封笔40年</h2><figure id="1c826610-6d9f-8139-9a3d-f4d3ba24876d" class="image"><a href="https://lh5.googleusercontent.com/ic4-xn29RHCwDUGDGBrWzpgi0HrnddnON2tft3BoaBSAQvQQ0mfS10AsaJ4ZqepuWZu8MUfsD1LvtWUPrtbQEdDQgw15bk-74wSpdvt3fmuyZDfIL0B2Gk8A172lVw_yUYf-"><img src="https://lh5.googleusercontent.com/ic4-xn29RHCwDUGDGBrWzpgi0HrnddnON2tft3BoaBSAQvQQ0mfS10AsaJ4ZqepuWZu8MUfsD1LvtWUPrtbQEdDQgw15bk-74wSpdvt3fmuyZDfIL0B2Gk8A172lVw_yUYf-"/></a></figure><p id="1c826610-6d9f-81fe-a0aa-d12bb2b10abf" class="">不见图 请翻墙</p><p id="1c826610-6d9f-8164-9a1f-f9f58470d709" class="">沈从文是民国时期第一流的小说家，此说法毫不夸张。夏志清在《中国现代文学史》中写到：</p><blockquote id="1c826610-6d9f-8170-b171-c29dc1ce16fa" class="">他是中国现代文学中最伟大的印象主义者。他能不着痕迹，轻轻几笔就把一个景色的神髓，或者是人类微妙的感情脉络勾画出来。他在这方面的工夫，直追中国的大诗人和大画家。现代文学作家中，没有一个及得上他。</blockquote><p id="1c826610-6d9f-81df-b290-d45549c7a856" class="">在1988年，沈从文与诺贝尔文学家失之交臂。他在那年的5月份去世了，如果他多活半年，文学奖就可收入囊中（请看<a href="http://cul.sohu.com/20071010/n252580088.shtml">这里的报道</a>）。假如真是这样，那莫言的粉丝就没地方得瑟了。</p><p id="1c826610-6d9f-81b4-a7c1-daa79f9ec1f9" class="">但是这么牛逼的小说家，居然在1948年12月31日宣布封笔。从那之后到他1988年去世，整整40年没有再写过小说，哪怕连一部短篇都没有写过。</p><p id="1c826610-6d9f-81f4-a49d-f353ad6c802e" class="">1949年之前写过至少五百万字的小说，大量的精品。为啥说封笔就封笔？因为1948年的时候，中共已经开始席卷中国。那年，郭沫若公开发表了一篇文章《斥反动文艺》。文中措辞非常严厉，直指沈从文是专写颓废色情的“桃红色作家”，把他定性为存心不良，意在蛊惑读者，软化人们斗争情绪的反动文人，有意识地作为反动派而活着。当时北大学生中有不少中共的支持者。郭沫若这篇文章发表之后，北大校内很快就出现了“打倒沈从文”的标语。沈从文受此刺激，才宣布封笔。</p><p id="1c826610-6d9f-8175-8129-ccd0c76b9f1c" class="">1949年之后，他改行从事考古，彻底跟文艺领域无缘。有人评价说——天朝少了个一流的小说家，多了个优秀的考古学家。这不能不说是一大悲哀，一大讽刺。</p><p id="1c826610-6d9f-8197-a8dd-ca1da9a77cc7" class="">中共掌权之后，官方出版的《现代中国文学史》，压根儿没怎么提及沈从文。在天朝的前30年，他的文学作品只出版过一次（而且还是很薄的一本选集）。文革期间，他收藏了几个书架的大量珍本图书（包括明代珍本）被红卫兵通通烧掉。红卫兵还美其名曰：帮他的思想消消毒。</p><p id="1c826610-6d9f-81e7-8a6b-f9fbf8e3d853" class="">1988年去世时，他的临终遗言是：我对这个世界没有什么好说的。</p><h2 id="1c826610-6d9f-8140-b034-ff1bdff6c557" class="">★<a href="https://zh.wikipedia.org/wiki/%E5%B7%B4%E9%87%91">巴金</a>——把丢失的晚节又找回来了</h2><figure id="1c826610-6d9f-818b-aecb-fa05fe4c8fe8" class="image"><a href="https://lh3.googleusercontent.com/0E8AYB1BWc5hxc9d6pgbBAPYbrdj_0uTX8okxGy0OsxC6Uq-8VIM75spmO96OY_EnCPKhEUOYlQFU7_HNRCddKGh_tqD8-9YOdqUbQM-DvBL4-vrKj5Cz1P0RCJSQXiMzhxB"><img src="https://lh3.googleusercontent.com/0E8AYB1BWc5hxc9d6pgbBAPYbrdj_0uTX8okxGy0OsxC6Uq-8VIM75spmO96OY_EnCPKhEUOYlQFU7_HNRCddKGh_tqD8-9YOdqUbQM-DvBL4-vrKj5Cz1P0RCJSQXiMzhxB"/></a></figure><p id="1c826610-6d9f-8114-9f86-ce43dc9df864" class="">不见图 请翻墙</p><p id="1c826610-6d9f-8168-8bfa-dd2a61b4f027" class="">巴金的名气也很大，中学课本里有他的作品，想必大伙儿都熟悉。在天朝钦定的“鲁郭茅巴老曹”中，他名列第4。</p><p id="1c826610-6d9f-8189-ad7e-c1fc8dc3ec63" class="">巴金一直是党外人士，天朝建国之前，跟“伟光正”没有太密切的关系。他最大的污点发生在文革期间，也就是所谓的“遵命文学、奉旨填词”。文革期间，他奉命写了不少应景之作，比如：《必须彻底打垮胡风反党集团》、《谈别有用心的〈洼地上的战役〉》、《美帝国主义是全世界人民最凶恶的敌人！》。</p><p id="1c826610-6d9f-814b-9838-cdb94a9dbb4e" class="">除了写这类“遵命文学”，巴金也对自己的朋友落井下石。比如作家柯灵是巴金的老朋友。1956年，柯灵应统战部和文化部的要求，写了一个电影剧本《不夜城》。到了文革期间，《不夜城》被点名批判为大毒草。当时上海文艺界领导指名要巴金写一篇批判文章。巴金就从了，写了一篇发在《文汇报》上。其中一段摘录如下（充满了文革特有的火药味）：</p><blockquote id="1c826610-6d9f-8192-840d-f9e1c5077d39" class="">文艺工作者必须认真地改造自己、你不遵守毛主席的文艺方向，不能同工农兵打成一片，不能取得工农兵的思想感情，就不能为工农兵服务。你不为工农兵服务，就要为资产阶级服务；你不宣传无产阶级思想，就会宣传资产阶级思想。不管是有意或无意，你就变成了资产阶级的代言人，替剥削者讲话。《不夜城》是这样，《林家铺子》也是这样。</blockquote><p id="1c826610-6d9f-81ee-b919-d0eee867f146" class="">以巴金在文革时期的言行来看，他的骨气不如马寅初和梁漱溟。不过他的人品比某些文人（余秋雨之流）好多了——至少他在文革之后出版了《随想录》（<a href="https://github.com/programthink/books">俺的网盘</a>上有电子版），对自己进行了深刻的批判和反思。可以这么说——就凭《随想录》一书，他把丢失的晚节又找回来了。</p><p id="1c826610-6d9f-8191-b7b1-dc5e1b504b0b" class="">另外，巴金生前反复倡议要设立“文化大革命博物馆”，可惜朝廷对此事没啥兴趣，到现在也没有下文。俺估计要等到中共垮台，这个“文革博物馆”才有望建成。</p><h2 id="1c826610-6d9f-8109-bb1d-dd165a573623" class="">★<a href="https://zh.wikipedia.org/wiki/%E8%80%81%E8%88%8D">老舍</a>——妻离子散，不堪受辱，投湖自尽</h2><figure id="1c826610-6d9f-8196-9441-c815dd7a46b0" class="image"><a href="https://lh6.googleusercontent.com/Zxihf5BxeMlX_2EiPWovJM4AoJlA7tArNwBB57P8_XBtUdnvT-xHR4reXMBeXGogwdpPDM-87tTmODvYK1NVUlpYdtI9Ul_xUfyD3UmsPeMLDLepjHKz426x37apSVBh7Q-2"><img src="https://lh6.googleusercontent.com/Zxihf5BxeMlX_2EiPWovJM4AoJlA7tArNwBB57P8_XBtUdnvT-xHR4reXMBeXGogwdpPDM-87tTmODvYK1NVUlpYdtI9Ul_xUfyD3UmsPeMLDLepjHKz426x37apSVBh7Q-2"/></a></figure><p id="1c826610-6d9f-8188-a2f8-c67de8fe34e0" class="">不见图 请翻墙</p><p id="1c826610-6d9f-8188-9d7e-e5f952c5643b" class="">老舍跟巴金类似，也是名气很大，中学课本里也有他的作品。在“鲁郭茅巴老曹”中，他名列第5。</p><p id="1c826610-6d9f-81b9-9fb2-f6f3376ac775" class="">关于老舍，有个比较鲜为人知的事情是——他在1922年受洗礼成为基督徒。在49年之前，老舍几乎没怎么掺和政治方面的事情（或许跟他的宗教信仰有关）。</p><p id="1c826610-6d9f-81dc-b995-e9c684f77ace" class="">在40年代后期，当中共席卷中国的时候，老舍正在美国讲学。《四世同堂》第三部和长篇小说《鼓书艺人》就是在美国完成的。1949年12月，应周恩来之邀，他回到了北京。显然，他完全没有意识到中共政权的危险性，所以才回国。</p><p id="1c826610-6d9f-8110-9a17-ed09c6978e41" class="">在民国的文学大牛中，凡是留在大陆的，1949年之后都没有出过精品。只有老舍是个例外，他在56-57年创作了话剧《茶馆》，可以算是精品。但是同一时期，他也写了歌功颂德的败笔，比如《龙须沟》之类的。作为歌功颂德的回报，北京市政府给他封了一个“人民艺术家”的头衔。</p><p id="1c826610-6d9f-817c-8a41-d89ade617ca0" class="">本来老舍打算在60年代创作一部自传体长篇小说《正红旗下》。他在这部作品上倾注大量心血，如果能写成，应该是精品。可惜60年代初，政治气氛已经很压抑了，所以这部作品在半途就搁笔了。</p><p id="1c826610-6d9f-81eb-8ca5-d7ec73c5ee57" class="">1966年文革爆发，“人民艺术家”的头衔并没能保住他。那年8月23日，北京女八中的红卫兵冲击市文联（请注意是女中学生哦），老舍与30多位作家、艺术家一道，脖子被挂上“走资派、牛鬼蛇神、反动文人”之类的牌子，押至北京孔庙，强迫他们跪在地上几个小时，然后一顿暴打。30几个作家、艺术家，个个都是满头流血。老舍被折腾到第二天凌晨才回家。第二天天亮的时候，他走到北京城外的太平湖畔，独自待了许久，然后投湖自尽。</p><p id="1c826610-6d9f-813a-bf11-e823a1cb0054" class="">单单是一顿暴打，其实不至于让老舍自尽，还有些更丑陋的阴暗面——那就是老舍他老婆和儿子为了自保，跟他划清界线。他老婆胡洁青甚至落井下石，写了大字报，对他恶毒攻击。大字报中还扯出陈年往事，提及老舍与女作家赵青阁搞婚外情。</p><p id="1c826610-6d9f-81a4-b3ee-ff477a23eef5" class="">等到文革结束，他的老婆和子女又摇身一变，写了许多文章，深情回忆老舍。如今他的长女舒济，成了老舍纪念馆馆长；他唯一的儿子舒乙，成了中国现代文学馆馆长。</p><h2 id="1c826610-6d9f-8150-9a56-da6ee79f99d8" class="">★<a href="https://zh.wikipedia.org/wiki/%E8%8C%85%E7%9B%BE">茅盾</a>——中共元老，人品很有问题</h2><figure id="1c826610-6d9f-811b-85cb-e6715b5a71c5" class="image"><a href="https://lh3.googleusercontent.com/oaBMJcu9NfW7CDwhLlJYcG-Atn1hhJtY-WMN1NMtteuuIoylI2D1Kaq1fXy7AP_8CytDFthtuW43VB0GQnXIRSlZlEE53vcXP4UAlXKnZajoizsdc_aKF5C91tTgCi1x6jdF"><img src="https://lh3.googleusercontent.com/oaBMJcu9NfW7CDwhLlJYcG-Atn1hhJtY-WMN1NMtteuuIoylI2D1Kaq1fXy7AP_8CytDFthtuW43VB0GQnXIRSlZlEE53vcXP4UAlXKnZajoizsdc_aKF5C91tTgCi1x6jdF"/></a></figure><p id="1c826610-6d9f-81d8-aa9f-f4af61428331" class="">不见图 请翻墙</p><p id="1c826610-6d9f-8114-b81c-de3e171a2bf0" class="">从某种意义上讲，茅盾是中共元老——因为他在1921年就入党了。但此人是个怂货，在1927年主动脱党。那年老蒋发动“412清党”，中共陷入低潮。党组织派茅盾去某地恢复并发展党组织，给他好几万银圆作活动经费。谁曾想，茅盾带着巨款，中途开溜了。然后他抛弃原配孔德芷，大搞婚外恋，勾搭了有夫之妇秦德君。这俩姘头在1928年东渡日本，之后同居了3年，秦德君还为他两次堕胎。这些可不是俺瞎掰的，有朝廷官网的文章为证——《<a href="http://history.people.com.cn/GB/205396/17295012.html">被茅盾“遗忘”的女子秦德君：曾为其两次堕胎 @ 人民网</a>》。但是后来茅盾写回忆录的时候，对秦德君一个字都没有提及。这就是典型的“既想当婊子，又想立牌坊”。</p><p id="1c826610-6d9f-816f-a3a7-ecb7529f8dfc" class="">顺便再说一个小事儿。50年代，秦德君受到政治审查。茅盾担心牵连到自己，从此跟她形同陌路，见面都不打招呼。之后秦德君申请恢复党籍，提到了她跟茅盾一起去日本的经历。党组织找到茅盾核实情况，茅盾却再三推脱，死活不肯提供证明。</p><p id="1c826610-6d9f-8174-bece-c02590f92ef3" class="">从上面这几段介绍，你应该能看出这个家伙的人品很差。就是这样一个很没有节操的家伙，1949年之后也能荣任文化部部长，一干就是几十年。为啥他能够长期保住乌纱帽捏，因为他也很善于观察政治风险，提前站队。早在50年代（文革尚未开始），茅盾就经常发表一些迎合朝廷的言论。所以在朝廷钦定的“鲁郭茅巴老曹”中，他能排名第3，也就好理解了。</p><h2 id="1c826610-6d9f-8113-b0d4-c1bbff25a150" class="">★<a href="https://zh.wikipedia.org/wiki/%E5%86%AF%E5%8F%8B%E5%85%B0">冯友兰</a>——生性怯懦的投机分子</h2><figure id="1c826610-6d9f-813b-b855-c45bb20fca3b" class="image"><a href="https://lh4.googleusercontent.com/OLkHdPLhHEu2rHCj2yylRqx5OuKU0mjhLr6WuE6w7Yg9VaRJZf8ApN66ucXeIRAZ0EF6QE5lWdvqaSPw4QG7JTdtC8GZHrZZOqfNT-E7mMKnEVoicIk3eSB2JR4DDUZW6yEz"><img src="https://lh4.googleusercontent.com/OLkHdPLhHEu2rHCj2yylRqx5OuKU0mjhLr6WuE6w7Yg9VaRJZf8ApN66ucXeIRAZ0EF6QE5lWdvqaSPw4QG7JTdtC8GZHrZZOqfNT-E7mMKnEVoicIk3eSB2JR4DDUZW6yEz"/></a></figure><p id="1c826610-6d9f-812b-9ea3-f96fc4109443" class="">不见图 请翻墙</p><p id="1c826610-6d9f-81d4-8c7f-c23da7ec9e82" class="">冯友兰是民国时期知名的哲学史家，其代表作是1931年和1934年出版《中国哲学史》上下卷。另在1946年出版了《中国哲学简史》（<a href="https://github.com/programthink/books">俺的网盘</a>上有电子版）。</p><p id="1c826610-6d9f-8183-bda5-d7a6143b4a67" class="">此人虽然在哲学领域颇有造诣，但是人品实在不敢恭维——是个典型的墙头草。他在1934年曾经应邀访问过苏联。回国后发表了几次公开演讲，谈及苏联的见闻和马列的理论，引发国民党当局的不满，把他抓去审讯了几天。据说经历此事后，冯友兰吓坏了，赶紧迅速地向国民党靠拢，当年就申请入党，第二年更是混了一个“国民党第五次全国代表大会代表”的头衔。</p><p id="1c826610-6d9f-81db-b017-f9938c298f89" class="">1949年，国民党政权崩溃，冯友兰觉得国民党过气了，于是留在大陆，转而投靠共产党。天朝建国后的第4天（10月5日），他主动写信给毛太祖，信中称：过去讲封建哲学，帮了国民党的忙，现在我决心改造思想，学习马克思主义。</p><p id="1c826610-6d9f-8159-a6a2-e49481045a74" class="">1962年开第三届全国政协，冯友兰又主动向毛泽东献诗“怀仁堂后百花香，浩荡春风感衆芳”。其肉麻吹捧的功夫，直追郭沫若啊。</p><p id="1c826610-6d9f-81b3-95ba-c606efa0d151" class="">到了文革时期，冯友兰更不得了啦，居然参加了臭名昭著的“<a href="https://zh.wikipedia.org/wiki/%E6%A2%81%E6%95%88">梁效写作班子</a>”， 在里面当顾问。这个“梁效写作班子”，那可是江青等人的御用笔杆子。文革后期，四人帮在毛腊肉的授意下发起“批林批孔”运动，他为了迎合，相继发表《对于孔子的批判和对于我过去的尊孔思想的自我批判》、《复古与反复古是两条路线的斗争》等文章。从各种理论高度痛骂孔子。他称自己是从旧营垒里冲杀出来，给了孔丘一个回马枪。</p><h2 id="1c826610-6d9f-815b-9e4b-d9ebbd3b7bbb" class="">★<a href="https://zh.wikipedia.org/wiki/%E9%83%AD%E6%B2%AB%E8%8B%A5">郭沫若</a>——足够厚颜无耻的党棍</h2><figure id="1c826610-6d9f-8150-9910-d2cc08d3581b" class="image"><a href="https://lh3.googleusercontent.com/Pgx9VBb5_JYalZrtJ85uSkyqQ80_gLi0j8Jepp7XlPvHtz8IJadxOGXcI1u4OywL_9gCbc2DIKkr6g_Ee8eBNMrYE1MS2nzCw_r8NYEr8-Lr_fMdoxU4OV1GJH8BNYhdF99a"><img src="https://lh3.googleusercontent.com/Pgx9VBb5_JYalZrtJ85uSkyqQ80_gLi0j8Jepp7XlPvHtz8IJadxOGXcI1u4OywL_9gCbc2DIKkr6g_Ee8eBNMrYE1MS2nzCw_r8NYEr8-Lr_fMdoxU4OV1GJH8BNYhdF99a"/></a></figure><p id="1c826610-6d9f-8101-9ced-e989eb2cfa20" class="">不见图 请翻墙</p><p id="1c826610-6d9f-8104-8770-e6c39a66e5cf" class="">为啥俺把郭沫若放到最后，因为此人是民国知名文人里面，最厚颜无耻的家伙，活脱脱一根党棍。此人能在官方排名的“鲁郭茅巴老曹”中名列第二，靠的就是【比城墙还厚的脸皮】。</p><h3 id="1c826610-6d9f-81da-9fe2-dc82ffc6b382" class="">◇郭沫若的雷人语录赏析</h3><p id="1c826610-6d9f-81b2-b5cc-d618da28a2f7" class="">在1966年文革刚开始的头几天，精明的郭沫若立马看清了形势并发表公开讲话，开始为“政治站队”作准备了。</p><blockquote id="1c826610-6d9f-818d-bb96-f04d3b0e5e11" class="">在一般的朋友、同志们看来，我是一个文化人，甚至于好些人都说我是一个作家，还是一个诗人，又是一个什么历史学家。几十年来，一直拿着笔杆子在写东西，也翻译了些东西。按字数来讲，恐怕有几百万字了。但是，拿今天的标准来讲，我以前所写的东西，严格地说，应该全部把它烧掉，没有一点价值。</blockquote><p id="1c826610-6d9f-816f-be57-d9a0f78aab3e" class="">文革期间，郭参加了某次纪念鲁迅的活动，他说道：</p><blockquote id="1c826610-6d9f-81c4-821c-d574555b25d8" class="">鲁迅如果还活在今天，他是会多么高兴啊！他一定会站在文化革命战线的前头行列，冲锋陷阵，同我们一起，在毛主席的领导下，踏出前人所没有走过的道路......</blockquote><p id="1c826610-6d9f-81a6-b762-fbb2876a6147" class="">再来看看郭沫若是如何吹捧毛太祖的书法，连其中的【错别字】都被他肉麻地夸赞。</p><blockquote id="1c826610-6d9f-8175-8b7f-ecc300525f85" class="">主席并无心成为诗家或词家，但他的诗词却成了诗词的顶峰。主席更无心成为书家，但他的墨迹却成了书法的顶峰。</blockquote><h3 id="1c826610-6d9f-8186-a420-eb0ddb89a84b" class="">◇郭沫若的马屁诗词赏析</h3><p id="1c826610-6d9f-8131-a2ba-f7b6ac0da1da" class="">在本文即将结束时，再分享他的六首诗词，作为压轴戏。看完这些诗词，你就能领略到郭大诗人厚脸皮的风采。</p><p id="1c826610-6d9f-810c-94ee-e7325e3482d5" class=""><strong>《我向你高呼万岁》</strong></p><p id="1c826610-6d9f-81bf-8d56-e26a71d6e38d" class="">我向你高呼万岁，斯大林元帅，你是全人类的解放者，今天是你的70寿辰，我向你高呼万岁。</p><p id="1c826610-6d9f-8115-a087-e0498382e76c" class="">原子弹的威力在你面前只是儿戏，细菌战的威协在你面前只是梦呓。</p><p id="1c826610-6d9f-8191-82d4-d0e423cb2f8d" class="">你的光暖使南北两冰洋化为暖流，你的润泽使撒哈拉沙漠化为沃土。</p><p id="1c826610-6d9f-815d-8063-ee3289c2288b" class="">不朽的马克思和你同在，你和马克思一样永远不朽了！</p><p id="1c826610-6d9f-81ad-b35a-dd5918f2143b" class="">不朽的恩格斯和你同在，你和恩格斯一样永远不朽了！</p><p id="1c826610-6d9f-8131-91ca-e274c2b3b464" class="">不朽的列宁和你同在，你和列宁一样永远地不朽了！</p><p id="1c826610-6d9f-8151-83ff-d2b2f8a492f9" class=""><strong>《毛主席赛过我亲爷爷》</strong></p><p id="1c826610-6d9f-818f-ac8d-f00c2bbb8a34" class="">天安门上红旗扬，毛主席画像挂墙上，亿万人民齐声唱毛主席万岁万万岁！万岁万岁寿无疆！</p><p id="1c826610-6d9f-8105-8c12-e01b89f1fb43" class="">毛主席呀毛主席，你真赛过我亲爷爷！</p><p id="1c826610-6d9f-8141-9f36-e2b5e90f6034" class=""><strong>《题毛主席在飞机中工作的摄影》</strong></p><p id="1c826610-6d9f-81c6-93f2-c3c11aea5e38" class="">在一万公尺的高空，在图104的飞机之上，难怪阳光是加倍地明亮，机内和机外有着两个太阳！</p><p id="1c826610-6d9f-818a-93e0-fe3dc63b7161" class="">不倦的精神啊，崇高的思想，凝成了交响曲的乐章，象静穆的丛山峻岭，也象浩渺无际的重洋！</p><p id="1c826610-6d9f-81ef-af5a-e51c0c0683aa" class=""><strong>《宇宙充盈歌颂声》</strong></p><p id="1c826610-6d9f-8199-8b58-c7dbc0d08686" class="">国庆年年益光辉，今年又有新景象。</p><p id="1c826610-6d9f-81bb-96cb-d3994e3f6c27" class="">人民英雄纪念碑，屹立天安门广场。</p><p id="1c826610-6d9f-818d-b891-fcc34f74646b" class="">广场浩荡人如海，丰碑巍峨天变矮。</p><p id="1c826610-6d9f-819c-a32a-cb4bd5400865" class="">人间出现双太阳，天上地下增光彩。</p><p id="1c826610-6d9f-8187-a277-c01c5b1e35b0" class=""><strong>《献给在座的江青同志》</strong></p><p id="1c826610-6d9f-819a-8192-c9faaafcb2ba" class="">（编程随想注：本诗写于1967年6月5日，纪念毛泽东《在延安文艺座谈会上的讲话》25周年讨论会的闭幕式）</p><p id="1c826610-6d9f-81ff-a12e-da4400511535" class="">亲爱的江青同志，你是我们学习的好榜样</p><p id="1c826610-6d9f-81bf-8894-f6c8b370ffc1" class="">你善于活学活用战无不胜的毛泽东思想</p><p id="1c826610-6d9f-814d-8d19-e4c1dae06316" class="">你奋不顾身地在文化战线上陷阵冲锋</p><p id="1c826610-6d9f-81fb-8cca-e1de0d115b11" class="">使中国舞台充满了工农兵的英雄形象</p><p id="1c826610-6d9f-81ef-b553-dc6668d5a8a6" class=""><strong>《水调歌头——庆祝无产阶级文化大革命十周年》</strong></p><p id="1c826610-6d9f-811f-b39d-f63bad175329" class="">（编程随想注：本诗写于1976年5月12日，打倒四人帮之前）</p><p id="1c826610-6d9f-818f-92d0-ef64317dd914" class="">四海《通知》遍，</p><p id="1c826610-6d9f-81a9-b7a4-f8fed10d9f94" class="">文革卷风云。</p><p id="1c826610-6d9f-8126-b4e9-f85018a3d9b5" class="">阶级斗争纲举，</p><p id="1c826610-6d9f-81a8-908c-fb1122c68e76" class="">打倒刘和林。</p><p id="1c826610-6d9f-81c5-9780-e983daa57e8b" class="">十载春风化雨</p><p id="1c826610-6d9f-816e-be25-fadc584641f9" class="">喜见山花烂漫</p><p id="1c826610-6d9f-818f-bac0-ee13d4acc3fb" class="">莺梭织锦勤</p><p id="1c826610-6d9f-8102-bf07-efe67f099871" class="">茁茁新苗壮</p><p id="1c826610-6d9f-8168-bd9e-d3cc12076417" class="">天下凯歌声</p><p id="1c826610-6d9f-8131-bc3f-f19a0c800f0d" class="">走资派</p><p id="1c826610-6d9f-81d9-bfe5-d08f15d81dcf" class="">奋螳臂</p><p id="1c826610-6d9f-81be-ae0f-ff456b413970" class="">邓小平</p><p id="1c826610-6d9f-8153-abe4-f3a1a5ef5bfa" class="">妄图倒退</p><p id="1c826610-6d9f-8158-a1d1-e9947fc59ae5" class="">奈“翻案不得人心”</p><p id="1c826610-6d9f-81fa-9526-c68ff77dd910" class="">“三项为纲”批透</p><p id="1c826610-6d9f-81f4-926f-da3b90c370f6" class="">复辟罪行怒讨</p><p id="1c826610-6d9f-81aa-9a0b-fcdd94418fca" class="">动地走雷霆</p><p id="1c826610-6d9f-81b3-995e-f35fd11ae7da" class="">主席挥巨手</p><p id="1c826610-6d9f-8160-8240-f699ddae76f7" class="">团结大进军</p><p id="1c826610-6d9f-8173-9009-e195c2223fbf" class=""><strong>《水调歌头——粉碎四人帮》</strong></p><p id="1c826610-6d9f-810a-a875-cbdf47f30e45" class="">（编程随想注：本诗写于1976年10月21日，打倒四人帮之后）</p><p id="1c826610-6d9f-8126-b57a-f9e75e2b79f0" class="">大快人心事</p><p id="1c826610-6d9f-81b5-a8af-fdfd49c8eb6e" class="">揪出四人帮</p><p id="1c826610-6d9f-810f-8287-da9516479770" class="">政治流氓文痞</p><p id="1c826610-6d9f-815f-8d55-f3c90a89fe47" class="">狗头军师张</p><p id="1c826610-6d9f-8111-a980-f4d7079fc1e5" class="">还有精生白骨</p><p id="1c826610-6d9f-81d8-b853-d2d6d990f966" class="">自比则天武后</p><p id="1c826610-6d9f-81df-9e8d-c187bd0e7976" class="">铁帚扫而光</p><p id="1c826610-6d9f-818c-a887-f182aab7ab7f" class="">篡党夺权者</p><p id="1c826610-6d9f-810a-940b-d5b7010aa851" class="">一枕梦黄梁</p><p id="1c826610-6d9f-81f1-a656-ff2da2f35f51" class="">野心大</p><p id="1c826610-6d9f-8169-a2b0-d00b3212396e" class="">阴谋毒</p><p id="1c826610-6d9f-8181-9239-e62d5addf5b8" class="">诡计狂</p><p id="1c826610-6d9f-8104-a112-dc94d11d12d3" class="">真是罪该万死</p><p id="1c826610-6d9f-817b-86f0-df43d3546b3a" class="">迫害红太阳</p><p id="1c826610-6d9f-81b2-8bde-ce037751c7a0" class="">接班人是俊杰</p><p id="1c826610-6d9f-8156-a126-e5fff27a1e3b" class="">遗志继承果断</p><p id="1c826610-6d9f-8145-86e3-d268073ff8fe" class="">功绩何辉煌</p><p id="1c826610-6d9f-81e1-828c-c522230cdf44" class="">拥护党中央</p><p id="1c826610-6d9f-813a-b03e-c34dd55925ae" class="">（大家请注意：末尾的这两首诗词，间隔仅仅5个月；前一首把江青捧上天，后一首把四人帮骂成臭头。咱们这位郭大诗人，翻脸比翻书还利索啊）</p><h2 id="1c826610-6d9f-814d-8ffd-e3ff5c6d1024" class="">★总结</h2><p id="1c826610-6d9f-8113-8d16-df83970069f0" class="">民国时期的大牛挺多的，所以今天这篇，破例写得很长，远远超出俺博文的平均长度。但还是有一些民国时期的大牛（比如梁启超、钱穆、钱钟书、翦伯赞、粱漱溟、金岳霖等）没有来得及介绍。如果大伙儿感兴趣的话，以后再继续聊吧。</p><p id="1c826610-6d9f-8184-a8d5-fdc8c5feb02a" class="">本文作为“七一”党生日的献礼，主要想达到如下几个目的：</p><p id="1c826610-6d9f-81f6-a288-fda57bafed11" class="">其1</p><p id="1c826610-6d9f-816a-80bf-c2e67e7e332a" class="">让大伙儿了解一下：民国时期出了这么多文学领域的大牛，出了这么多精品。但是捏，1949年之后留在天朝的，都【再无精品】问世（除了老舍在1956年写了《茶馆》）。这充分说明了共产党国家对“思想自由”的禁锢。俺的博客上，已经不止一次强调过“思想自由”的重要性（“思想自由”是其它自由的基础）。</p><p id="1c826610-6d9f-81bd-9ada-ecec633c4c59" class="">其2</p><p id="1c826610-6d9f-818c-bdf4-e94232f753e0" class="">让大伙儿了解一下：很多民国时期的大牛，因为政治上的幼稚，被中共利用，被中共玩弄于股掌之中，有的人都被玩死了（比如陈寅恪和老舍）。可见马列极权国家之残酷。</p><p id="1c826610-6d9f-81b8-8c21-f29b92aa5002" class="">其3</p><p id="1c826610-6d9f-812e-a3f5-c8616f282583" class="">让大伙儿了解一下：即便牛逼如胡适这样的思想家，竟然也被苏俄蒙蔽了十多年。可见共产运动的迷惑性之强。</p><h2 id="1c826610-6d9f-8119-b166-ee0c3f6d0e08" class="">★引申阅读</h2><p id="1c826610-6d9f-8173-8b7f-d3fe5a10f225" class="">总而言之，俺希望有更多的读者了解到共产运动的祸害。作为本文的引申阅读，大伙儿还可再去看看<a href="https://github.com/programthink/books">俺网盘</a>上分享的如下几本经典的书籍（这几本都很有影响），从不同角度剖析共产运动。</p><p id="1c826610-6d9f-810e-8b23-cd694eb2f780" class="">兹比格涅夫·布热津斯基：《<a href="https://docs.google.com/document/d/1SRsTj2i-zccQcD4Q_4hBppZMzJPzTBkp6EQOUZCFs2Y/">大失败——二十世纪共产主义的兴亡</a>》</p><p id="1c826610-6d9f-815a-b87f-d6dbd380b236" class="">理查德·派普斯：《<a href="https://docs.google.com/document/d/1qQySfLohHdWbKGaKAfO-azkm_Zv6h1Fmcom9uk-6Smw/">共产主义实录</a>》</p><p id="1c826610-6d9f-8116-a33e-db414a330f22" class="">卡尔·波普尔：《<a href="https://docs.google.com/document/d/1ZQDSZ2ma1bQjuP_SNs5O8kkaoPEawgm2FN5SSsChLMU/">历史决定论的贫困</a>》</p><p id="1c826610-6d9f-8134-b71e-e3c4fe259412" class="">密洛凡·德热拉斯：《<a href="https://docs.google.com/document/d/1SqZUfHRNp1XyfOLKJ0VrWPOfrroOD6GKfEDzauH9JRs/">新阶级——对共产主义制度的分析</a>》</p><p id="1c826610-6d9f-8149-a2d1-c041ca9f5056" class="">卡尔·考茨基：《<a href="https://docs.google.com/document/d/16RfckBiSxG5v1mmMxrZ3eLtpEUoWRNN_4g2FsZs4zxk/">恐怖主义与共产主义</a>》</p><p id="1c826610-6d9f-81c5-ab07-f6f6cc4798d6" class=""><strong>俺博客上，和本文相关的帖子（需翻墙）</strong>：</p><p id="1c826610-6d9f-8110-b3cc-d0dbf5e4358d" class="">《<a href="https://program-think.blogspot.com/2018/09/Book-Review-The-Errors-of-Marxism-Leninism.html">为什么马克思是错的？——全面批判马列主义的知名著作导读</a>》</p><p id="1c826610-6d9f-81ec-a431-f7d908f0b00a" class="">《<a href="https://program-think.blogspot.com/2018/08/USA-Containment-Strategies-in-Cold-War.html">苏联是如何被慢慢勒死的？——聊聊冷战中美国的遏制战略</a>》</p><p id="1c826610-6d9f-8193-a5ce-e545fe8ba652" class="">《<a href="https://program-think.blogspot.com/2019/11/Brief-History-of-the-Berlin-Wall.html">美苏冷战的缩影——柏林墙简史（多图）</a>》</p><p id="1c826610-6d9f-8157-ac3b-cb6eb7e64bad" class="">《<a href="https://program-think.blogspot.com/2017/11/The-Story-of-Ordinary-People.html">处在历史转折点的小人物们——回首80年代的几则往事</a>》</p><p id="1c826610-6d9f-816e-8bad-e1a744b8f9a1" class="">《<a href="https://program-think.blogspot.com/2012/10/history-of-red-khmers.html">最“纯正”的共产主义政权——红色高棉简史</a>》</p><p id="1c826610-6d9f-8170-8763-f6a522e86ac7" class="">《<a href="https://program-think.blogspot.com/2013/02/film-soviet-story.html">影评：＜苏维埃往事＞——帮你看清苏联和纳粹的共同本质</a>》</p><p id="1c826610-6d9f-813c-bd7f-f197f16c0fc9" class="">《<a href="https://program-think.blogspot.com/2013/12/kim-il-sung-great-purge.html">北朝鲜金氏王朝的崛起——聊聊金日成的历次大清洗</a>》</p><p id="1c826610-6d9f-8157-9d29-f555745408d5" class="">《<a href="https://program-think.blogspot.com/2010/09/censorship-of-images.html">看看真理部是如何 PS 照片的</a>》</p><p id="1c826610-6d9f-8123-8d72-c92d61730401" class="">《<a href="https://program-think.blogspot.com/2011/03/ccp-vs-japanese.html">谁是最可恨的人？——写给仇日愤青们</a>》</p><p id="1c826610-6d9f-812e-bc3f-cd802de40d6e" class=""><strong>版权声明</strong></p><p id="1c826610-6d9f-8182-860c-df06b9eaa496" class="">本博客所有的原创文章，作者皆保留版权。转载必须包含本声明，保持本文完整，并以超链接形式注明作者<a href="mailto:program.think@gmail.com">编程随想</a>和本文原始地址：</p><p id="1c826610-6d9f-8129-aac7-eb9db33de30d" class=""><a href="https://program-think.blogspot.com/2014/07/artists-and-ccp.html">https://program-think.blogspot.com/2014/07/artists-and-ccp.html</a></p></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(50, 48, 44, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-default_background {
+	color: rgba(50, 48, 44, 1);
+}
+.highlight-gray_background {
+	background: rgba(248, 248, 247, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(248, 243, 252, 1);
+}
+.highlight-pink_background {
+	background: rgba(252, 241, 246, 1);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-default_background {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray_background {
+	background: rgba(248, 248, 247, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(248, 243, 252, 1);
+}
+.block-color-pink_background {
+	background: rgba(252, 241, 246, 1);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-uiBlue { background-color: undefined; }
+.select-value-color-pink { background-color: rgba(225, 136, 179, 0.27); }
+.select-value-color-purple { background-color: rgba(168, 129, 197, 0.27); }
+.select-value-color-green { background-color: rgba(123, 183, 129, 0.27); }
+.select-value-color-gray { background-color: rgba(84, 72, 49, 0.15); }
+.select-value-color-transparentGray { background-color: undefined; }
+.select-value-color-translucentGray { background-color: undefined; }
+.select-value-color-orange { background-color: rgba(224, 124, 57, 0.27); }
+.select-value-color-brown { background-color: rgba(210, 162, 141, 0.35); }
+.select-value-color-red { background-color: rgba(244, 171, 159, 0.4); }
+.select-value-color-yellow { background-color: rgba(236, 191, 66, 0.39); }
+.select-value-color-blue { background-color: rgba(93, 165, 206, 0.27); }
+.select-value-color-pageGlass { background-color: undefined; }
+.select-value-color-washGlass { background-color: undefined; }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="1c826610-6d9f-80f1-8e24-d31b2af4d2b1" class="page sans"><header><img class="page-cover-image" src="https://www.notion.so/images/page-cover/met_william_morris_1877_willow.jpg" style="object-position:center 90%"/><div class="page-header-icon page-header-icon-with-cover"><span class="icon">⛰️</span></div><h1 class="page-title">Blog for her</h1><p class="page-description"></p></header><div class="page-body"><p id="1c826610-6d9f-8050-8710-f9a6351ff917" class="">
+</p><figure id="1c826610-6d9f-8183-9523-ce858afcffce" class="link-to-page"><a href="Blog%20for%20her%201c8266106d9f80f18e24d31b2af4d2b1/%E5%90%84%E7%A7%8D%E3%80%90%E4%B8%80%E5%85%83%E5%8C%96%E6%80%9D%E7%BB%B4%E3%80%91%E7%9A%84%E8%B0%AC%E8%AF%AF%E2%80%94%E2%80%94%E4%BB%8E%E2%80%9C%E6%98%9F%E5%BA%A7%E7%90%86%E8%AE%BA%E2%80%9D%E5%88%B0%E2%80%9C%E5%85%B1%E4%BA%A7%E4%B8%BB%E4%B9%89%E7%A4%BE%E4%BC%9A%E2%80%9D%20@%20%E7%BC%96%E7%A8%8B%E9%9A%8F%E6%83%B3%E7%9A%84%E5%8D%9A%E5%AE%A2%201c8266106d9f81839523ce858afcffce.html"><span class="icon">😁</span>各种【一元化思维】的谬误——从“星座理论”到“共产主义社会” @ 编程随想的博客</a></figure><figure id="1c826610-6d9f-81e6-803d-f6ef2d880f02" class="link-to-page"><a href="Blog%20for%20her%201c8266106d9f80f18e24d31b2af4d2b1/%E6%80%9D%E7%BB%B4%E7%9A%84%E8%AF%AF%E5%8C%BA%EF%BC%9A%E4%BB%8E%E2%80%9C%E6%B2%89%E6%B2%A1%E6%88%90%E6%9C%AC%E8%B0%AC%E8%AF%AF%E2%80%9D%E5%88%B0%E2%80%9C%E6%8D%9F%E5%A4%B1%E5%8E%8C%E6%81%B6%E6%83%85%E7%BB%93%E2%80%9D%20@%20%E7%BC%96%E7%A8%8B%E9%9A%8F%E6%83%B3%E7%9A%84%E5%8D%9A%E5%AE%A2%201c8266106d9f81e6803df6ef2d880f02.html">思维的误区：从“沉没成本谬误”到“损失厌恶情结” @ 编程随想的博客</a></figure><p id="1c826610-6d9f-804f-bd9a-dd38e1e3ca01" class="">
+</p><figure id="1c826610-6d9f-8126-8ae3-c4c8c016861e" class="link-to-page"><a href="Blog%20for%20her%201c8266106d9f80f18e24d31b2af4d2b1/%E9%9D%A2%E5%AF%B9%E5%85%B1%E4%BA%A7%E5%85%9A%E2%80%94%E2%80%94%E6%B0%91%E5%9B%BD%E4%BA%BA%E6%96%87%E5%A4%A7%E5%B8%88%E7%9A%84%E4%BC%97%E7%94%9F%E7%9B%B8%20@%20%E7%BC%96%E7%A8%8B%E9%9A%8F%E6%83%B3%E7%9A%84%E5%8D%9A%E5%AE%A2%201c8266106d9f81268ae3c4c8c016861e.html">面对共产党——民国人文大师的众生相 @ 编程随想的博客</a></figure><figure id="1c826610-6d9f-8166-a1c6-c74cbeebca1a" class="link-to-page"><a href="Blog%20for%20her%201c8266106d9f80f18e24d31b2af4d2b1/%E7%A7%91%E5%AD%A6%E6%98%AF%E4%BB%80%E4%B9%88%EF%BC%9F%E2%80%94%E2%80%94%E5%85%BC%E8%B0%88%E2%80%9C%E9%9D%9E%E7%A7%91%E5%AD%A6%E3%80%81%E4%BC%AA%E7%A7%91%E5%AD%A6%E3%80%81%E5%8F%8D%E7%A7%91%E5%AD%A6%E2%80%9D%E5%92%8C%E4%B8%80%E4%BA%9B%E5%B8%B8%E8%A7%81%E8%B0%AC%E8%AF%AF%20@%20%E7%BC%96%E7%A8%8B%E9%9A%8F%E6%83%B3%E7%9A%84%E5%8D%9A%E5%AE%A2%201c8266106d9f8166a1c6c74cbeebca1a.html">科学是什么？——兼谈“非科学、伪科学、反科学”和一些常见谬误 @ 编程随想的博客</a></figure></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>
